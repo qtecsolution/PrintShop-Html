@@ -565,6 +565,42 @@ button:focus,
 .modal-header .btn-close:not([disabled]):hover svg path {
   fill: hsl(0deg, 49%, 52%);
 }
+.tooltip-inner {
+  background: hsl(11deg, 66%, 83%);
+}
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: hsl(11deg, 66%, 83%);
+}
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: hsl(11deg, 66%, 83%);
+}
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: hsl(11deg, 66%, 83%);
+}
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: hsl(11deg, 66%, 83%);
+}
+
+.preloader {
+  background: hsl(11deg, 66%, 83%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader .loader {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .cse-container {
   margin-inline: auto;
   width: 100%;

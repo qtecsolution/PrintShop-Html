@@ -1,0 +1,18 @@
+
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.preloader {
+  background: $primary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include vwh100;
+  @include flex-center;
+
+  .loader {
+    @include square(240);
+    @include flex-center;
+    overflow: hidden;
+  }
+}

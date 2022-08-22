@@ -1,16 +1,16 @@
 @use '../../global' as *;
-@use '../../partials' as p;
+@use '../../partials' as *;
 
 
 .commentinput {
-  // @include p.setBgColor($white, $textPrimary);
-  // @include p.border(solid, 1, $checkborder);
-  @include p.radius(15);
+  // @include setBgColor($white, $textPrimary);
+  // @include border(solid, 1, $checkborder);
+  @include radius(15);
   @include font($primaryFont, 14, normal, normal, 20);
-  letter-spacing: p.size(0.04);
-  @include p.w100;
-  padding: p.size(14) p.size(16);
-  @include p.transitionsall;
+  letter-spacing: size(0.04);
+  @include w100;
+  padding: size(14) size(16);
+  @include transitionsall;
 
   &::placeholder {
     color: $textPlaceholder;

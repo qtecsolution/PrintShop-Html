@@ -1,61 +1,61 @@
 @use '../../global' as *;
-@use '../../partials' as p;
+@use '../../partials' as *;
 
 
 .inputbox {
-  @include p.flex-column;
-  gap: p.size(10);
+  @include flex-column;
+  gap: size(10);
   
   .inputinfo {
     background: $white;
-    @include p.flex-center-vert;
-    // @include p.border(solid, 1, $inputBorder);
-    padding: p.size(8) p.size(16);
+    @include flex-center-vert;
+    // @include border(solid, 1, $inputBorder);
+    padding: size(8) size(16);
     position: relative;
-    @include p.radius(10);
-    @include p.transitionsall;
+    @include radius(10);
+    @include transitionsall;
 
     .icon {
-      @include p.square(18);
-      @include p.flex-center;
+      @include square(18);
+      @include flex-center;
       overflow: hidden;
 
       svg {
-        @include p.wh100;
+        @include wh100;
       }
     }
 
     .inputfield {
-      // @include p.setBgColor(transparent, $textPrimary);
+      // @include setBgColor(transparent, $textPrimary);
       @include font($primaryFont, 14, normal, normal, 20);
       width: calc(100% - 1.125rem);
-      padding: p.size(3) p.size(14);
+      padding: size(3) size(14);
 
       &::placeholder {
         color: $textPlaceholder;
       }
 
       &.loginpass {
-        padding-right: p.size(24);
+        padding-right: size(24);
       }
     }
 
     .btn-toggle {
-      @include p.transparent-button;
-      @include p.absolute(top 50% right 1rem);
-      @include p.translateY(-50%);
+      @include transparent-button;
+      @include absolute(top 50% right 1rem);
+      @include translateY(-50%);
       padding: 0;
 
       .toggleicon {
-        @include p.square(20);
-        @include p.flex-center;
+        @include square(20);
+        @include flex-center;
         overflow: hidden;
 
         svg {
-          @include p.wh100;
+          @include wh100;
 
           path {
-            @include p.transitionsall;
+            @include transitionsall;
           }
         }
 
@@ -80,7 +80,7 @@
         }
       }
 
-      @include p.hover {
+      @include hover {
         .toggleicon {
           svg {
             path {
@@ -98,24 +98,24 @@
   }
 
   .error-message {
-    gap: p.size(8);
+    gap: size(8);
     display: none;
 
     .icon {
-      @include p.square(12);
-      @include p.flex-center;
+      @include square(12);
+      @include flex-center;
       overflow: hidden;
 
       svg {
-        @include p.wh100;
+        @include wh100;
       }
     }
 
     .errortext {
       color: $danger;
       @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: p.size(0.04);
-      margin-top: p.size(-3);
+      letter-spacing: size(0.04);
+      margin-top: size(-3);
     }
   }
 
@@ -123,38 +123,38 @@
     .infotext {
       color: $textPlaceholder;
       @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: p.size(0.04);
+      letter-spacing: size(0.04);
       text-align: left;
     }
   }
 
   .optional {
-    @include p.flex-end;
+    @include flex-end;
 
     &-text {
       color: $textPlaceholder;
       @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: p.size(0.04);
+      letter-spacing: size(0.04);
       text-align: right;
     }
   }
 
   .verify {
-    @include p.w100;
-    @include p.flex-center;
-    gap: p.size(24);
+    @include w100;
+    @include flex-center;
+    gap: size(24);
     overflow: hidden;
 
     &-field {
-      // @include p.setBgColor($white, $textPrimary);
+      // @include setBgColor($white, $textPrimary);
       @include font($primaryFont, 18, semibold, normal, 24);
-      @include p.square(58);
-      @include p.flex-center;
-      // @include p.border(solid, 1, $inputBorder);
-      @include p.radius(10);
+      @include square(58);
+      @include flex-center;
+      // @include border(solid, 1, $inputBorder);
+      @include radius(10);
       text-align: center;
       overflow: hidden;
-      @include p.transitionsall;
+      @include transitionsall;
 
       &::placeholder {
         color: $textPlaceholder;
@@ -186,7 +186,7 @@
     }
 
     .error-message {
-      @include p.flex-center-vert;
+      @include flex-center-vert;
       align-items: flex-start;
     }
   }

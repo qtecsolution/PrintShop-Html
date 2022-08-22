@@ -111,6 +111,11 @@
 	height: 100%;
 }
 
+@mixin vwh100 {
+	width: 100vw;
+	height: 100vh;
+}
+
 @mixin ratio($width, $r1, $r2) {
 	width: size($width);
 	aspect-ratio: $r1 / $r2;
