@@ -1,2 +1,50 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.header {
+  &-nav {
+    @include flex-center-between;
+
+    @include breakpoint(tab992) {
+      justify-content: flex-start;
+    }
+
+    .hamburger {
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .btn-hamburger {
+        @include transparent-button;
+        width: size(28);
+        height: size(18);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+
+    }
+
+    .logo {
+      width: size(96);
+      height: size(64);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(tab992) {
+        width: size(126);
+        height: size(87);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+  }
+}

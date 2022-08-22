@@ -11,7 +11,7 @@
   @include flex-center;
 
   .loader {
-    @include square(240);
+    @include square(160);
     @include flex-center;
     overflow: hidden;
   }

@@ -24,11 +24,9 @@ html {
 
 body {
   background: $white;
-  background: rgba($black, 0.2);
   @include font($primaryFont, 16, normal, normal, 24);
   margin: 0;
   text-rendering: optimizeSpeed;
-  min-height: 400vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
