@@ -287,15 +287,20 @@ button:focus,
   outline: none;
 }
 
+.header {
+  border-bottom: solid 0.0625rem hsl(0deg, 0%, 85%);
+}
 .header-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 0.3125rem;
 }
 @media screen and (min-width: 62rem) {
   .header-nav {
     justify-content: flex-start;
+    gap: 7.5rem;
   }
 }
 @media screen and (min-width: 62rem) {
@@ -335,6 +340,82 @@ button:focus,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.header-nav .desktopmenu {
+  padding-right: 0.75rem;
+  width: auto;
+}
+@media screen and (min-width: 62rem) {
+  .header-nav .desktopmenu {
+    width: calc(100% - 15.375rem);
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header-nav .desktopmenu .deskmenu {
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .header-nav .desktopmenu .deskmenu {
+    display: block;
+  }
+}
+.header-nav .desktopmenu .deskmenu .desktoplist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.header-nav .desktopmenu .deskmenu .desktoplist-link {
+  color: hsl(0deg, 0%, 27%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  transition: color 250ms ease-in-out;
+}
+.header-nav .desktopmenu .deskmenu .desktoplist-link:not([disabled]):hover {
+  color: hsl(0deg, 0%, 0%);
+}
+.header-nav .desktopmenu .cartmenu .cartlink {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-nav .desktopmenu .cartmenu .cartlink::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: hsl(11deg, 66%, 83%);
+  color: hsl(120deg, 7%, 29%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+}
+.header-nav .desktopmenu .cartmenu .cartlink svg path {
+  transition: all 250ms ease-in-out;
+}
+.header-nav .desktopmenu .cartmenu .cartlink:not([disabled]):hover svg path {
+  fill: hsl(11deg, 66%, 83%);
 }
 
 .inputbox {
