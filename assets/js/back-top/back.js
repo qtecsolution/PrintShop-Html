@@ -4,7 +4,7 @@ up({
     right: '1.5rem',
     width: '2.75rem',
     height: '2.75rem',
-    bg: 'hsl(1, 71%, 54%)',
+    bg: 'hsl(166, 14%, 64%)',
     src: 'assets/cursor/chevron-up-solid.svg',
     // distance from the top to show the back to top button
     whenShow: 400,
