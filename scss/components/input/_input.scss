@@ -1,0 +1,194 @@
+@use '../../global' as *;
+@use '../../partials' as p;
+
+
+.inputbox {
+  @include p.flex-column;
+  gap: p.size(10);
+  
+  .inputinfo {
+    background: $white;
+    @include p.flex-center-vert;
+    // @include p.border(solid, 1, $inputBorder);
+    padding: p.size(8) p.size(16);
+    position: relative;
+    @include p.radius(10);
+    @include p.transitionsall;
+
+    .icon {
+      @include p.square(18);
+      @include p.flex-center;
+      overflow: hidden;
+
+      svg {
+        @include p.wh100;
+      }
+    }
+
+    .inputfield {
+      // @include p.setBgColor(transparent, $textPrimary);
+      @include font($primaryFont, 14, normal, normal, 20);
+      width: calc(100% - 1.125rem);
+      padding: p.size(3) p.size(14);
+
+      &::placeholder {
+        color: $textPlaceholder;
+      }
+
+      &.loginpass {
+        padding-right: p.size(24);
+      }
+    }
+
+    .btn-toggle {
+      @include p.transparent-button;
+      @include p.absolute(top 50% right 1rem);
+      @include p.translateY(-50%);
+      padding: 0;
+
+      .toggleicon {
+        @include p.square(20);
+        @include p.flex-center;
+        overflow: hidden;
+
+        svg {
+          @include p.wh100;
+
+          path {
+            @include p.transitionsall;
+          }
+        }
+
+        &.showicon {
+          display: block;
+        }
+
+        &.hideicon {
+          display: none;
+        }
+      }
+
+      &.active {
+        .toggleicon {
+          &.hideicon {
+            display: block;
+          }
+
+          &.showicon {
+            display: none;
+          }
+        }
+      }
+
+      @include p.hover {
+        .toggleicon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &:focus-within {
+      border-color: $primary;
+      // border-color: darken($checkborder, 50%);
+    }
+  }
+
+  .error-message {
+    gap: p.size(8);
+    display: none;
+
+    .icon {
+      @include p.square(12);
+      @include p.flex-center;
+      overflow: hidden;
+
+      svg {
+        @include p.wh100;
+      }
+    }
+
+    .errortext {
+      color: $danger;
+      @include font($primaryFont, 12, medium, normal, 18);
+      letter-spacing: p.size(0.04);
+      margin-top: p.size(-3);
+    }
+  }
+
+  .passinfo {
+    .infotext {
+      color: $textPlaceholder;
+      @include font($primaryFont, 12, medium, normal, 18);
+      letter-spacing: p.size(0.04);
+      text-align: left;
+    }
+  }
+
+  .optional {
+    @include p.flex-end;
+
+    &-text {
+      color: $textPlaceholder;
+      @include font($primaryFont, 12, medium, normal, 18);
+      letter-spacing: p.size(0.04);
+      text-align: right;
+    }
+  }
+
+  .verify {
+    @include p.w100;
+    @include p.flex-center;
+    gap: p.size(24);
+    overflow: hidden;
+
+    &-field {
+      // @include p.setBgColor($white, $textPrimary);
+      @include font($primaryFont, 18, semibold, normal, 24);
+      @include p.square(58);
+      @include p.flex-center;
+      // @include p.border(solid, 1, $inputBorder);
+      @include p.radius(10);
+      text-align: center;
+      overflow: hidden;
+      @include p.transitionsall;
+
+      &::placeholder {
+        color: $textPlaceholder;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+
+      &:visited,
+      &:active,
+      &:target {
+        // border-color: $checkborder;
+      }
+
+      &.active {
+        // border-color: $checkborder;
+      }
+    }
+  }
+
+  // &.verifybox {
+
+  // }
+
+  &.error {
+    .inputinfo {
+      border-color: $danger;
+    }
+
+    .error-message {
+      @include p.flex-center-vert;
+      align-items: flex-start;
+    }
+  }
+}
+

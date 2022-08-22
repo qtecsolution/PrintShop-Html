@@ -1,0 +1,19 @@
+@use '../global' as *;
+@use '../partials' as p;
+
+.cse-container {
+  margin-inline: auto;
+  @include p.w100;
+
+  @include p.breakpoint(mobile576) {
+    max-width: p.size(540);
+  }
+
+  @include p.breakpoint(mobile768) {
+    max-width: p.size(720);
+  }
+
+  @include p.breakpoint(tab992) {
+    max-width: p.size(960);
+  }
+}

@@ -1,0 +1,58 @@
+@use '../global' as *;
+@use '../partials' as p;
+
+
+// .customcheck {
+//   &-box {
+//     &:checked ~ .customcheck-label {
+//       &::before {
+//         background: $primary;
+//         border-color: $primary;
+//       }
+
+//       &::after {
+//         opacity: 1;
+//         visibility: visible;
+//       }
+//     }
+//   }
+
+//   &-label {
+//     position: relative;
+//     color: $textPrimary;
+//     font: inherit;
+//     padding-left: p.size(26);
+//     cursor: pointer;
+
+//     &::before,
+//     &::after {
+//       content: '';
+//       @include p.absolute(top 50% left 0);
+//     }
+
+//     &::before {
+//       @include p.square(18);
+//       @include p.radius(4);
+//       @include p.border(solid, 1, $checkborder);
+//       @include p.translateY(-50%);
+//       @include p.transitionsall;
+//     }
+
+//     &::after {
+//       width: p.size(5);
+//       height: p.size(10);
+//       @include p.border(solid, 1.5, $white);
+//       border-top: 0;
+//       border-left: 0;
+//       left: p.size(7);
+//       @include p.transform(translateY(-70%) rotate(45deg));
+//       opacity: 0;
+//       visibility: hidden;
+//       @include p.transitionsall;
+//     }
+
+//     &::selection {
+//       @include p.setBgColor(transparent, $textPrimary);
+//     }
+//   }
+// }

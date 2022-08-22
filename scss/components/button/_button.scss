@@ -1,0 +1,19 @@
+@use '../../global' as *;
+@use '../../partials' as p;
+
+button, 
+[type='button'], 
+[type='reset'], 
+[type='submit'] {
+  cursor: pointer;
+  border: none;
+  @include p.transparent-button;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}

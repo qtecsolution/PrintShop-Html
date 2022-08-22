@@ -1,0 +1,40 @@
+@use '../../global' as *;
+@use '../../partials' as p;
+
+.modal {
+  &-content {
+    @include p.radius(25);
+  }
+  
+  &-header {
+    border-bottom: 0;
+
+    .btn-close {
+      @include p.square(24);
+      @include p.flex-center;
+      overflow: hidden;
+      opacity: 1;
+
+      svg {
+        @include p.wh100;
+
+        path {
+          fill: rgba($danger, 0.4);
+          @include p.transitionsall;
+        }
+      }
+
+      @include p.hover {
+        svg {
+          path {
+            fill: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    
+  }
+}

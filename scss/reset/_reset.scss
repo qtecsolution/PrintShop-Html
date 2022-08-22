@@ -1,0 +1,103 @@
+@use '../global' as *;
+@use '../partials' as p;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &:focus-within {
+    scroll-behavior: inherit;
+  }
+}
+
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+
+body {
+  background: $white;
+  background: rgba($black, 0.2);
+  @include font($primaryFont, 16, normal, normal, 24);
+  margin: 0;
+  text-rendering: optimizeSpeed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // color: $textPrimary;
+  font-family: $secondaryFont;
+  margin: 0;
+}
+
+input, select, textarea {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+// HIDE INPUT ARROWS
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+	color: transparent;
+}
+
+input[type="date"]::before {
+	content: attr(data-placeholder);
+	@include p.w100;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	display: none
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+figure, picture, p, ul, ol {
+  margin: 0;
+}

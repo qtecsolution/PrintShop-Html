@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap");
+/**=====================================================**
+                ANIMATION-STYLES
+=======================================================**/
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes slideDownInMobile {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+  0% {
+    transform: translateY(-1.25rem);
+  }
+}
+@keyframes slideDownInMobile {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+  0% {
+    transform: translateY(-1.25rem);
+  }
+}
+@-webkit-keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
+@-webkit-keyframes slideUpInMobile {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(1.5625rem);
+  }
+  0% {
+    transform: translateY(2.5rem);
+  }
+}
+@keyframes slideUpInMobile {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(1.5625rem);
+  }
+  0% {
+    transform: translateY(2.5rem);
+  }
+}
+@-webkit-keyframes slideLeftIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-6.25rem);
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-6.25rem);
+  }
+}
+@-webkit-keyframes slideRightIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(6.25rem);
+  }
+}
+@keyframes slideRightIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(6.25rem);
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/**=====================================================**
+                BREAKPOINT-VARIABLES
+=======================================================**/
+/**=====================================================**
+                BREAKPOINT-FUNCTIONS
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-MIXIN
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-USAGE
+=======================================================**/
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html:focus-within {
+  scroll-behavior: inherit;
+}
+
+* {
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: hsl(0deg, 0%, 100%);
+  background: rgba(0, 0, 0, 0.2);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0;
+  text-rendering: optimizeSpeed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
+
+input, select, textarea {
+  border: none;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=search]::-webkit-search-decoration:focus,
+input[type=search]::-webkit-search-cancel-button:focus,
+input[type=search]::-webkit-search-results-button:focus,
+input[type=search]::-webkit-search-results-decoration:focus {
+  outline: none;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+
+input[type=date]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+input[type=date]:focus::before,
+input[type=date]:valid::before {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+figure, picture, p, ul, ol {
+  margin: 0;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border: none;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+}
+button:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.inputbox .inputinfo {
+  background: hsl(0deg, 0%, 100%);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: relative;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  transition: all 250ms ease-in-out;
+}
+.inputbox .inputinfo .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.inputbox .inputinfo .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.inputbox .inputinfo .inputfield {
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+  width: calc(100% - 1.125rem);
+  padding: 0.1875rem 0.875rem;
+}
+.inputbox .inputinfo .inputfield::-moz-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .inputinfo .inputfield::placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .inputinfo .inputfield.loginpass {
+  padding-right: 1.5rem;
+}
+.inputbox .inputinfo .btn-toggle {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  padding: 0;
+}
+.inputbox .inputinfo .btn-toggle .toggleicon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.inputbox .inputinfo .btn-toggle .toggleicon svg {
+  width: 100%;
+  height: 100%;
+}
+.inputbox .inputinfo .btn-toggle .toggleicon svg path {
+  transition: all 250ms ease-in-out;
+}
+.inputbox .inputinfo .btn-toggle .toggleicon.showicon {
+  display: block;
+}
+.inputbox .inputinfo .btn-toggle .toggleicon.hideicon {
+  display: none;
+}
+.inputbox .inputinfo .btn-toggle.active .toggleicon.hideicon {
+  display: block;
+}
+.inputbox .inputinfo .btn-toggle.active .toggleicon.showicon {
+  display: none;
+}
+.inputbox .inputinfo .btn-toggle:not([disabled]):hover .toggleicon svg path {
+  fill: hsl(11deg, 66%, 83%);
+}
+.inputbox .inputinfo:focus-within {
+  border-color: hsl(11deg, 66%, 83%);
+}
+.inputbox .error-message {
+  gap: 0.5rem;
+  display: none;
+}
+.inputbox .error-message .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.inputbox .error-message .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.inputbox .error-message .errortext {
+  color: hsl(0deg, 49%, 52%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.0025rem;
+  margin-top: -0.1875rem;
+}
+.inputbox .passinfo .infotext {
+  color: hsl(0deg, 0%, 49%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.0025rem;
+  text-align: left;
+}
+.inputbox .optional {
+  display: flex;
+  justify-content: flex-end;
+}
+.inputbox .optional-text {
+  color: hsl(0deg, 0%, 49%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.0025rem;
+  text-align: right;
+}
+.inputbox .verify {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.inputbox .verify-field {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.3333333333;
+  width: 3.625rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  text-align: center;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+.inputbox .verify-field::-moz-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .verify-field:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .verify-field::placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.inputbox .verify-field:focus {
+  border-color: hsl(11deg, 66%, 83%);
+}
+.inputbox.error .inputinfo {
+  border-color: hsl(0deg, 49%, 52%);
+}
+.inputbox.error .error-message {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+}
+
+.commentinput {
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+  letter-spacing: 0.0025rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  transition: all 250ms ease-in-out;
+}
+.commentinput::-moz-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.commentinput:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.commentinput::placeholder {
+  color: hsl(0deg, 0%, 49%);
+}
+.commentinput:focus {
+  border-color: hsl(11deg, 66%, 83%);
+}
+
+.offcanvas.offcanvas-start {
+  border-right: 0;
+  width: 17.5rem;
+}
+.offcanvas-header .logo {
+  width: 6.875rem;
+}
+.offcanvas-header .btn-close {
+  border-radius: 0rem;
+  border-radius: 0rem;
+  transition: all 250ms ease-in-out;
+  padding: 0;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-header .btn-close:not([disabled]):hover {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+.offcanvas-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem;
+}
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background: #db674d;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.modal-content {
+  border-radius: 1.5625rem;
+  border-radius: 1.5625rem;
+}
+.modal-header {
+  border-bottom: 0;
+}
+.modal-header .btn-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+}
+.modal-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+.modal-header .btn-close svg path {
+  fill: rgba(193, 73, 73, 0.4);
+  transition: all 250ms ease-in-out;
+}
+.modal-header .btn-close:not([disabled]):hover svg path {
+  fill: hsl(0deg, 49%, 52%);
+}
+.cse-container {
+  margin-inline: auto;
+  width: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .cse-container {
+    max-width: 33.75rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .cse-container {
+    max-width: 45rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cse-container {
+    max-width: 60rem;
+  }
+}

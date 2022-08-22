@@ -1,0 +1,55 @@
+@use '../../global' as *;
+@use '../../partials' as p;
+
+.offcanvas {
+
+  &.offcanvas-start {
+    border-right: 0;
+    width: p.size(280);
+  }
+
+  &-header {
+    .logo {
+      width: p.size(110);
+    }
+
+    .btn-close {
+      @include p.radius(0);
+      @include p.transitionsall;
+      padding: 0;
+      margin: 0;
+      @include p.square(16);
+      @include p.flex-center;
+      overflow: hidden;
+
+      svg {
+        @include p.wh100;
+      }
+
+      @include p.hover {
+        opacity: 1;
+        @include p.rotate(180);
+
+        svg {
+          path {
+            // stroke: rgba($white, .8);
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+
+		&::-webkit-scrollbar {
+			background: transparent;
+			width: p.size(8);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: darken($primary, 25%);
+      @include p.radius(8);
+		}
+
+  }
+}

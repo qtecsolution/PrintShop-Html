@@ -1,0 +1,108 @@
+@use '../global' as *;
+@use '../partials' as p;
+
+// .customselect {
+// 	@include p.w100;
+
+// 	.selector {
+// 		position: relative;
+// 		cursor: pointer;
+// 		z-index: 1;
+
+// 		.selected {
+// 			background: $white;
+// 			@include p.border(solid, 1, $checkborder);
+// 			@include p.radius(8);
+// 			@include p.flex-center-between;
+// 			// gap: p.size(8);
+// 			padding: p.size(8) p.size(12);
+// 			min-width: p.size(104);
+	
+// 			.label {
+// 				width: calc(100% - p.size(16));
+// 				color: $textPrimary;
+// 				@include font($primaryFont, 14, medium, normal, 20);
+// 				letter-spacing: p.size(0.04);
+
+// 				&::selection {
+// 					color: inherit;
+// 					background: transparent;
+// 				}
+	
+// 				span {
+// 					color: inherit;
+// 					font: inherit;
+
+// 					&::selection {
+// 						color: inherit;
+// 						background: transparent;
+// 					}
+// 				}
+// 			}
+	
+// 			.arrow {
+// 				transform: rotateZ(0deg);
+// 				transition-duration: 0.3s;
+// 				transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
+// 				width: p.size(16);
+// 				@include p.flex-center;
+	
+// 				.icon {
+// 					width: p.size(11);
+// 					height: p.size(6);
+// 					@include p.flex-center;
+// 					overflow: hidden;
+// 					margin-top: p.size(-3);
+	
+// 					svg {
+// 						@include p.wh100;
+// 					}
+// 				}
+	
+// 				&.expanded {
+// 					transform: rotateZ(180deg);
+
+// 					.icon {
+// 						margin-top: p.size(3);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	ul {
+// 		width: 100%;
+// 		list-style-type: none;
+// 		padding: 0;
+// 		margin: 0;
+// 		position: absolute;
+// 		z-index: 1;
+// 		@include p.setBgColor($white, $textPrimary);
+// 		@include p.border(solid, 1, $checkborder);
+// 		@include p.radius(8);
+// 		letter-spacing: p.size(0.04);
+
+// 		li {
+// 			color: inherit;
+// 			@include font($primaryFont, 14, normal, normal, 20);
+// 			cursor: pointer;
+// 			padding: p.size(8) p.size(12);
+			
+// 			@include p.hover {
+// 				@include p.setBgColor($primary, $white);
+// 			}
+// 		}
+// 	}
+
+// 	.current {
+// 		background: darken($bodybg, 3%);
+// 	}
+
+// 	.hidden {
+// 		visibility: hidden;
+// 	}
+
+// 	.visible {
+// 		visibility: visible;
+// 	}
+// }
