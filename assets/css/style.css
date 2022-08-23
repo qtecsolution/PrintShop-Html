@@ -485,7 +485,12 @@ button:focus,
 .footer .footerdetails {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 62rem) {
+  .footer .footerdetails {
+    gap: 1.5rem;
+  }
 }
 .footer .footerdetails-header .footer-title {
   color: hsl(0deg, 0%, 0%);

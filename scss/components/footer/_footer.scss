@@ -37,13 +37,16 @@
 
   .footerdetails {
     @include flex-column;
-    gap: size(20);
+    gap: size(16);
+
+    @include breakpoint(tab992) {
+      gap: size(24);
+    }
 
     &-header {
       .footer-title {
         color: $black;
         @include font($secondaryFont, 20, semibold, normal, 20);
-        
       }
     }
 
