@@ -2,11 +2,11 @@
 @use '../../partials' as *;
 
 .header {
-  @include border-single(bottom, solid, 1, $grayBg);
+  background: $white;
+  box-shadow: $boxshadow-1;
 
   &-nav {
     @include flex-center-between;
-    padding-bottom: size(5);
 
     @include breakpoint(tab992) {
       justify-content: flex-start;

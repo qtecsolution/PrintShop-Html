@@ -24,6 +24,7 @@ $grayBg: hsl(0, 0%, 85%); //#D9D9D9
 
 // BORDER COLORS
 $cardborder: hsl(0, 0%, 72%); //#B7B7B7
+$checkborder: hsla(217, 98%, 61%, 0.2); //rgba(57, 131, 253, 0.2)
 
 
 // NORMAL COLORS
@@ -34,3 +35,9 @@ $black: hsl(0, 0%, 0%); //#000000
 $boxshadow-1: inset 0 .3125rem .3125rem rgba($black, 0.1);
 $boxshadow-2: 0 .25rem .25rem rgba($black, 0.1);
 $dropshadow: drop-shadow(0 .3125rem .3125rem rgba($black, 0.1));
+
+// BOX-SHADOW COLORS
+$shadow-1: hsla(217, 98%, 61%, 0.102); //rgba(57, 131, 253, 0.1)
+
+// BOX SHADOWS
+$boxshadow-1: 0 .25rem 1.25rem $shadow-1;

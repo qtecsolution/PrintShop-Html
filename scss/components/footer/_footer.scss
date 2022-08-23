@@ -15,6 +15,12 @@
     @include breakpoint(tab992) {
       gap: size(80);
     }
+
+    .footerdetails {
+      &:nth-child(even) {
+        background: rebeccapurple;
+      }
+    }
   }
 
   .footlogo {
@@ -66,7 +72,7 @@
             left: 0;
             bottom: size(-2);
             @include w100;
-            height: size(1);
+            height: size(2);
             background: $black;
             @include scaleX(0);
             @include transitiontransform;
@@ -84,6 +90,11 @@
         .social {
           @include list-horizontal;
           gap: size(16);
+          justify-content: flex-end;
+          
+          @include breakpoint(tab992) {
+            justify-content: flex-start;
+          }
 
           &-link {
             @include square(20);
