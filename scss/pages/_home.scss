@@ -25,6 +25,10 @@
     padding-right: size(0);
   }
 
+  @include breakpoint(desktop1200) {
+    min-height: size(530);
+  }
+
   .content {
     @include flex-center-column;
     gap: size(16);
@@ -57,16 +61,18 @@
       }
     }
 
-    .bannertext {
-      color: $white;
-      @include font($primaryFont, 16, normal, normal, 24);
-
-      @include breakpoint(mobile768) {
-        @include font($primaryFont, 18, normal, normal, 26);
-      }
-
-      @include breakpoint(desktop1200) {
-        @include font($primaryFont, 20, normal, normal, 28);
+    .bannerinfo {
+      .bannertext {
+        color: $white;
+        @include font($primaryFont, 16, normal, normal, 24);
+  
+        @include breakpoint(mobile768) {
+          @include font($primaryFont, 18, normal, normal, 26);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include font($primaryFont, 20, normal, normal, 28);
+        }
       }
     }
 
@@ -79,6 +85,40 @@
         gap: size(40);
       }
     }
+  }
+}
+
+.homeproducts {
+  padding: size(40) size(0) size(64);
+
+  @include breakpoint(tab992) {
+    padding: size(76) size(0) size(120);
+  }
+
+  &-content {
+    .emptybox {
+      background: $sectionBg;
+      height: size(255);
+    }
+
+    .products {
+      position: relative;
+      margin-top: size(-200);
+      z-index: 10;
+    }
+  }
+}
+
+.homesection {
+  background: $sectionBg;
+  padding: size(48) size(0) size(32);
+}
+
+.homefeatures {
+  padding: size(48) size(0) size(32);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(48);
   }
 }
 

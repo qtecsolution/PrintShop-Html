@@ -1,2 +1,173 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.product {
+  @include flex-column;
+
+  &-header {
+    @include w100;
+    height: size(200);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.05);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(14);
+    @include border(solid, 1, $secondary);
+    padding: size(24);
+
+    .product-title {
+      color: $black;
+      @include font($secondaryFont, 24, normal, normal, 24);
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+    }
+
+    .productinfo {
+      @include flex-column;
+      gap: size(12);
+
+      .product-text {
+        color: $black;
+        @include font($primaryFont, 14, normal, normal, 20);
+
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+
+    .cardlink {
+      @include flex-center;
+      margin-top: size(14);
+    }
+  }
+}
+
+.cardhome {
+  &-header {
+    @include w100;
+    height: size(200);
+    @include flex-center;
+    overflow: hidden;
+
+    @include breakpoint(mobile768) {
+      height: size(280);
+    }
+
+    @include breakpoint(tab992) {
+      height: size(320);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.05);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
+    padding: size(16) size(16) size(32);
+
+    @include breakpoint(mobile768) {
+      gap: size(24);
+    }
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .cardhome-title {
+      color: $black;
+      @include font($secondaryFont, 24, normal, normal, 24);
+      @include transitionscolor;
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+
+      @include breakpoint(desktop1400) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+
+      @include hover {
+        color: $green;
+      }
+    }
+    
+    .cardinfo {
+      .cardhome-text {
+        color: $black;
+        @include font($primaryFont, 14, normal, normal, 20);
+
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+
+    .cardlink {
+      @include flex-center;
+      margin-top: size(8);
+    }
+  }
+}
+
+.card-feature {
+  @include flex-center-column;
+  gap: size(14);
+  text-align: center;
+
+  @include breakpoint(tab992) {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+
+  .icon {
+    @include square(60);
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .feature-title {
+    color: $black;
+    @include font($secondaryFont, 20, normal, normal, 20);
+
+    @include breakpoint(tab992) {
+      @include font($secondaryFont, 24, normal, normal, 24);
+    }
+  }
+  
+  .feature-text {
+    color: $black;
+    @include font($primaryFont, 14, normal, normal, 20);
+
+    @include breakpoint(tab992) {
+      @include font($primaryFont, 16, normal, normal, 24);
+    }
+  }
+}

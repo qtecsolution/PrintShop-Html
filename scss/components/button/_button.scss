@@ -41,6 +41,7 @@ button,
   padding: size(12) size(16);
   @include radius(6);
   text-align: center;
+  @include transitionsall;
 
   @include breakpoint(mobile768) {
     padding: size(16) size(40);
@@ -67,4 +68,50 @@ button,
     }
   }
 
+}
+
+.btn-product {
+  @include setBgColor($white, $buttonText);
+  @include border(solid, 1, $secondary);
+  @include radius(6);
+  @include font($secondaryFont, 14, normal, normal, 20);
+  padding: size(12) size(24);
+  @include transitionsall;
+
+  @include breakpoint(mobile768) {
+    padding: size(12) size(32);
+    @include font($secondaryFont, 16, normal, normal, 24);
+  }
+
+  @include breakpoint(tab992) {
+    @include font($secondaryFont, 18, normal, normal, 25);
+  }
+
+  @include hover {
+    @include setBgColor($buttonText, $white);
+    border-color: $buttonText;
+  }
+}
+
+.btn-more {
+  @include setBgColor($white, $btnText);
+  @include border(solid, 1, $secondary);
+  @include radius(6);
+  @include font($secondaryFont, 14, normal, normal, 20);
+  padding: size(12) size(32);
+  @include transitionsall;
+
+  @include breakpoint(mobile768) {
+    padding: size(12) size(40);
+    @include font($secondaryFont, 16, normal, normal, 24);
+  }
+
+  @include breakpoint(tab992) {
+    @include font($secondaryFont, 18, normal, normal, 25);
+  }
+
+  @include hover {
+    @include setBgColor($btnText, $secondary);
+    border-color: $btnText;
+  }
 }
