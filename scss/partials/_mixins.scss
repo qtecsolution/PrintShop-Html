@@ -164,8 +164,20 @@
   @include transform(rotateX(#{$deg}deg));
 }
 
+@mixin rotateY($deg) {
+  @include transform(rotateY(#{$deg}deg));
+}
+
 @mixin scale($scale) {
   @include transform(scale($scale));
+}
+
+@mixin scaleX($scale) {
+  @include transform(scaleX($scale));
+}
+
+@mixin scaleY($scale) {
+  @include transform(scaleY($scale));
 }
 
 @mixin translate($x, $y) {

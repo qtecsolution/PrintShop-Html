@@ -2,7 +2,112 @@
 @use '../../partials' as *;
 
 .footer {
+  &-content {
+    padding-top: size(32);
+
+    @include breakpoint(tab992) {
+      padding-top: size(48);
+    }
+
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+  }
+
+  .footlogo {
+    width: size(120);
+    height: size(80);
+    @include flex-center;
+    margin-inline: auto;
+    overflow: hidden;
+
+    @include breakpoint(tab992) {
+      width: size(185);
+      height: size(145);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .footerdetails {
+    @include flex-column;
+    gap: size(20);
+
+    &-header {
+      .footer-title {
+        color: $black;
+        @include font($secondaryFont, 20, semibold, normal, 20);
+        
+      }
+    }
+
+    &-body {
+      .footerlist {
+        @include list-vertical;
+        gap: size(8);
+
+        &-link {
+          color: $linkText;
+          position: relative;
+          @include transitiontransform;
   
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: size(-2);
+            @include w100;
+            height: size(1);
+            background: $black;
+            @include scaleX(0);
+            @include transitiontransform;
+          }
+
+          @include hover {
+            color: $black;
+
+            &::before {
+              @include scaleX(1);
+            }
+          }
+        }
+
+        .social {
+          @include list-horizontal;
+          gap: size(16);
+
+          &-link {
+            @include square(20);
+            @include flex-center;
+
+            svg {
+              @include wh100;
+
+              path {
+                @include transitionsall;
+              }
+            }
+
+            @include hover {
+              svg {
+                @include wh100;
+  
+                path {
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   .copyright {
     background: $secondary;

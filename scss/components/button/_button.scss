@@ -23,9 +23,13 @@ button,
   @include setBgColor($green, $white);
   padding: size(8.5) size(40);
   @include radius(6);
-  @include font($secondaryFont, 18, normal, normal, 25);
+  @include font($secondaryFont, 16, normal, normal, 24);
   text-align: center;
   max-height: size(42);
+
+  @include breakpoint(tab992) {
+    @include font($secondaryFont, 18, normal, normal, 25);
+  }
 
   @include hover {
     @include setBgColor(darken($green, 20%), $white);

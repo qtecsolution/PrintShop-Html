@@ -1,41 +1,47 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use '../../global'as *;
+@use '../../partials'as *;
 
 .tooltip {
+	opacity: 1;
+
 	&-inner {
-		background: $primary;
-		// @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(20, 12));
+		background: $green;
+		@include font($primaryFont, 14, medium, normal, 20);
 	}
+}
 
-	&.bs-tooltip-top {
-		.tooltip-arrow {
-			&::before {
-				border-top-color: $primary;
-			}
+.bs-tooltip-top,
+.bs-tooltip-auto[data-popper-placement^=top] {
+	.tooltip-arrow {
+		&::before {
+			border-top-color: $green;
 		}
 	}
+}
 
-	&.bs-tooltip-bottom {
-		.tooltip-arrow {
-			&::before {
-				border-bottom-color: $primary;
-			}
+.bs-tooltip-bottom,
+.bs-tooltip-auto[data-popper-placement^=bottom] {
+	.tooltip-arrow {
+		&::before {
+			border-bottom-color: $green;
 		}
 	}
+}
 
-	&.bs-tooltip-start {
-		.tooltip-arrow {
-			&::before {
-				border-left-color: $primary;
-			}
+.bs-tooltip-start,
+.bs-tooltip-auto[data-popper-placement^=left] {
+	.tooltip-arrow {
+		&::before {
+			border-left-color: $green;
 		}
 	}
+}
 
-	&.bs-tooltip-end {
-		.tooltip-arrow {
-			&::before {
-				border-right-color: $primary;
-			}
+.bs-tooltip-end,
+.bs-tooltip-auto[data-popper-placement^=right] {
+	.tooltip-arrow {
+		&::before {
+			border-right-color: $green;
 		}
 	}
 }
