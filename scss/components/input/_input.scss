@@ -1,194 +1,190 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+// @use '../../global' as *;
+// @use '../../partials' as *;
 
 
-.inputbox {
-  @include flex-column;
-  gap: size(10);
+// .inputbox {
+//   @include flex-column;
+//   gap: size(10);
   
-  .inputinfo {
-    background: $white;
-    @include flex-center-vert;
-    // @include border(solid, 1, $inputBorder);
-    padding: size(8) size(16);
-    position: relative;
-    @include radius(10);
-    @include transitionsall;
+//   .inputinfo {
+//     background: $white;
+//     @include flex-center-vert;
+//     // @include border(solid, 1, $inputBorder);
+//     padding: size(8) size(16);
+//     position: relative;
+//     @include radius(10);
+//     @include transitionsall;
 
-    .icon {
-      @include square(18);
-      @include flex-center;
-      overflow: hidden;
+//     .icon {
+//       @include square(18);
+//       @include flex-center;
+//       overflow: hidden;
 
-      svg {
-        @include wh100;
-      }
-    }
+//       svg {
+//         @include wh100;
+//       }
+//     }
 
-    .inputfield {
-      // @include setBgColor(transparent, $textPrimary);
-      @include font($primaryFont, 14, normal, normal, 20);
-      width: calc(100% - 1.125rem);
-      padding: size(3) size(14);
+//     .inputfield {
+//       // @include setBgColor(transparent, $textPrimary);
+//       @include font($primaryFont, 14, normal, normal, 20);
+//       width: calc(100% - 1.125rem);
+//       padding: size(3) size(14);
 
-      &::placeholder {
-        color: $textPlaceholder;
-      }
+//       &::placeholder {
+//         color: $textPlaceholder;
+//       }
 
-      &.loginpass {
-        padding-right: size(24);
-      }
-    }
+//       &.loginpass {
+//         padding-right: size(24);
+//       }
+//     }
 
-    .btn-toggle {
-      @include transparent-button;
-      @include absolute(top 50% right 1rem);
-      @include translateY(-50%);
-      padding: 0;
+//     .btn-toggle {
+//       @include transparent-button;
+//       @include absolute(top 50% right 1rem);
+//       @include translateY(-50%);
+//       padding: 0;
 
-      .toggleicon {
-        @include square(20);
-        @include flex-center;
-        overflow: hidden;
+//       .toggleicon {
+//         @include square(20);
+//         @include flex-center;
+//         overflow: hidden;
 
-        svg {
-          @include wh100;
+//         svg {
+//           @include wh100;
 
-          path {
-            @include transitionsall;
-          }
-        }
+//           path {
+//             @include transitionsall;
+//           }
+//         }
 
-        &.showicon {
-          display: block;
-        }
+//         &.showicon {
+//           display: block;
+//         }
 
-        &.hideicon {
-          display: none;
-        }
-      }
+//         &.hideicon {
+//           display: none;
+//         }
+//       }
 
-      &.active {
-        .toggleicon {
-          &.hideicon {
-            display: block;
-          }
+//       &.active {
+//         .toggleicon {
+//           &.hideicon {
+//             display: block;
+//           }
 
-          &.showicon {
-            display: none;
-          }
-        }
-      }
+//           &.showicon {
+//             display: none;
+//           }
+//         }
+//       }
 
-      @include hover {
-        .toggleicon {
-          svg {
-            path {
-              fill: $primary;
-            }
-          }
-        }
-      }
-    }
+//       @include hover {
+//         .toggleicon {
+//           svg {
+//             path {
+//               fill: $primary;
+//             }
+//           }
+//         }
+//       }
+//     }
 
-    &:focus-within {
-      border-color: $primary;
-      // border-color: darken($checkborder, 50%);
-    }
-  }
+//     &:focus-within {
+//       border-color: $primary;
+//       // border-color: darken($checkborder, 50%);
+//     }
+//   }
 
-  .error-message {
-    gap: size(8);
-    display: none;
+//   .error-message {
+//     gap: size(8);
+//     display: none;
 
-    .icon {
-      @include square(12);
-      @include flex-center;
-      overflow: hidden;
+//     .icon {
+//       @include square(12);
+//       @include flex-center;
+//       overflow: hidden;
 
-      svg {
-        @include wh100;
-      }
-    }
+//       svg {
+//         @include wh100;
+//       }
+//     }
 
-    .errortext {
-      color: $danger;
-      @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: size(0.04);
-      margin-top: size(-3);
-    }
-  }
+//     .errortext {
+//       color: $danger;
+//       @include font($primaryFont, 12, medium, normal, 18);
+//       letter-spacing: size(0.04);
+//       margin-top: size(-3);
+//     }
+//   }
 
-  .passinfo {
-    .infotext {
-      color: $textPlaceholder;
-      @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: size(0.04);
-      text-align: left;
-    }
-  }
+//   .passinfo {
+//     .infotext {
+//       color: $textPlaceholder;
+//       @include font($primaryFont, 12, medium, normal, 18);
+//       letter-spacing: size(0.04);
+//       text-align: left;
+//     }
+//   }
 
-  .optional {
-    @include flex-end;
+//   .optional {
+//     @include flex-end;
 
-    &-text {
-      color: $textPlaceholder;
-      @include font($primaryFont, 12, medium, normal, 18);
-      letter-spacing: size(0.04);
-      text-align: right;
-    }
-  }
+//     &-text {
+//       color: $textPlaceholder;
+//       @include font($primaryFont, 12, medium, normal, 18);
+//       letter-spacing: size(0.04);
+//       text-align: right;
+//     }
+//   }
 
-  .verify {
-    @include w100;
-    @include flex-center;
-    gap: size(24);
-    overflow: hidden;
+//   .verify {
+//     @include w100;
+//     @include flex-center;
+//     gap: size(24);
+//     overflow: hidden;
 
-    &-field {
-      // @include setBgColor($white, $textPrimary);
-      @include font($primaryFont, 18, semibold, normal, 24);
-      @include square(58);
-      @include flex-center;
-      // @include border(solid, 1, $inputBorder);
-      @include radius(10);
-      text-align: center;
-      overflow: hidden;
-      @include transitionsall;
+//     &-field {
+//       // @include setBgColor($white, $textPrimary);
+//       @include font($primaryFont, 18, semibold, normal, 24);
+//       @include square(58);
+//       @include flex-center;
+//       // @include border(solid, 1, $inputBorder);
+//       @include radius(10);
+//       text-align: center;
+//       overflow: hidden;
+//       @include transitionsall;
 
-      &::placeholder {
-        color: $textPlaceholder;
-      }
+//       &::placeholder {
+//         color: $textPlaceholder;
+//       }
 
-      &:focus {
-        border-color: $primary;
-      }
+//       &:focus {
+//         border-color: $primary;
+//       }
 
-      &:visited,
-      &:active,
-      &:target {
-        // border-color: $checkborder;
-      }
+//       &:visited,
+//       &:active,
+//       &:target {
+//         // border-color: $checkborder;
+//       }
 
-      &.active {
-        // border-color: $checkborder;
-      }
-    }
-  }
+//       &.active {
+//         // border-color: $checkborder;
+//       }
+//     }
+//   }
 
-  // &.verifybox {
+//   &.error {
+//     .inputinfo {
+//       border-color: $danger;
+//     }
 
-  // }
-
-  &.error {
-    .inputinfo {
-      border-color: $danger;
-    }
-
-    .error-message {
-      @include flex-center-vert;
-      align-items: flex-start;
-    }
-  }
-}
+//     .error-message {
+//       @include flex-center-vert;
+//       align-items: flex-start;
+//     }
+//   }
+// }
 

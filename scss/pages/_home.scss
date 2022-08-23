@@ -1,3 +1,28 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.newsletter {
+  background: $sectionBg;
+  padding: size(40) size(0) size(60);
+
+  &-content {
+    @include flex-center-column;
+    gap: size(24);
+  }
+
+  &-header {
+    .newsletter-title {
+      color: $textDark;
+      @include font($secondaryFont, 24, normal, normal, 24);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+  }
+}

@@ -112,10 +112,63 @@
   <!--========== HEADER-END ============-->
   
 
+  <!--========== NEWSLETTER-START ==========-->
+  <section class="newsletter">
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-md-8 col-12 mx-md-auto">
+          <div class="newsletter-content">
+            <div class="newsletter-header">
+              <h3 class="newsletter-title">Sign up to our newsletter for special offers</h3>
+            </div>
+
+            <div class="newsletter-body">
+              <!-- NEWSLETTER-FORM -->
+              <form class="formnewsletter">
+                <div class="inputbox">
+                  <input type="text" id="username" class="inputfield" placeholder="Name*" autocomplete="off">
+
+                  <div class="error-message">
+                    <p class="message">This field is required.</p>
+                  </div>
+                </div>
+
+                <div class="inputbox">
+                  <input type="email" id="email" class="inputfield" placeholder="Email*" autocomplete="off">
+
+                  <div class="error-message">
+                    <p class="message">This field is required.</p>
+                  </div>
+                </div>
+
+                <div class="submitbox">
+                  <button type="submit" class="btn-submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== NEWSLETTER-END ============-->
+
   <!--========== FOOTER-START ==========-->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-content">
+      <div class="container">
+        
+      </div>
 
+      <div class="copyright">
+        <div class="container p-0">
+          <div class="copyright-info">
+            <p class="copyright-text">
+              &copy; Copyright <span id="year"></span>. All Right Reserved By Printshop
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
   <!--========== FOOTER-END ============-->
@@ -127,8 +180,11 @@
   <!-- BACK-TOP JS -->
   <script src="assets/js/back-top/back-top.js"></script>
   <script src="assets/js/back-top/back.js"></script>
+  <!-- NEWSLETTER JS (VALIDATIONS) -->
+  <script src="assets/js/validations/newsletter.js"></script>
+  <!-- COPYRIGHT (YEAR) -->
+  <script src="assets/js/copyright/copyright.js"></script>
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

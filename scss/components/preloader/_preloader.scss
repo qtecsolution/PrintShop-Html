@@ -3,12 +3,13 @@
 @use '../../partials' as *;
 
 .preloader {
-  background: $primary;
+  background: lighten($primary, 40%);
   position: fixed;
   top: 0;
   left: 0;
   @include vwh100;
   @include flex-center;
+  z-index: 999999;
 
   .loader {
     @include square(160);

@@ -1,2 +1,32 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.footer {
+  
+
+  .copyright {
+    background: $secondary;
+    padding: size(12);
+
+    &-info {
+      @include flex-center;
+      text-align: center;
+
+      .copyright-text {
+        color: $textCopyright;
+        @include font($primaryFont, 14, normal, normal, 20);
+        text-transform: capitalize;
+
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+
+        span {
+          color: inherit;
+          font: inherit;
+          // font-family: $secondaryFont;
+        }
+      }
+    }
+  }
+}

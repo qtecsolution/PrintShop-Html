@@ -1,5 +1,5 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
 html {
   box-sizing: border-box;
@@ -29,14 +29,14 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  // color: $textPrimary;
-  font-family: $secondaryFont;
+h1, h2, h3, h4, h5, h6,
+figure, picture, p, ul, ol {
   margin: 0;
 }
 
 input, select, textarea {
   border: none;
+  outline: none;
 
   &:focus {
     outline: none;
@@ -78,7 +78,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 input[type="date"]::before {
 	content: attr(data-placeholder);
-	@include p.w100;
+	@include w100;
 }
 
 input[type="date"]:focus::before,
@@ -95,8 +95,4 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
-}
-
-figure, picture, p, ul, ol {
-  margin: 0;
 }

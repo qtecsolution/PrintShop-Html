@@ -11,9 +11,23 @@ button,
   opacity: 1;
   margin: 0;
   padding: 0;
+  @include transitionsall;
 
   &:focus {
     box-shadow: none;
     outline: none;
+  }
+}
+
+.btn-submit {
+  @include setBgColor($green, $white);
+  padding: size(8.5) size(40);
+  @include radius(6);
+  @include font($secondaryFont, 18, normal, normal, 25);
+  text-align: center;
+  max-height: size(42);
+
+  @include hover {
+    @include setBgColor(darken($green, 20%), $white);
   }
 }

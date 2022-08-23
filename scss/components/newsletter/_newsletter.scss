@@ -1,0 +1,82 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+
+.formnewsletter {
+  @include flex-column;
+  gap: size(24);
+  @include w100;
+
+  @include breakpoint(tab992) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .inputbox {
+    @include flex-column;
+    gap: size(10);
+
+    @include breakpoint(tab992) {
+      min-width: size(218);
+    }
+
+    @include breakpoint(desktop1200) {
+      min-width: size(275);
+    }
+
+    @include breakpoint(desktop1400) {
+      min-width: size(338);
+    }
+  
+    .inputfield {
+      @include setBgColor($white, $menuBlack);
+      @include font($primaryFont, 14, normal, normal, 20);
+      padding: size(10) size(16);
+      @include border(solid, 1, $primary);
+      @include radius(6);
+      @include transitionsall;
+
+      &:focus {
+        border-color: $green;
+      }
+
+      &::placeholder {
+        color: $textPlaceholder;
+      }
+    }
+  
+    .error-message {
+      display: none;
+  
+      .message {
+        color: $dangercolor;
+        @include font($secondaryFont, 12, medium, normal, 18);
+        letter-spacing: size(0.04);
+      }
+    }
+  
+    &.error {
+      .inputfield {
+        border-color: $dangercolor;
+      }
+  
+      .error-message {
+        display: block;
+      }
+    }
+
+    &.success {
+      .inputfield {
+        border-color: $green;
+      }
+
+      .error-message {
+        display: none;
+      }
+    }
+  }
+
+  .submitbox {
+    @include flex-end;
+  }
+}
