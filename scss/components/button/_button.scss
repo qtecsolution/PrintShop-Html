@@ -35,3 +35,36 @@ button,
     @include setBgColor(darken($green, 20%), $white);
   }
 }
+
+.btn-shop {
+  @include font($secondaryFont, 14, normal, normal, 20);
+  padding: size(12) size(16);
+  @include radius(6);
+  text-align: center;
+
+  @include breakpoint(mobile768) {
+    padding: size(16) size(40);
+    @include font($secondaryFont, 16, normal, normal, 24);
+  }
+
+  @include breakpoint(tab992) {
+    @include font($secondaryFont, 18, normal, normal, 25);
+  }
+
+  &.business {
+    @include setBgColor($white, $btnText);
+
+    @include hover {
+      @include setBgColor($btnText, $white);
+    }
+  }
+
+  &.brochures {
+    @include setBgColor($tertiary, $black);
+
+    @include hover {
+      @include setBgColor($black, $tertiary);
+    }
+  }
+
+}

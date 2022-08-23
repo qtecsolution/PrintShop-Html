@@ -24,71 +24,59 @@
     padding-left: size(0);
     padding-right: size(0);
   }
-  
-  &-content {
-    @include flex-end;
-    @include wh100;
 
-    .bannercontent {
-      @include w100;
-      @include flex-center;
+  .content {
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
 
-      @include breakpoint(tab992) {
-        width: 50%;
-        justify-content: flex-start;
-        padding-right: size(16);
+    @include breakpoint(tab992) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .bannertitle {
+      color: $white;
+      @include font($secondaryFont, 24, semibold, normal, 24);
+
+      @include breakpoint(mobile768) {
+        @include font($secondaryFont, 36, semibold, normal, 36);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($secondaryFont, 48, semibold, normal, 48);
+      }
+
+      @include breakpoint(desktop1400) {
+        @include font($secondaryFont, 64, semibold, normal, 64);
+      }
+    
+      span {
+        color: $primary;
+        font: inherit;
       }
     }
 
-    .content {
-      @include flex-center-column;
+    .bannertext {
+      color: $white;
+      @include font($primaryFont, 16, normal, normal, 24);
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 18, normal, normal, 26);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($primaryFont, 20, normal, normal, 28);
+      }
+    }
+
+    .banner-buttons {
+      @include flex-center;
       gap: size(16);
-      text-align: center;
+      margin-top: size(32);
 
-      @include breakpoint(tab992) {
-        align-items: flex-start;
-        text-align: left;
-      }
-
-      .bannertitle {
-        color: $white;
-        @include font($secondaryFont, 24, semibold, normal, 24);
-
-        @include breakpoint(mobile768) {
-          @include font($secondaryFont, 36, semibold, normal, 36);
-        }
-
-        @include breakpoint(desktop1200) {
-          @include font($secondaryFont, 48, semibold, normal, 48);
-        }
-
-        @include breakpoint(desktop1400) {
-          @include font($secondaryFont, 70, semibold, normal, 70);
-        }
-      
-        span {
-          color: $primary;
-          font: inherit;
-        }
-      }
-
-      .bannertext {
-        color: $white;
-        @include font($primaryFont, 16, normal, normal, 24);
-
-        @include breakpoint(mobile768) {
-          @include font($primaryFont, 18, normal, normal, 26);
-        }
-
-        @include breakpoint(desktop1200) {
-          @include font($primaryFont, 20, normal, normal, 28);
-        }
-      }
-
-      .banner-buttons {
-        @include flex-center;
-        gap: size(16);
-        margin-top: size(32);
+      @include breakpoint(mobile768) {
+        gap: size(40);
       }
     }
   }
