@@ -138,11 +138,6 @@
   gap: size(14);
   text-align: center;
 
-  @include breakpoint(tab992) {
-    max-width: 80%;
-    margin-inline: auto;
-  }
-
   .icon {
     @include square(60);
     @include flex-center;

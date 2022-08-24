@@ -21,7 +21,6 @@ html {
   }
 }
 
-
 body {
   background: $white;
   @include font($primaryFont, 16, normal, normal, 24);
@@ -30,9 +29,98 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6,
-figure, picture, p, ul, ol {
-  margin: 0;
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+button,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+input,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+main,
+nav,
+object,
+ol,
+output,
+option,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+select,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+	margin: 0;
+  padding: 0;
+
+	&::selection {
+		@include setBgColor($buttonText, $white);
+	}
 }
 
 input, select, textarea {
@@ -55,7 +143,7 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-/* Firefox */
+// FIREFOX
 input[type=number] {
 	-moz-appearance: textfield;
 }

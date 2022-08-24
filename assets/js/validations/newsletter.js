@@ -1,13 +1,13 @@
-const form = document.querySelector(".formnewsletter");
+const formNewsLetter = document.querySelector(".formnewsletter");
 const userName = document.querySelector("#username");
 const email = document.querySelector("#email");
 
-form.addEventListener('submit', (e) => {
+formNewsLetter.addEventListener('submit', (e) => {
   e.preventDefault();
-  handleInput();
+  handleNewsLetter();
 });
 
-function handleInput() {
+function handleNewsLetter() {
   // Values from dom elements ( input )
   const userNameValue = userName.value.trim();
   const emailValue = email.value.trim();
@@ -31,13 +31,13 @@ function handleInput() {
 
 // SET ERROR MESSAGE
 function setErrorFor(input) {
-  let inputbox = input.parentElement;
+  const inputbox = input.parentElement;
   inputbox.classList.add('error');
 }
 
 // REMOVE ERROR MESSAGE
 function showSucces(input) {
-  let inputbox = input.parentElement;
+  const inputbox = input.parentElement;
   inputbox.classList.remove('error');
   inputbox.classList.add('success');
 }

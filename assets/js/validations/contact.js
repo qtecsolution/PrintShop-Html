@@ -6,10 +6,10 @@ const message = document.querySelector("#message");
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  handleInput();
+  handleContact();
 });
 
-function handleInput() {
+function handleContact() {
   // Values from dom elements ( input )
   const firastNameValue = firstName.value.trim();
   const lastNameValue = lastName.value.trim();
@@ -49,13 +49,13 @@ function handleInput() {
 
 // SET ERROR MESSAGE
 function setErrorFor(input) {
-  let inputbox = input.parentElement;
+  const inputbox = input.parentElement;
   inputbox.classList.add('error');
 }
 
 // REMOVE ERROR MESSAGE
 function showSucces(input) {
-  let inputbox = input.parentElement;
+  const inputbox = input.parentElement;
   inputbox.classList.remove('error');
   inputbox.classList.add('success');
 }

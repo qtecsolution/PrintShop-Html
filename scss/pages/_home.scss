@@ -120,6 +120,15 @@
   @include breakpoint(tab992) {
     padding: size(80) size(0) size(48);
   }
+
+  .card-feature {
+    max-width: 75%;
+    margin-inline: auto;
+
+    @include breakpoint(tab992) {
+      max-width: 95%;
+    }
+  }
 }
 
 .newsletter {

@@ -9,6 +9,12 @@
 	flex-direction: row;
 }
 
+// FLEX START
+@mixin flex-start {
+	@include flex;
+	align-items: flex-start;
+}
+
 // FLEX COLUMN
 @mixin flex-column {
 	@include flex;

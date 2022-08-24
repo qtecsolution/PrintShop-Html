@@ -17,7 +17,7 @@
     gap: size(10);
 
     @include breakpoint(tab992) {
-      min-width: size(218);
+      min-width: 40%;
     }
 
     @include breakpoint(desktop1200) {
@@ -78,5 +78,9 @@
 
   .submitbox {
     @include flex-center;
+    
+    @include breakpoint(tab992) {
+      align-items: flex-start;
+    }
   }
 }
