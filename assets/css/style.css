@@ -678,6 +678,81 @@ button:focus,
   }
 }
 
+.card-printshop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.card-printshop-header {
+  width: 100%;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-printshop-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 250ms ease-in-out;
+}
+.card-printshop-header img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+.card-printshop-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  border: solid 0.0625rem hsl(26deg, 36%, 84%);
+  padding: 1.5rem 1.5rem 3rem;
+}
+.card-printshop-body .print-title {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .card-printshop-body .print-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.card-printshop-body .descriptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.875rem;
+  text-align: center;
+}
+.card-printshop-body .descriptions .text {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+}
+@media screen and (min-width: 62rem) {
+  .card-printshop-body .descriptions .text {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+  }
+}
+
 .header {
   background: hsl(0deg, 0%, 100%);
   box-shadow: 0 0.25rem 1.25rem hsla(217deg, 98%, 61%, 0.102);
@@ -1422,6 +1497,189 @@ button:focus,
 }
 .newsletter-body {
   width: 100%;
+}
+
+.bgsec {
+  width: 100%;
+  height: 3rem;
+  background: hsl(166deg, 14%, 64%);
+}
+@media screen and (min-width: 62rem) {
+  .bgsec {
+    height: 5rem;
+  }
+}
+
+.about {
+  padding-top: 2.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .about {
+    padding-top: 3.375rem;
+  }
+}
+.about-content {
+  background: hsl(330deg, 12%, 97%);
+  padding: 2rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .about-content {
+    padding: 3rem 0rem;
+  }
+}
+.about-details {
+  height: 100%;
+  padding: 1.5rem 1.5rem 3rem;
+  background: hsl(0deg, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .about-details {
+    padding: 3rem;
+  }
+}
+.about-details .about-title {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .about-details .about-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.about-details .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.about-details .details .text {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .about-details .details .text {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .about-details .details .text {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+  }
+}
+.about-thumbnail {
+  width: 100%;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .about-thumbnail {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about-thumbnail {
+    height: 28.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .about-thumbnail {
+    width: 100%;
+    height: 100%;
+  }
+}
+.about-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 250ms ease-in-out;
+}
+.about-thumbnail img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+
+.whyprintshop {
+  padding: 3rem 0rem 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .whyprintshop {
+    padding: 5rem 0rem 6rem;
+  }
+}
+.whyprintshop-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.whyprintshop-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whyprintshop-header .options-title {
+  color: hsl(0deg, 0%, 20%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .whyprintshop-header .options-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.whyprintshop-body {
+  width: 100%;
+}
+.whyprintshop-body .emptybox {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+}
+.whyprintshop-body .emptybox .emptytop {
+  height: 12.5rem;
+  width: 100%;
+  background: hsl(330deg, 12%, 97%);
+}
+.whyprintshop-body .emptybox .emptybottom {
+  height: 2.5rem;
+  width: 100%;
+  background: hsl(11deg, 66%, 83%);
+}
+.whyprintshop-body .options {
+  position: relative;
+  margin-top: -15.5rem;
 }
 
 .cse-container {

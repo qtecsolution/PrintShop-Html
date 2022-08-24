@@ -171,3 +171,56 @@
     }
   }
 }
+
+.card-printshop {
+  @include flex-center-column;
+  text-align: center;
+
+  &-header {
+    @include w100;
+    height: size(200);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.05);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(14);
+    @include border(solid, 1, $secondary);
+    padding: size(24) size(24) size(48);
+
+    .print-title {
+      color: $black;
+      @include font($secondaryFont, 20, normal, normal, 20);
+  
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 24, normal, normal, 24);
+      }
+    }
+
+    .descriptions {
+      @include flex-center-column;
+      gap: size(14);
+      text-align: center;
+
+      .text {
+        color: $black;
+        @include font($primaryFont, 14, normal, normal, 20);
+    
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+  }
+}

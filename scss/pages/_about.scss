@@ -1,0 +1,152 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.bgsec {
+  @include w100;
+  height: size(48);
+  background: $green;
+
+  @include breakpoint(tab992) {
+    height: size(80);
+  }
+}
+
+.about {
+  padding-top: size(40);
+  
+  @include breakpoint(tab992) {
+    padding-top: size(54);
+  }
+
+  &-content {
+    background: $sectionBg;
+    padding: size(32) size(0);
+    
+    @include breakpoint(tab992) {
+      padding: size(48) size(0);
+    }
+  }
+
+  &-details {
+    @include h100;
+    padding: size(24) size(24) size(48);
+    background: $white;
+    @include flex-center-column;
+    gap: size(40);
+
+    @include breakpoint(tab992) {
+      padding: size(48);
+    }
+
+    .about-title {
+      color: $black;
+      @include font($secondaryFont, 28, normal, normal, 28);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+    }
+
+    .details {
+      @include flex-column;
+      gap: size(12);
+
+      .text {
+        color: $black;
+        @include font($primaryFont, 14, normal, normal, 20);
+        text-align: center;
+
+        @include breakpoint(mobile768) {
+          text-align: left;
+        }
+
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+  }
+
+  &-thumbnail {
+    @include w100;
+    height: size(200);
+    @include flex-center;
+    overflow: hidden;
+
+    @include breakpoint(mobile576) {
+      height: size(300);
+    }
+
+    @include breakpoint(mobile768) {
+      height: size(460);
+    }
+
+    @include breakpoint(tab992) {
+      @include wh100;
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.05);
+      }
+    }
+  }
+}
+
+.whyprintshop {
+  padding: size(48) size(0) size(64);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(96);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(32);
+    text-align: center;
+  }
+    
+  &-header {
+    @include flex-center;
+    
+    .options-title {
+      color: $textDark;
+      @include font($secondaryFont, 28, normal, normal, 28);
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+
+    .emptybox {
+      @include flex-column;
+      height: size(240);
+  
+      .emptytop {
+        height: size(200);
+        @include w100;
+        background: $sectionBg;
+      }
+  
+      .emptybottom {
+        height: size(40);
+        @include w100;
+        background: $primary;
+      }
+    }
+  
+    .options {
+      position: relative;
+      margin-top: size(-248);
+    }
+  }
+}
