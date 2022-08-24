@@ -33,9 +33,12 @@
     background: $white;
     @include flex-center-column;
     gap: size(40);
+    @include border(solid, 1, $primary);
+    border-left: 0;
+    border-right: 0;
 
     @include breakpoint(tab992) {
-      padding: size(48);
+      padding: size(48) size(64);
     }
 
     .about-title {

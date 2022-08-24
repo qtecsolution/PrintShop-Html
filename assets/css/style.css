@@ -684,6 +684,7 @@ button:focus,
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .card-printshop-header {
   width: 100%;
@@ -1536,10 +1537,13 @@ button:focus,
   justify-content: center;
   flex-direction: column;
   gap: 2.5rem;
+  border: solid 0.0625rem hsl(11deg, 66%, 83%);
+  border-left: 0;
+  border-right: 0;
 }
 @media screen and (min-width: 62rem) {
   .about-details {
-    padding: 3rem;
+    padding: 3rem 4rem;
   }
 }
 .about-details .about-title {

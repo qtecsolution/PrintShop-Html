@@ -175,6 +175,7 @@
 .card-printshop {
   @include flex-center-column;
   text-align: center;
+  box-shadow: $boxshadow-2;
 
   &-header {
     @include w100;
