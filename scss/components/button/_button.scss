@@ -78,12 +78,13 @@ button,
   padding: size(12) size(24);
   @include transitionsall;
 
-  @include breakpoint(mobile768) {
-    padding: size(12) size(32);
+  @include breakpoint(desktop1200) {
+    padding: size(12) size(20);
     @include font($secondaryFont, 16, normal, normal, 24);
   }
 
-  @include breakpoint(tab992) {
+  @include breakpoint(desktop1400) {
+    padding: size(12) size(32);
     @include font($secondaryFont, 18, normal, normal, 25);
   }
 
