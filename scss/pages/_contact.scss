@@ -1,3 +1,197 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.getintouch {
+  padding: size(40) size(0);
+  background: $primary;
+  
+  @include breakpoint(tab992) {
+    padding: size(64) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(32);
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: size(8);
+    text-align: center;
+
+    .getintouch-title {
+      color: $black;
+      @include font($secondaryFont, 28, normal, normal, 28);
+      text-align: center;
+
+      @include breakpoint(mobile768) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 48, normal, normal, 48);
+      }
+    }
+
+    .getintouch-text {
+      color: $black;
+      @include font($primaryFont, 16, normal, normal, 24);
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 18, normal, normal, 26);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($primaryFont, 20, normal, normal, 28);
+      }
+    }
+  }
+}
+
+.contact {
+  padding: size(48) size(0) size(64);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(0) size(96);
+  }
+
+  &-content {
+    background: $sectionBg;
+  }
+
+  .contactform {
+    @include flex-column;
+    gap: size(32);
+    padding: size(48) size(12);
+    @include h100;
+
+    @include breakpoint(tab992) {
+      padding-left: size(32);
+      padding-right: size(32);
+    }
+
+    @include breakpoint(desktop1200) {
+      padding-left: size(48);
+      padding-right: size(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      padding-left: size(64);
+      padding-right: size(64);
+    }
+
+    &-header {
+      @include flex-column;
+      gap: size(16);
+
+      .formtitle {
+        color: $black;
+        @include font($secondaryFont, 24, normal, normal, 24);
+        text-align: center;
+  
+        @include breakpoint(mobile768) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+          text-align: left;
+        }
+      }
+
+      .formtext {
+        color: $black;
+        @include font($primaryFont, 16, normal, normal, 24);
+        text-align: center;
+  
+        @include breakpoint(mobile768) {
+          @include font($primaryFont, 18, normal, normal, 26);
+          text-align: left;
+        }
+      }
+    }
+
+    &-body {
+      .inputbox {
+        @include w100;
+        @include flex-column;
+        gap: size(10);
+
+        .inputfield {
+          @include w100;
+          @include setBgColor($white, $black);
+          @include font($primaryFont, 14, normal, normal, 20);
+          padding: size(10) size(16);
+          @include border(solid, 1, $inputborder);
+          @include radius(6);
+          @include transitionsall;
+    
+          &:focus {
+            border-color: $secondary;
+          }
+    
+          &::placeholder {
+            color: $placeholdertext;
+          }
+        }
+
+        .error-message {
+          display: none;
+      
+          .message {
+            color: $dangercolor;
+            @include font($secondaryFont, 12, medium, normal, 18);
+            letter-spacing: size(0.04);
+          }
+        }
+  
+        &.error {
+          .inputfield {
+            border-color: $dangercolor;
+          }
+      
+          .error-message {
+            display: block;
+          }
+        }
+    
+        &.success {
+          .inputfield {
+            border-color: $green;
+          }
+    
+          .error-message {
+            display: none;
+          }
+        }
+      }
+
+      .submitbox {
+        @include flex-center;
+
+        @include breakpoint(mobile768) {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  &-map {
+    @include w100;
+    height: size(200);
+    overflow: hidden;
+
+    @include breakpoint(mobile576) {
+      height: size(300);
+    }
+
+    @include breakpoint(mobile768) {
+      @include wh100;
+    }
+
+    @include breakpoint(tab992) {
+      height: size(540);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}

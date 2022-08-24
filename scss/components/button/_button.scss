@@ -116,3 +116,26 @@ button,
     border-color: $btnText;
   }
 }
+
+.btn-send {
+  @include setBgColor($white, $btnText);
+  text-align: center;
+  padding: size(8) size(48);
+  @include radius(8);
+  @include border(solid, 1, $secondary);
+  @include font($secondaryFont, 14, normal, normal, 20);
+  @include transitionsall;
+
+  @include breakpoint(mobile768) {
+    @include font($secondaryFont, 16, normal, normal, 24);
+  }
+
+  @include breakpoint(tab992) {
+    @include font($secondaryFont, 18, normal, normal, 25);
+  }
+
+  @include hover {
+    @include setBgColor($btnText, $white);
+    border-color: $btnText;
+  }
+}

@@ -225,3 +225,57 @@
     }
   }
 }
+
+.card-contact {
+  @include h100;
+  @include flex-column;
+  gap: size(24);
+  @include border(solid, 1, $secondary);
+  @include radius(6);
+  background: $white;
+  box-shadow: $boxshadow-2;
+  padding: size(24) size(16);
+  text-align: center;
+
+  .title {
+    color: $textDark;
+    @include font($secondaryFont, 24, normal, normal, 24);
+
+    @include breakpoint(tab992) {
+      @include font($secondaryFont, 28, normal, normal, 28);
+    }
+  }
+
+  .info {
+    .text {
+      color: $black;
+      @include font($primaryFont, 16, normal, normal, 24);
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 18, normal, normal, 26);
+      }
+
+      // @include breakpoint(desktop1200) {
+      //   @include font($primaryFont, 20, normal, normal, 28);
+      // }
+    }
+
+    .link {
+      color: $black;
+      @include font($primaryFont, 16, normal, normal, 24);
+      @include transitionscolor;
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 18, normal, normal, 26);
+      }
+
+      // @include breakpoint(desktop1200) {
+      //   @include font($primaryFont, 20, normal, normal, 28);
+      // }
+
+      @include hover {
+        color: darken($green, 20%);
+      }
+    }
+  }
+}
