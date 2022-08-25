@@ -1,3 +1,74 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.checkout {
+  padding-top: size(40);
+  @include breakpoint(tab992) {
+    padding-top: size(54);
+  }
+
+  &-content{
+    @include flex-column;
+    gap: size(32);
+  }
+  &-header{
+    .checkout-title{
+      text-align: center;
+      @include font($secondaryFont, 36, normal, normal, 36);
+      color: $textDark;
+      @include breakpoint(tab992){
+        @include font($secondaryFont, 48, normal, normal, 48);
+      }
+    }
+  }
+  &-body{
+     
+    .billingform {
+      background: $sectionBg;
+      @include flex-column;
+      gap: size(32);
+      padding: size(48) size(12);
+      @include h100;
+  
+      @include breakpoint(tab992) {
+        padding-left: size(32);
+        padding-right: size(32);
+      }
+  
+      @include breakpoint(desktop1200) {
+        padding-left: size(48);
+        padding-right: size(48);
+      }
+  
+      @include breakpoint(desktop1400) {
+        padding-left: size(64);
+        padding-right: size(64);
+      }
+
+      &-header {
+
+        .formtitle{
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+
+      &-body{
+        .inputbox{
+          @include flex-column;
+          .inputfield{
+            @include border(solid, 1, $inputborder);
+            @include radius(6);
+            @include transitionsall;
+            padding: size(10) size(16);
+
+            &:focus{
+              border-color: $secondary;
+            }
+          }
+        }
+      }
+  }
+
+}
+
+}
