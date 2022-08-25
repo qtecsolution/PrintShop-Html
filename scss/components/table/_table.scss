@@ -1,0 +1,14 @@
+@use '../../global'as *;
+@use '../../partials'as *;
+
+.product-table {
+  @include w100;
+  background: $white;
+  @include border(solid, 1, $secondary);
+
+  td, th {
+    padding: size(8) size(16);
+    color: $black;
+    @include font($primaryFont, 16, normal, normal, 16);
+  }
+}

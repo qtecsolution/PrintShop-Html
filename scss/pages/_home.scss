@@ -90,21 +90,54 @@
 
 .homeproducts {
   padding: size(40) size(0) size(64);
+  @include flex-center-column;
+  gap: size(32);
+  text-align: center;
 
   @include breakpoint(tab992) {
     padding: size(76) size(0) size(120);
   }
 
+  &.productshop {
+    padding: size(32) size(0) size(64);
+
+    @include breakpoint(tab992) {
+      padding: size(32) size(0) size(96);
+    }
+  }
+
+  &-header {
+    @include flex-center;
+    @include w100;
+
+    .homeproducts-title {
+      color: $black;
+      @include font($secondaryFont, 24, normal, normal, 24);
+
+      @include breakpoint(tab992) {
+        @include font($secondaryFont, 28, normal, normal, 28);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+    }
+  }
+
   &-content {
+    @include w100;
+
     .emptybox {
       background: $sectionBg;
       height: size(255);
+      @include w100;
     }
 
     .products {
       position: relative;
       margin-top: size(-248);
       z-index: 10;
+      @include w100;
     }
   }
 }

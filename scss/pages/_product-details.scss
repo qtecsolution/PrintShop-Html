@@ -1,3 +1,347 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.productdetails {
+  padding-bottom: size(32);
+    
+  @include breakpoint(tab992) {
+    padding-bottom: size(48);
+  }
+  
+  &-content {
+    @include flex-column;
+  }
+
+  &-header {
+    background: $primary;
+    height: size(340);
+    @include flex-center-column;
+    justify-content: flex-start;
+    gap: size(12);
+    padding: size(40) size(12) size(0);
+    text-align: center;
+    
+    @include breakpoint(tab992) {
+      padding: size(60) size(0) size(0);
+      height: size(440);
+    }
+
+    .productdetails-title {
+      color: $black;
+      @include font($secondaryFont, 28, normal, normal, 28);
+
+      @include breakpoint(mobile768) {
+        @include font($secondaryFont, 36, normal, normal, 36);
+      }
+
+      @include breakpoint(desktop1200) {
+        @include font($secondaryFont, 48, normal, normal, 48);
+      }
+    }
+
+    .productdetails-text {
+      color: $black;
+      @include font($primaryFont, 16, normal, normal, 24);
+
+      @include breakpoint(desktop1200) {
+        @include font($primaryFont, 18, normal, normal, 26);
+      }
+    }
+  }
+  
+  &-body {
+    position: relative;
+    margin-top: size(-200);
+    z-index: 20;
+    
+    @include breakpoint(tab992) {
+      margin-top: size(-240);
+    }
+
+    .product-thumbnail {
+      @include w100;
+      height: size(340);
+      overflow: hidden;
+
+      @include breakpoint(mobile576) {
+        height: size(460);
+      }
+
+      @include breakpoint(mobile768) {
+        height: size(560);
+      }
+
+      @include breakpoint(desktop1200) {
+        height: size(700);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .productdescriptions {
+      @include border(solid, 1, $secondary);
+
+      &-header {
+        background: $white;
+        @include flex-column;
+        gap: size(32);
+        padding: size(16);
+
+        @include breakpoint(mobile576) {
+          padding: size(24);
+        }
+    
+        @include breakpoint(tab992) {
+          gap: size(48);
+        }
+
+        .producthead {
+          @include flex-column;
+          gap: size(12);
+
+          &-title {
+            color: $black;
+            @include font($secondaryFont, 24, normal, normal, 24);
+
+            @include breakpoint(tab992) {
+              @include font($secondaryFont, 28, normal, normal, 28);
+            }
+
+            @include breakpoint(desktop1200) {
+              @include font($secondaryFont, 36, normal, normal, 36);
+            }
+          }
+
+          &-text {
+            color: $black;
+            @include font($primaryFont, 16, normal, normal, 24);
+      
+            @include breakpoint(desktop1200) {
+              @include font($primaryFont, 18, normal, normal, 26);
+            }
+          }
+        }
+
+        .productinfos {
+          @include flex-column;
+          gap: size(24);
+      
+          @include breakpoint(tab992) {
+            gap: size(32);
+          }
+
+          .papersize,
+          .papersides,
+          .choosefinish {
+            @include flex-column;
+            gap: size(12);
+
+            &-body {
+              @include flex-center-vert;
+              gap: size(12);
+              flex-wrap: wrap;
+            }
+          }
+
+          .papersize {
+            &-header {
+              .papersize-title {
+                color: $black;
+                @include font($primaryFont, 18, normal, normal, 18);
+    
+                @include breakpoint(mobile768) {
+                  @include font($primaryFont, 24, normal, normal, 24);
+                }
+              }
+            }
+          }
+
+          .papersides {
+            &-header {
+              .papersides-title {
+                color: $black;
+                @include font($primaryFont, 18, normal, normal, 18);
+    
+                @include breakpoint(mobile768) {
+                  @include font($primaryFont, 24, normal, normal, 24);
+                }
+              }
+            }
+          }
+          
+          .choosefinish {
+            &-header {
+              .choosefinish-title {
+                color: $black;
+                @include font($primaryFont, 18, normal, normal, 18);
+    
+                @include breakpoint(mobile768) {
+                  @include font($primaryFont, 24, normal, normal, 24);
+                }
+              }
+            }
+          }
+
+          .quantity {
+            @include flex-center-vert;
+            gap: size(24);
+
+            &-title {
+              color: $black;
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+
+            &-left {
+              width: 30%;
+            }
+
+            &-right {
+              width: calc(100% - size(24));
+              @include flex-center-vert;
+              @include border(solid, 1, $secondary);
+              @include radius(6);
+
+              .inputfield {
+                width: calc(100% - size(80));
+                color: $black;
+                @include font($primaryFont, 16, normal, normal, 24);
+                padding: size(6) size(12);
+              }
+
+              .customselect {
+                width: size(80);
+                @include flex-center;
+              }
+            }
+          }
+        }
+      }
+
+      .divider {
+        margin: size(32) size(0);
+        height: size(1);
+        @include w100;
+        background: $secondary;
+      }
+
+      &-body {
+        @include w100;
+        padding: size(16);
+        @include flex-column;
+        gap: size(32);
+
+        @include breakpoint(mobile576) {
+          padding: size(24);
+        }
+    
+        @include breakpoint(tab992) {
+          gap: size(48);
+        }
+      
+        .totalquantity {
+          @include flex-center-between;
+          gap: size(14);
+
+          .quantitylabel {
+            color: $black;
+            @include font($primaryFont, 18, normal, normal, 18);
+
+            @include breakpoint(mobile768) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+          }
+
+          .quantityfield {
+            color: $black;
+            @include font($primaryFont, 16, normal, normal, 24);
+            padding: size(6) size(16);
+            @include border(solid, 1, $secondary);
+          }
+        }
+
+        .totalprice {
+          @include flex-center-between;
+
+          .title {
+            color: $black;
+            @include font($primaryFont, 18, normal, normal, 18);
+
+            @include breakpoint(mobile768) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+          }
+
+          .price {
+            color: $black;
+            @include font($primaryFont, 18, normal, normal, 18);
+
+            @include breakpoint(mobile768) {
+              @include font($primaryFont, 24, normal, normal, 24);
+            }
+          }
+        }
+
+        .addinfo {
+          @include flex-center;
+
+          .btn-shop {
+            @include w100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.productinform {
+  background: $sectionBg;
+  padding: size(40) size(0);
+    
+  @include breakpoint(tab992) {
+    padding: size(64) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(32);
+    
+    @include breakpoint(tab992) {
+      gap: size(48);
+    }
+  }
+
+  &-title {
+    color: $black;
+    @include font($secondaryFont, 24, normal, normal, 24);
+
+    @include breakpoint(tab992) {
+      @include font($secondaryFont, 28, normal, normal, 28);
+    }
+  }
+
+  &-body {
+    .informs {
+      @include flex-column;
+      gap: size(8);
+
+      .informtext {
+        color: $black;
+        @include font($primaryFont, 16, normal, normal, 24);
+      }
+
+      .informlist {
+        @include flex-column;
+        gap: size(8);
+        padding-left: size(32);
+
+        &-item {
+          color: $black;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+  }
+}

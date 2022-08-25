@@ -139,3 +139,106 @@ button,
     border-color: $btnText;
   }
 }
+
+.btn-size {
+  width: calc(50% - size(12));
+  @include flex-center-column;
+  gap: size(4);
+  @include border(solid, 1, $secondary);
+  @include radius(8);
+  padding: size(10) size(16);
+  @include transitionsall;
+
+  @include breakpoint(mobile576) {
+    width: calc(33% - size(12));
+  }
+
+  @include breakpoint(mobile768) {
+    width: calc(25% - size(12));
+  }
+
+  @include breakpoint(tab992) {
+    width: calc(50% - size(12));
+  }
+
+  @include breakpoint(desktop1400) {
+    width: auto;
+  }
+
+  .size-text {
+    color: $black;
+    @include font($secondaryFont, 14, normal, normal, 20);
+  }
+
+  .size-type {
+    color: $textGray;
+    @include font($secondaryFont, 12, normal, normal, 16);
+    @include text-overflow;
+
+    @include breakpoint(mobile768) {
+      max-width: 100%;
+    }
+  }
+
+  &:hover:not(.active) {
+    background: $secondary;
+
+    .size-type {
+      color: $buttonText;
+    }
+  }
+
+  &.active {
+    background: $secondary;
+
+    .size-type {
+      color: $buttonText;
+    }
+  }
+}
+
+.btn-side {
+  @include setBgColor($white, $black);
+  @include border(solid, 1, $secondary);
+  @include radius(8);
+  padding: size(10) size(16);
+  width: calc(50% - size(12));
+  @include font($secondaryFont, 14, normal, normal, 20);
+
+  &:hover:not(.active) {
+    @include setBgColor($secondary, $black);
+  }
+
+  &.active {
+    @include setBgColor($secondary, $black);
+  }
+}
+
+.btn-choose {
+  @include setBgColor($white, $black);
+  @include border(solid, 1, $secondary);
+  @include radius(8);
+  padding: size(10) size(16);
+  @include font($secondaryFont, 14, normal, normal, 20);
+  width: calc(50% - size(12));
+
+  @include breakpoint(mobile768) {
+    width: calc(33% - size(12));
+  }
+
+  @include breakpoint(tab992) {
+    width: calc(50% - size(12));
+  }
+
+  @include breakpoint(desktop1400) {
+    width: calc(33% - size(12));
+  }
+
+  &:hover:not(.active) {
+    @include setBgColor($secondary, $black);
+  }
+
+  &.active {
+    @include setBgColor($secondary, $black);
+  }
+}
