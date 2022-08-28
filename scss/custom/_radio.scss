@@ -1,2 +1,48 @@
 @use '../global' as *;
 @use '../partials' as p;
+
+.delivery-buttons{
+  
+ 
+
+  padding-block: p.size(20);
+  .custom-radio { 
+    display: inline-block;
+    width: 100%;
+    padding-block: 0;
+    input {
+      display: none;
+      // display: block;
+      &:checked {
+        + {
+          .radio-btn {
+            background-color: $btnText !important;
+            transition: all .5s;
+            h3{
+              color: #fff;
+            }
+          } 
+        }
+      }
+    }
+    .radio-btn{
+      padding-block: p.size(16);
+       
+      background-color: #fff !important;
+      border-radius: p.size(6);
+      display: inline-block;
+      box-shadow: inset p.size(0) p.size(5) p.size(5) rgba(0, 0, 0, 0.1);
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      .icon{
+
+      }
+      h3{
+        @include font($primaryFont, 24, normal, normal, 24);
+      }
+    } 
+    
+  } 
+  
+}

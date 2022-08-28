@@ -24,37 +24,125 @@
   &-body{
      
     .billingform {
-      background: $sectionBg;
       @include flex-column;
       gap: size(32);
-      padding: size(48) size(12);
+      // padding: size(48) size(12);
       @include h100;
   
-      @include breakpoint(tab992) {
-        padding-left: size(32);
-        padding-right: size(32);
-      }
+      // @include breakpoint(tab992) {
+      //   padding-left: size(32);
+      //   padding-right: size(32);
+      // }
   
-      @include breakpoint(desktop1200) {
-        padding-left: size(48);
-        padding-right: size(48);
-      }
+      // @include breakpoint(desktop1200) {
+      //   padding-left: size(48);
+      //   padding-right: size(48);
+      // }
   
-      @include breakpoint(desktop1400) {
-        padding-left: size(64);
-        padding-right: size(64);
+      // @include breakpoint(desktop1400) {
+      //   padding-left: size(64);
+      //   padding-right: size(64);
+      // }
+      .formtitle{
+        @include font($secondaryFont, 28, normal, normal, 28);
       }
-
+      .billingdetails {
+        background: $sectionBg;
+        @include flex-column;
+        gap: size(32);
+        padding: size(48) size(12);
+        @include breakpoint(tab992) {
+            padding-left: size(32);
+            padding-right: size(32);
+          }
+      
+          @include breakpoint(desktop1200) {
+            padding-left: size(48);
+            padding-right: size(48);
+          }
+      
+          @include breakpoint(desktop1400) {
+            padding-left: size(64);
+            padding-right: size(64);
+          }
+      
+        &-body{
+          .inputbox{
+            @include flex-column; 
+            label{
+              @include font($primaryFont, 15, normal, normal, 18);
+              color: $labelText;
+              padding-bottom: size(16);
+              margin-left: size(1);
+            }
+            .inputfield{
+              @include border(solid, 1, $inputborder);
+              @include radius(6);
+              @include transitionsall;
+              padding: size(10) size(16);
+  
+              &:focus{
+                border-color: $secondary;
+              }
+            }
+          }
+        }
+      }
+      .deliveryoptions {
+        background: $sectionBg;
+        padding: size(30) size(12);
+        @include breakpoint(tab992) {
+            padding-left: size(32);
+            padding-right: size(32);
+          }
+      
+          @include breakpoint(desktop1200) {
+            padding-left: size(48);
+            padding-right: size(48);
+          }
+      
+          @include breakpoint(desktop1400) {
+            padding-left: size(64);
+            padding-right: size(64);
+          }
+      }
+      .deliverydetails{
+        padding: size(30) size(12);
+        @include breakpoint(tab992) {
+            padding-left: size(32);
+            padding-right: size(32);
+          }
+      
+          @include breakpoint(desktop1200) {
+            padding-left: size(48);
+            padding-right: size(48);
+          }
+      
+          @include breakpoint(desktop1400) {
+            padding-left: size(64);
+            padding-right: size(64);
+          }
+      }
+      .payment {
+        background: $sectionBg;
+      }
+      
       &-header {
 
-        .formtitle{
-          @include font($secondaryFont, 28, normal, normal, 28);
-        }
+        // .formtitle{
+        //   @include font($secondaryFont, 28, normal, normal, 28);
+        // }
       }
 
       &-body{
         .inputbox{
-          @include flex-column;
+          @include flex-column; 
+          label{
+            @include font($primaryFont, 15, normal, normal, 18);
+            color: $labelText;
+            padding-bottom: size(16);
+            margin-left: size(1);
+          }
           .inputfield{
             @include border(solid, 1, $inputborder);
             @include radius(6);

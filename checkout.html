@@ -133,7 +133,127 @@
           <div class="row g-3">
             <div class="col-lg-7 col-12">
               <form action="" class="billingform">
-                <div class="billingform-header">
+                <div class="billingdetails">
+                   <div class="billingdetails-header">
+                    <h5 class="formtitle">Billing Details</h5>
+                   </div>
+                   <div class="billingdetails-body">
+                    <div class="row g-4">
+                      <div class="col-lg-6 col-12">
+                        <div class="inputbox">
+                          <label for="fname">FIRST NAME *</label>
+                          <input type="text" id="fname" class="inputfield" name="fname" autocomplete="off" placeholder="Your first name ">
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-12">
+                        <div class="inputbox">
+                          <label for="lname">LAST NAME *</label>
+                          <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-12">
+                        <div class="inputbox">
+                          <label for="lname">COUNTRY / REGION *</label>
+                          <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-12">
+                        <div class="inputbox">
+                          <label for="city">TOWN / CITY  *</label>
+                          <input type="text" id="city" class="inputfield" name="city" autocomplete="off" placeholder="Your Town/ City ">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="inputbox">
+                          <label for="street">STREET ADDRESS *</label>
+                          <input type="text" id="street" class="inputfield" name="street" autocomplete="off" placeholder="House number, street name, apartmen, suit, unit etc. ">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="inputbox">
+                          <label for="email">EMAIL ADDRESS *</label>
+                          <input type="email" id="email" class="inputfield" name="email" autocomplete="off" placeholder="Your email address">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="inputbox">
+                          <label for="phone">Phone Number *</label>
+                          <input type="tel" id="phone" class="inputfield" name="phone" autocomplete="off" placeholder="Your phone number ">
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="deliveryoptions">
+                  <div class="deliveryoptions-header">
+                    <h5 class="formtitle">Delivery Options</h5>
+                  </div>
+                  <div class="deliveryoptions-body">
+                      <div class="delivery-buttons">
+
+                        <div class="row g-4">
+                          <div class="col-12 col-sm-6">
+                            <label class="custom-radio">
+                              <input type="radio" name="radio" checked />
+                              <span class="radio-btn">
+                                <div class="icon">
+                                  <svg width="70" height="70" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M85.6812 25.0635L56.6187 9.07912C56.1895 8.84304 55.7077 8.71925 55.2178 8.71925C54.728 8.71925 54.2462 8.84304 53.817 9.07912L24.7545 25.0635C24.2989 25.3144 23.9189 25.683 23.6542 26.1308C23.3896 26.5786 23.25 27.0892 23.25 27.6094C23.25 28.1295 23.3896 28.6402 23.6542 29.088C23.9189 29.5358 24.2989 29.9044 24.7545 30.1552L52.3116 45.3113V76.4634L43.4882 71.61L40.6866 76.6988L53.817 83.9209C54.246 84.1575 54.7279 84.2816 55.2178 84.2816C55.7078 84.2816 56.1897 84.1575 56.6187 83.9209L85.6812 67.9365C86.137 67.6857 86.5172 67.3172 86.782 66.8694C87.0468 66.4216 87.1865 65.9109 87.1866 65.3906V27.6094C87.1865 27.0891 87.0468 26.5784 86.782 26.1306C86.5172 25.6828 86.137 25.3143 85.6812 25.0635ZM55.2178 14.9439L78.2499 27.6094L55.2178 40.2748L32.1858 27.6094L55.2178 14.9439ZM81.3741 63.673L58.1241 76.4605V45.3084L81.3741 32.5209V63.673Z"
+                                      fill="#E4D3C6" />
+                                    <path
+                                      d="M29.0625 46.5H5.8125V40.6875H29.0625V46.5ZM34.875 69.75H11.625V63.9375H34.875V69.75ZM40.6875 58.125H17.4375V52.3125H40.6875V58.125Z"
+                                      fill="#95AFA9" />
+                                  </svg>
+                                  <h3>Standard Delivery </h3>
+                                </div>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="col-12 col-sm-6">
+                            <label class="custom-radio">
+                              <input type="radio" name="radio"/>
+                              <span class="radio-btn">
+                                <div class="icon">
+                                  <svg width="70" height="70" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M87.1877 31.0388L81.3752 13.6012C81.1729 12.9997 80.7794 12.4809 80.2546 12.124C79.7298 11.7672 79.1027 11.5919 78.4689 11.625H14.5314C13.8976 11.5919 13.2705 11.7672 12.7457 12.124C12.2209 12.4809 11.8274 12.9997 11.6252 13.6012L5.81265 31.0388C5.77078 31.3473 5.77078 31.6602 5.81265 31.9688V49.4062C5.81265 50.177 6.11885 50.9163 6.66387 51.4613C7.2089 52.0063 7.94812 52.3125 8.7189 52.3125H11.6252V81.375H17.4377V52.3125H34.8752V81.375H81.3752V52.3125H84.2814C85.0522 52.3125 85.7914 52.0063 86.3364 51.4613C86.8815 50.9163 87.1877 50.177 87.1877 49.4062V31.9688C87.2295 31.6602 87.2295 31.3473 87.1877 31.0388ZM75.5627 75.5625H40.6877V52.3125H75.5627V75.5625ZM81.3752 46.5H69.7502V34.875H63.9377V46.5H49.4064V34.875H43.5939V46.5H29.0627V34.875H23.2502V46.5H11.6252V32.4338L16.6239 17.4375H76.3764L81.3752 32.4338V46.5Z" fill="#E4D3C6"/>
+                                    </svg>
+                                  <h3>Collect in Store</h3>
+                                </div>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                 </div>
+                 <div class="deliverydetails">
+                  <div class="deliverydetails-header">
+                   <h5 class="formtitle">Delivery Details</h5>
+                  </div>
+                  <div class="deliverydetails-body">
+                    <div class="deliverydetails-check">
+                      <input type="checkbox" name="" id="check" class="deliver-check">
+                       <label for="check">Deliver to a different address?</label>
+                    </div>
+                  </div>
+               </div>
+               <div class="payment">
+                 <div class="payment-header">
+                   <h5 class="formtitle">Payment </h5>
+                 </div>
+                 <div class="payment-body">
+
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-5 col-12">
+              Lorem ipsum dolor sit amet.
+              <p>yoour order</p>
+              <p>information </p>
+            </div>
+             
+                <!-- <div class="billingform-header">
                    <h5 class="formtitle">Billing Details</h5>
                 </div>
                 <div class="billingform-body">
@@ -181,14 +301,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </form>
             </div>
-            <div class="col-lg-5 col-12">
-              Lorem ipsum dolor sit amet.
-              <p>yoour order</p>
-              <p>information </p>
-            </div>
+           
           </div>
         </div>
        </div>
