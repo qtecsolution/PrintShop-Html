@@ -204,13 +204,39 @@ button,
   padding: size(10) size(16);
   width: calc(50% - size(12));
   @include font($secondaryFont, 14, normal, normal, 20);
+  @include flex-center-column;
+  gap: size(4);
+  @include transitionsall;
+
+  .size-text {
+    color: $black;
+    @include font($secondaryFont, 14, normal, normal, 20);
+  }
+
+  .size-type {
+    color: $textGray;
+    @include font($secondaryFont, 12, normal, normal, 16);
+    @include text-overflow;
+
+    @include breakpoint(mobile768) {
+      max-width: 100%;
+    }
+  }
 
   &:hover:not(.active) {
-    @include setBgColor($secondary, $black);
+    background: $secondary;
+
+    .size-type {
+      color: $buttonText;
+    }
   }
 
   &.active {
-    @include setBgColor($secondary, $black);
+    background: $secondary;
+
+    .size-type {
+      color: $buttonText;
+    }
   }
 }
 

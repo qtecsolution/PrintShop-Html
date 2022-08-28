@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrintShop | Checkout</title>
+  <title>PrintShop | Leaflets</title>
   <!-- FAVICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg">
   <!-- BOOTSTRAP CSS -->
@@ -122,81 +122,311 @@
   <!--========== BACKGROUND-END ==============-->
 
 
-  <!--========== CHECKOUT-START ==============-->
-   <section class="checkout">
-    <div class="container">
-       <div class="checkout-content">
-        <div class="checkout-header">
-          <h3 class="checkout-title">Checkout</h3>
-        </div> 
-        <div class="checkout-body">
-          <div class="row g-3">
+  <!--========== PRODUCT-DETAILS START ==============-->
+  <section class="productdetails">
+    <div class="productdetails-content">
+      <div class="productdetails-header">
+        <h2 class="productdetails-title">Leaflets</h2>
+        <p class="productdetails-text">Give us a call, drop us an email or fill in the form below.</p>
+      </div>
+
+      <div class="productdetails-body">
+        <div class="container">
+          <div class="row g-0">
             <div class="col-lg-7 col-12">
-              <form action="" class="billingform">
-                <div class="billingform-header">
-                   <h5 class="formtitle">Billing Details</h5>
-                </div>
-                <div class="billingform-body">
-                  <div class="row g-4">
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="fname">FIRST NAME *</label>
-                        <input type="text" id="fname" class="inputfield" name="fname" autocomplete="off" placeholder="Your first name ">
+              <figure class="product-thumbnail">
+                <img src="assets/images/product-thumb/leaflets.png" alt="business-card">
+              </figure>
+            </div>
+
+            <div class="col-lg-5 col-12">
+              <div class="productdescriptions">
+                <div class="productdescriptions-header">
+                  <div class="producthead">
+                    <h4 class="producthead-title">Build your leaflet</h4>
+                    <p class="producthead-text">Upload your artwork at the basket page.</p>
+                  </div>
+
+                  <div class="productinfos">
+                    <!-- PAPER-SIZE -->
+                    <div class="papersize">
+                      <div class="papersize-header">
+                        <h5 class="papersize-title">Paper Size</h5>
+                      </div>
+
+                      <div class="papersize-body">
+                        <button type="button" class="btn-size">
+                          <span class="size-text">148 x 105mm</span>
+                          <span class="size-type">(A6)</span>
+                        </button>
+
+                        <button type="button" class="btn-size">
+                          <span class="size-text">170 x 55mm</span>
+                          <span class="size-type">(A5)</span>
+                        </button>
+
+                        <button type="button" class="btn-size">
+                          <span class="size-text">210 x 99mm</span>
+                          <span class="size-type">(DL)</span>
+                        </button>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="lname">LAST NAME *</label>
-                        <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+
+                    <!-- PAPER-SIDES -->
+                    <div class="papersides">
+                      <div class="papersides-header">
+                        <h5 class="papersides-title">Paper Sides</h5>
+                      </div>
+                      
+                      <div class="papersides-body">
+                        <button type="button" class="btn-side">Single Sided</button>
+                        <button type="button" class="btn-side">Double Sided</button>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="lname">COUNTRY / REGION *</label>
-                        <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+
+                    <!-- PAPER-TYPE -->
+                    <div class="papersize">
+                      <div class="papersize-header">
+                        <h5 class="papersize-title">Paper Type</h5>
                       </div>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="city">TOWN / CITY  *</label>
-                        <input type="text" id="city" class="inputfield" name="city" autocomplete="off" placeholder="Your Town/ City ">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="street">STREET ADDRESS *</label>
-                        <input type="text" id="street" class="inputfield" name="street" autocomplete="off" placeholder="House number, street name, apartmen, suit, unit etc. ">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="email">EMAIL ADDRESS *</label>
-                        <input type="email" id="email" class="inputfield" name="email" autocomplete="off" placeholder="Your email address">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" class="inputfield" name="phone" autocomplete="off" placeholder="Your phone number ">
+
+                      <div class="papersize-body">
+                        <button type="button" class="btn-side">
+                          <span class="size-text">170gsm</span>
+                          <span class="size-type">Silk</span>
+                        </button>
+                        <button type="button" class="btn-side">
+                          <span class="size-text">170gsm</span>
+                          <span class="size-type">Gloss</span>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
-            <div class="col-lg-5 col-12">
-              Lorem ipsum dolor sit amet.
-              <p>yoour order</p>
-              <p>information </p>
+
+                <div class="divider"></div>
+
+                <div class="productdescriptions-body">
+                  <div class="totalquantity">
+                    <label for="totalquantity" class="quantitylabel">Quantity</label>
+                    <input type="text" class="quantityfield">
+                  </div>
+                  <div class="totalprice">
+                    <span class="title">Price</span>
+                    <span class="price">£19.35</span>
+                  </div>
+                  <div class="addinfo">
+                    <button type="button" class="btn-shop brochures" data-bs-toggle="modal" data-bs-target="#addedBasket">Add to Basket</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-       </div>
+      </div>
     </div>
-   </section>
-  <!--========== CHECKOUT-END ================-->
+  </section>
+  <!--========== PRODUCT-DETAILS END ================-->
 
-   
+
+  <!--========== PRODUCT-INFORM START ================-->
+  <section class="productinform">
+    <div class="container">
+      <div class="productinform-content">
+        <div class="productinform-header">
+          <h2 class="productinform-title">The Print Shop Business Cards</h2>
+        </div>
+  
+        <div class="productinform-body">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-12">
+              <div class="informs">
+                <p class="informtext">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                </p>
+  
+                <p class="informtext">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.
+                </p>
+  
+                <ul class="informlist">
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                  </li>
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Exercitation veniam consequat sunt nostrud amet.
+                  </li>
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-5 offset-lg-1 col-12">
+              <table class="product-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price per Card</th>
+                    <th scope="col">Pack Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>50</td>
+                    <td>26p</td>
+                    <td>£19.23</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>22p</td>
+                    <td>£30.23</td>
+                  </tr>
+                  <tr>
+                    <td>200</td>
+                    <td>20p</td>
+                    <td>£33.23</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>15p</td>
+                    <td>£36.23</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== PRODUCT-INFORM END ==================-->
+
+
+  <!--========== HOME-PRODUCTS START ==========-->
+  <section class="homeproducts productshop">
+    <div class="homeproducts-header">
+      <h4 class="homeproducts-title">Shop Products</h4>
+    </div>
+
+    <div class="homeproducts-content">
+      <div class="emptybox"></div>
+
+      <div class="products">
+        <div class="container">
+          <div class="row gy-5 gx-4">
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-1.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Tshirts</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop T-shirts</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-2.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Stickers</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Stickers</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-3.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Envelopes</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Envelopes</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-4.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Menus</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Menus</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== HOME-PRODUCTS END ============-->
+
+
   <!--========== HOME-FEATURES START ==========-->
   <section class="homefeatures">
     <div class="container">
@@ -502,7 +732,52 @@
   </footer>
   <!--========== FOOTER-END ============-->
 
-  
+
+  <!--========== ADDED-IN-BASKET MODAL START ============-->
+  <div class="modal fade pe-0 addedmodal" id="addedBasket" tabindex="-1" aria-labelledby="addedBasket" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.673 1.58189L17.9516 0L9.83648 7.4575L1.72138 0L0 1.58189L8.1151 9.03939L0 16.4969L1.72138 18.0788L9.83648 10.6213L17.9516 18.0788L19.673 16.4969L11.5579 9.03939L19.673 1.58189Z" fill="#E4D3C6"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="addedbasket">
+            <div class="addedbasket-header">
+              <figure class="icon">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#basketaddedicon)">
+                    <path d="M20 24.9062C20 24.3841 20.2074 23.8833 20.5766 23.5141C20.9458 23.1449 21.4466 22.9375 21.9688 22.9375H27.875C28.3142 22.9376 28.7407 23.0846 29.0867 23.355C29.4327 23.6254 29.6784 24.0037 29.7847 24.4298L31.3794 30.8125H77.0938C77.3828 30.8128 77.6683 30.8767 77.9299 30.9997C78.1915 31.1228 78.4228 31.3019 78.6073 31.5244C78.7918 31.7469 78.9251 32.0073 78.9977 32.2872C79.0702 32.567 79.0803 32.8594 79.0271 33.1435L73.1208 64.6435C73.0364 65.0947 72.7969 65.5021 72.4439 65.7955C72.0909 66.0888 71.6465 66.2496 71.1875 66.25H35.75C35.291 66.2496 34.8466 66.0888 34.4936 65.7955C34.1406 65.5021 33.9011 65.0947 33.8167 64.6435L27.9144 33.2026L26.3394 26.875H21.9688C21.4466 26.875 20.9458 26.6676 20.5766 26.2984C20.2074 25.9292 20 25.4284 20 24.9062ZM32.2141 34.75L37.3841 62.3125H69.5534L74.7234 34.75H32.2141ZM39.6875 66.25C37.5989 66.25 35.5959 67.0797 34.119 68.5565C32.6422 70.0334 31.8125 72.0364 31.8125 74.125C31.8125 76.2136 32.6422 78.2166 34.119 79.6935C35.5959 81.1703 37.5989 82 39.6875 82C41.7761 82 43.7791 81.1703 45.256 79.6935C46.7328 78.2166 47.5625 76.2136 47.5625 74.125C47.5625 72.0364 46.7328 70.0334 45.256 68.5565C43.7791 67.0797 41.7761 66.25 39.6875 66.25ZM67.25 66.25C65.1614 66.25 63.1584 67.0797 61.6815 68.5565C60.2047 70.0334 59.375 72.0364 59.375 74.125C59.375 76.2136 60.2047 78.2166 61.6815 79.6935C63.1584 81.1703 65.1614 82 67.25 82C69.3386 82 71.3416 81.1703 72.8185 79.6935C74.2953 78.2166 75.125 76.2136 75.125 74.125C75.125 72.0364 74.2953 70.0334 72.8185 68.5565C71.3416 67.0797 69.3386 66.25 67.25 66.25ZM39.6875 70.1875C40.7318 70.1875 41.7333 70.6023 42.4717 71.3408C43.2102 72.0792 43.625 73.0807 43.625 74.125C43.625 75.1693 43.2102 76.1708 42.4717 76.9092C41.7333 77.6477 40.7318 78.0625 39.6875 78.0625C38.6432 78.0625 37.6417 77.6477 36.9033 76.9092C36.1648 76.1708 35.75 75.1693 35.75 74.125C35.75 73.0807 36.1648 72.0792 36.9033 71.3408C37.6417 70.6023 38.6432 70.1875 39.6875 70.1875ZM67.25 70.1875C68.2943 70.1875 69.2958 70.6023 70.0342 71.3408C70.7727 72.0792 71.1875 73.0807 71.1875 74.125C71.1875 75.1693 70.7727 76.1708 70.0342 76.9092C69.2958 77.6477 68.2943 78.0625 67.25 78.0625C66.2057 78.0625 65.2042 77.6477 64.4658 76.9092C63.7273 76.1708 63.3125 75.1693 63.3125 74.125C63.3125 73.0807 63.7273 72.0792 64.4658 71.3408C65.2042 70.6023 66.2057 70.1875 67.25 70.1875Z" fill="#E4D3C6"/>
+                  </g>
+                  <circle cx="50" cy="50" r="49.5" stroke="#E4D3C6"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M88 8C81.925 8 77 12.925 77 19C77 25.075 81.925 30 88 30C94.075 30 99 25.075 99 19C99 12.925 94.075 8 88 8ZM89 23C89 23.2652 88.8946 23.5196 88.7071 23.7071C88.5196 23.8946 88.2652 24 88 24C87.7348 24 87.4804 23.8946 87.2929 23.7071C87.1054 23.5196 87 23.2652 87 23V20H84C83.7348 20 83.4804 19.8946 83.2929 19.7071C83.1054 19.5196 83 19.2652 83 19C83 18.7348 83.1054 18.4804 83.2929 18.2929C83.4804 18.1054 83.7348 18 84 18H87V15C87 14.7348 87.1054 14.4804 87.2929 14.2929C87.4804 14.1054 87.7348 14 88 14C88.2652 14 88.5196 14.1054 88.7071 14.2929C88.8946 14.4804 89 14.7348 89 15V18H92C92.2652 18 92.5196 18.1054 92.7071 18.2929C92.8946 18.4804 93 18.7348 93 19C93 19.2652 92.8946 19.5196 92.7071 19.7071C92.5196 19.8946 92.2652 20 92 20H89V23Z" fill="#95AFA9"/>
+                  <defs>
+                    <clipPath id="basketaddedicon">
+                      <rect width="63" height="63" fill="white" transform="translate(20 19)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </figure>
+            </div>
+            <div class="addedbasket-body">
+              <h4 class="basket-title">Item has has been added to the basket.</h4>
+
+              <div class="basket-buttons">
+                <button class="btn-basket">Continue Shopping</button>
+                <button class="btn-basket">View Basket</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========== ADDED-IN-BASKET MODAL END ==============-->
+
+
   <!-- LOTTIE JS -->
   <script src="assets/js/lottie-player/lottie-player.js"></script>
   <!-- PRELOADER JS -->
@@ -514,6 +789,7 @@
   <script src="assets/js/validations/newsletter.js"></script>
   <!-- COPYRIGHT (YEAR) -->
   <script src="assets/js/copyright/copyright.js"></script>
+  <script src="assets/js/select/select.js"></script>
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- TOOLTIP JS -->

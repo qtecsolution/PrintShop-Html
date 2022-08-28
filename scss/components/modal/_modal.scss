@@ -10,7 +10,7 @@
     border-bottom: 0;
 
     .btn-close {
-      @include square(24);
+      @include square(20);
       @include flex-center;
       overflow: hidden;
       opacity: 1;
@@ -37,4 +37,76 @@
   &-body {
     
   }
+
+  &.addedmodal {
+    .modal-content {
+      @include radius(8);
+    }
+
+    .modal-body {
+      .addedbasket {
+        @include flex-center-column;
+        gap: size(32);
+
+        @include breakpoint(tab992) {
+          padding: size(0) size(48) size(48);
+        }
+
+        &-header {
+          .icon {
+            @include square(size(64));
+            @include flex-center;
+            @include circle;
+
+            @include breakpoint(tab992) {
+              @include square(size(100));
+            }
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        &-body {
+          @include flex-center-column;
+          gap: size(20);
+          text-align: center;
+
+          .basket-title {
+            color: $menuBlack;
+            @include font($secondaryFont, 20, normal, normal, 20);
+
+            @include breakpoint(tab992) {
+              @include font($secondaryFont, 28, normal, normal, 28);
+            }
+          }
+
+          .basket-buttons {
+            @include flex-center;
+            gap: size(16);
+            @include w100;
+
+            .btn-basket {
+              padding: size(12);
+              @include radius(8);
+              @include setBgColor($green, $white);
+              @include font($secondaryFont, 14, normal, normal, 20);
+              text-align: center;
+              width: 50%;
+
+              @include breakpoint(tab992) {
+                @include font($secondaryFont, 16, normal, normal, 24);
+              }
+
+              @include hover {
+                @include setBgColor(darken($green, 25%), $white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
