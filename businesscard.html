@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrintShop | Checkout</title>
+  <title>PrintShop | Business Card</title>
   <!-- FAVICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg">
   <!-- BOOTSTRAP CSS -->
@@ -122,197 +122,448 @@
   <!--========== BACKGROUND-END ==============-->
 
 
-  <!--========== CHECKOUT-START ==============-->
-   <section class="checkout">
-    <div class="container">
-       <div class="checkout-content">
-        <div class="checkout-header">
-          <h3 class="checkout-title">Checkout</h3>
-        </div> 
-        <div class="checkout-body">
-          <div class="row g-3">
+  <!--========== PRODUCT-DETAILS START ==============-->
+  <section class="productdetails">
+    <div class="productdetails-content">
+      <div class="productdetails-header">
+        <h2 class="productdetails-title">Business Cards</h2>
+        <p class="productdetails-text">Give us a call, drop us an email or fill in the form below.</p>
+      </div>
+
+      <div class="productdetails-body">
+        <div class="container">
+          <div class="row g-0">
             <div class="col-lg-7 col-12">
-              <form action="" class="billingform">
-                <div class="billingdetails">
-                   <div class="billingdetails-header">
-                    <h5 class="formtitle">Billing Details</h5>
-                   </div>
-                   <div class="billingdetails-body">
-                    <div class="row g-4">
-                      <div class="col-lg-6 col-12">
-                        <div class="inputbox">
-                          <label for="fname">FIRST NAME *</label>
-                          <input type="text" id="fname" class="inputfield" name="fname" autocomplete="off" placeholder="Your first name ">
-                        </div>
+              <figure class="product-thumbnail">
+                <img src="assets/images/product-thumb/business-card.png" alt="business-card">
+              </figure>
+            </div>
+
+            <div class="col-lg-5 col-12">
+              <div class="productdescriptions">
+                <div class="productdescriptions-header">
+                  <div class="producthead">
+                    <h4 class="producthead-title">Build your business card</h4>
+                    <p class="producthead-text">Upload your artwork at the basket page.</p>
+                  </div>
+
+                  <div class="productinfos">
+                    <!-- PAPER-SIZE -->
+                    <div class="papersize">
+                      <div class="papersize-header">
+                        <h5 class="papersize-title">Paper Size</h5>
                       </div>
-                      <div class="col-lg-6 col-12">
-                        <div class="inputbox">
-                          <label for="lname">LAST NAME *</label>
-                          <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-12">
-                        <div class="inputbox">
-                          <label for="lname">COUNTRY / REGION *</label>
-                          <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-12">
-                        <div class="inputbox">
-                          <label for="city">TOWN / CITY  *</label>
-                          <input type="text" id="city" class="inputfield" name="city" autocomplete="off" placeholder="Your Town/ City ">
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="inputbox">
-                          <label for="street">STREET ADDRESS *</label>
-                          <input type="text" id="street" class="inputfield" name="street" autocomplete="off" placeholder="House number, street name, apartmen, suit, unit etc. ">
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="inputbox">
-                          <label for="email">EMAIL ADDRESS *</label>
-                          <input type="email" id="email" class="inputfield" name="email" autocomplete="off" placeholder="Your email address">
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="inputbox">
-                          <label for="phone">Phone Number *</label>
-                          <input type="tel" id="phone" class="inputfield" name="phone" autocomplete="off" placeholder="Your phone number ">
-                        </div>
+
+                      <div class="papersize-body">
+                        <button type="button" class="btn-size w-100">
+                          <span class="size-text">148 x 105mm</span>
+                          <span class="size-type">(A6)</span>
+                        </button>
+
+                        <button type="button" class="btn-size w-100">
+                          <span class="size-text">170 x 55mm</span>
+                        </button>
+                        
+                        <button type="button" class="btn-size">
+                          <span class="size-text">85 x 55mm</span>
+                          <span class="size-type">(Standard)</span>
+                        </button>
+
+                        <button type="button" class="btn-size">
+                          <span class="size-text">170 x 55mm</span>
+                          <span class="size-type">(Folder)</span>
+                        </button>
+
+                        <button type="button" class="btn-size">
+                          <span class="size-text">85 x 110mm</span>
+                          <span class="size-type">(Folded)</span>
+                        </button>
+
+                        <button type="button" class="btn-size">
+                          <span class="size-text">60 x 60mm</span>
+                          <span class="size-type">(Square)</span>
+                        </button>
                       </div>
                     </div>
-                   </div>
-                </div>
-                <div class="deliveryoptions">
-                  <div class="deliveryoptions-header">
-                    <h5 class="formtitle">Delivery Options</h5>
-                  </div>
-                  <div class="deliveryoptions-body">
-                      <div class="delivery-buttons">
 
-                        <div class="row g-4">
-                          <div class="col-12 col-sm-6">
-                            <label class="custom-radio">
-                              <input type="radio" name="radio" checked />
-                              <span class="radio-btn">
-                                <div class="icon">
-                                  <svg width="70" height="70" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M85.6812 25.0635L56.6187 9.07912C56.1895 8.84304 55.7077 8.71925 55.2178 8.71925C54.728 8.71925 54.2462 8.84304 53.817 9.07912L24.7545 25.0635C24.2989 25.3144 23.9189 25.683 23.6542 26.1308C23.3896 26.5786 23.25 27.0892 23.25 27.6094C23.25 28.1295 23.3896 28.6402 23.6542 29.088C23.9189 29.5358 24.2989 29.9044 24.7545 30.1552L52.3116 45.3113V76.4634L43.4882 71.61L40.6866 76.6988L53.817 83.9209C54.246 84.1575 54.7279 84.2816 55.2178 84.2816C55.7078 84.2816 56.1897 84.1575 56.6187 83.9209L85.6812 67.9365C86.137 67.6857 86.5172 67.3172 86.782 66.8694C87.0468 66.4216 87.1865 65.9109 87.1866 65.3906V27.6094C87.1865 27.0891 87.0468 26.5784 86.782 26.1306C86.5172 25.6828 86.137 25.3143 85.6812 25.0635ZM55.2178 14.9439L78.2499 27.6094L55.2178 40.2748L32.1858 27.6094L55.2178 14.9439ZM81.3741 63.673L58.1241 76.4605V45.3084L81.3741 32.5209V63.673Z"
-                                      fill="#E4D3C6" />
-                                    <path
-                                      d="M29.0625 46.5H5.8125V40.6875H29.0625V46.5ZM34.875 69.75H11.625V63.9375H34.875V69.75ZM40.6875 58.125H17.4375V52.3125H40.6875V58.125Z"
-                                      fill="#95AFA9" />
+                    <!-- PAPER-SIDES -->
+                    <div class="papersides">
+                      <div class="papersides-header">
+                        <h5 class="papersides-title">Paper Sides</h5>
+                      </div>
+                      
+                      <div class="papersides-body">
+                        <button type="button" class="btn-side">Single Sided</button>
+                        <button type="button" class="btn-side">Double Sided</button>
+                      </div>
+                    </div>
+
+                    <!-- MULTI-NAME -->
+                    <div class="papersides">
+                      <div class="papersides-header">
+                        <h5 class="papersides-title">Multi Name</h5>
+                      </div>
+
+                      <div class="papersides-body">
+                        <button type="button" class="btn-side">Yes</button>
+                        <button type="button" class="btn-side">No</button>
+                      </div>
+                    </div>
+
+                    <!-- QUANTITY -->
+                    <div class="quantity">
+                      <div class="quantity-left">
+                        <h5 class="quantity-title">Quantity</h5>
+                      </div>
+                      
+                      <div class="quantity-right">
+                        <input type="text" class="inputfield" value="0">
+
+                        <div class="customselect">
+                          <div class="select-wrapper">
+                            <div class="select">
+                              <div class="select-trigger">
+                                <span class="selectedvalue"></span>
+  
+                                <span class="arrow">
+                                  <svg width="13" height="6" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.958496 0L6.50016 6L12.0418 0H0.958496Z" fill="white"/>
                                   </svg>
-                                  <h3>Standard Delivery </h3>
-                                </div>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="col-12 col-sm-6">
-                            <label class="custom-radio">
-                              <input type="radio" name="radio"/>
-                              <span class="radio-btn">
-                                <div class="icon">
-                                  <svg width="70" height="70" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M87.1877 31.0388L81.3752 13.6012C81.1729 12.9997 80.7794 12.4809 80.2546 12.124C79.7298 11.7672 79.1027 11.5919 78.4689 11.625H14.5314C13.8976 11.5919 13.2705 11.7672 12.7457 12.124C12.2209 12.4809 11.8274 12.9997 11.6252 13.6012L5.81265 31.0388C5.77078 31.3473 5.77078 31.6602 5.81265 31.9688V49.4062C5.81265 50.177 6.11885 50.9163 6.66387 51.4613C7.2089 52.0063 7.94812 52.3125 8.7189 52.3125H11.6252V81.375H17.4377V52.3125H34.8752V81.375H81.3752V52.3125H84.2814C85.0522 52.3125 85.7914 52.0063 86.3364 51.4613C86.8815 50.9163 87.1877 50.177 87.1877 49.4062V31.9688C87.2295 31.6602 87.2295 31.3473 87.1877 31.0388ZM75.5627 75.5625H40.6877V52.3125H75.5627V75.5625ZM81.3752 46.5H69.7502V34.875H63.9377V46.5H49.4064V34.875H43.5939V46.5H29.0627V34.875H23.2502V46.5H11.6252V32.4338L16.6239 17.4375H76.3764L81.3752 32.4338V46.5Z" fill="#E4D3C6"/>
-                                    </svg>
-                                  <h3>Collect in Store</h3>
-                                </div>
-                              </span>
-                            </label>
+                                </span>
+                              </div>
+                              
+                              <div class="custom-options">
+                                <span class="custom-option selected" data-value="1">100</span>
+                                <span class="custom-option" data-value="200">200</span>
+                                <span class="custom-option" data-value="300">300</span>
+                                <span class="custom-option" data-value="400">400</span>
+                                <span class="custom-option" data-value="500">500</span>
+                                <span class="custom-option" data-value="600">600</span>
+                                <span class="custom-option" data-value="700">700</span>
+                                <span class="custom-option" data-value="800">800</span>
+                                <span class="custom-option" data-value="900">900</span>
+                                <span class="custom-option" data-value="1000">1000</span>
+                                <span class="custom-option" data-value="10000">10000</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                  </div>
-                 </div>
-                 <div class="deliverydetails">
-                  <div class="deliverydetails-header">
-                   <h5 class="formtitle">Delivery Details</h5>
-                  </div>
-                  <div class="deliverydetails-body">
-                    <div class="deliverydetails-check">
-                      <input type="checkbox" name="" id="check" class="deliver-check">
-                       <label for="check">Deliver to a different address?</label>
                     </div>
-                  </div>
-               </div>
-               <div class="payment">
-                 <div class="payment-header">
-                   <h5 class="formtitle">Payment </h5>
-                 </div>
-                 <div class="payment-body">
 
-                 </div>
-               </div>
-             </div>
-             <div class="col-lg-5 col-12">
-              Lorem ipsum dolor sit amet.
-              <p>yoour order</p>
-              <p>information </p>
-            </div>
-             
-                <!-- <div class="billingform-header">
-                   <h5 class="formtitle">Billing Details</h5>
-                </div>
-                <div class="billingform-body">
-                  <div class="row g-4">
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="fname">FIRST NAME *</label>
-                        <input type="text" id="fname" class="inputfield" name="fname" autocomplete="off" placeholder="Your first name ">
+                    <!-- PAPER-TYPE -->
+                    <div class="papersize">
+                      <div class="papersize-header">
+                        <h5 class="papersize-title">Paper Type</h5>
+                      </div>
+
+                      <div class="papersize-body">
+                        <button type="button" class="btn-size">
+                          <span class="size-text">300gsm</span>
+                          <span class="size-type">Eco freindly Board</span>
+                        </button>
+                        <button type="button" class="btn-size">
+                          <span class="size-text">400gsm</span>
+                          <span class="size-type">Board</span>
+                        </button>
+                        <button type="button" class="btn-size">
+                          <span class="size-text">450gsm</span>
+                          <span class="size-type">Board</span>
+                        </button>
+                        <button type="button" class="btn-size">
+                          <span class="size-text">810gsm</span>
+                          <span class="size-type">Triple layerd card</span>
+                        </button>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="lname">LAST NAME *</label>
-                        <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+
+                    <!-- CHOOSE-CORNERS -->
+                    <div class="papersides">
+                      <div class="papersides-header">
+                        <h5 class="papersides-title">Choose Corners</h5>
+                      </div>
+
+                      <div class="papersides-body">
+                        <button type="button" class="btn-side">Square</button>
+                        <button type="button" class="btn-side">Round</button>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="lname">COUNTRY / REGION *</label>
-                        <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+
+                    <!-- CHOOSE-FINISH -->
+                    <div class="choosefinish">
+                      <div class="choosefinish-header">
+                        <h5 class="choosefinish-title">Choose your finish</h5>
+                      </div>
+
+                      <div class="choosefinish-body">
+                        <button type="button" class="btn-choose">Matt Lamination</button>
+                        <button type="button" class="btn-choose">Gloss Lamination</button>
+                        <button type="button" class="btn-choose">Soft Lamination</button>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-12">
-                      <div class="inputbox">
-                        <label for="city">TOWN / CITY  *</label>
-                        <input type="text" id="city" class="inputfield" name="city" autocomplete="off" placeholder="Your Town/ City ">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="street">STREET ADDRESS *</label>
-                        <input type="text" id="street" class="inputfield" name="street" autocomplete="off" placeholder="House number, street name, apartmen, suit, unit etc. ">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="email">EMAIL ADDRESS *</label>
-                        <input type="email" id="email" class="inputfield" name="email" autocomplete="off" placeholder="Your email address">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="inputbox">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" class="inputfield" name="phone" autocomplete="off" placeholder="Your phone number ">
+
+                    <div class="quantity flex-column align-items-start">
+                      <h5 class="quantity-title">Middle Card Colour</h5>
+                      
+                      <div class="quantity-right w-100">
+                        <input type="text" class="inputfield" value="0">
+
+                        <div class="customselect 1">
+                          <div class="select-wrapper">
+                            <div class="select">
+                              <div class="select-trigger">
+                                <span class="selectedvalue"></span>
+  
+                                <span class="arrow">
+                                  <svg width="13" height="6" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.958496 0L6.50016 6L12.0418 0H0.958496Z" fill="white"/>
+                                  </svg>
+                                </span>
+                              </div>
+                              
+                              <div class="custom-options">
+                                <span class="custom-option selected" data-value="1">10</span>
+                                <span class="custom-option" data-value="20">20</span>
+                                <span class="custom-option" data-value="30">30</span>
+                                <span class="custom-option" data-value="40">40</span>
+                                <span class="custom-option" data-value="50">50</span>
+                                <span class="custom-option" data-value="60">60</span>
+                                <span class="custom-option" data-value="70">70</span>
+                                <span class="custom-option" data-value="80">80</span>
+                                <span class="custom-option" data-value="90">90</span>
+                                <span class="custom-option" data-value="100">100</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div> -->
-              </form>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="productdescriptions-body">
+                  <div class="totalquantity">
+                    <label for="totalquantity" class="quantitylabel">Quantity</label>
+                    <input type="text" class="quantityfield">
+                  </div>
+                  <div class="totalprice">
+                    <span class="title">Price</span>
+                    <span class="price">£19.35</span>
+                  </div>
+                  <div class="addinfo">
+                    <button type="button" class="btn-shop brochures" data-bs-toggle="modal" data-bs-target="#addedBasket">Add to Basket</button>
+                  </div>
+                </div>
+              </div>
             </div>
-           
           </div>
         </div>
-       </div>
+      </div>
     </div>
-   </section>
-  <!--========== CHECKOUT-END ================-->
+  </section>
+  <!--========== PRODUCT-DETAILS END ================-->
 
-   
+
+  <!--========== PRODUCT-INFORM START ================-->
+  <section class="productinform">
+    <div class="container">
+      <div class="productinform-content">
+        <div class="productinform-header">
+          <h2 class="productinform-title">The Print Shop Business Cards</h2>
+        </div>
+  
+        <div class="productinform-body">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-12">
+              <div class="informs">
+                <p class="informtext">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                </p>
+  
+                <p class="informtext">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.
+                </p>
+  
+                <ul class="informlist">
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                  </li>
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Exercitation veniam consequat sunt nostrud amet.
+                  </li>
+                  <li class="informlist-item">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-5 offset-lg-1 col-12">
+              <table class="product-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price per Card</th>
+                    <th scope="col">Pack Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>50</td>
+                    <td>26p</td>
+                    <td>£19.23</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>22p</td>
+                    <td>£30.23</td>
+                  </tr>
+                  <tr>
+                    <td>200</td>
+                    <td>20p</td>
+                    <td>£33.23</td>
+                  </tr>
+                  <tr>
+                    <td>500</td>
+                    <td>15p</td>
+                    <td>£36.23</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== PRODUCT-INFORM END ==================-->
+
+
+  <!--========== HOME-PRODUCTS START ==========-->
+  <section class="homeproducts productshop">
+    <div class="homeproducts-header">
+      <h4 class="homeproducts-title">Shop Products</h4>
+    </div>
+
+    <div class="homeproducts-content">
+      <div class="emptybox"></div>
+
+      <div class="products">
+        <div class="container">
+          <div class="row gy-5 gx-4">
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-1.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Tshirts</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop T-shirts</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-2.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Stickers</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Stickers</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-3.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Envelopes</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Envelopes</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-xl-3 col-12">
+              <a href="#" class="productlink">
+                <div class="product">
+                  <figure class="product-header">
+                    <img src="assets/images/products/product-4.png" alt="product-thumbnail">
+                  </figure>
+      
+                  <div class="product-body text-start">
+                    <h4 class="product-title">Menus</h4>
+                    <div class="productinfo">
+                      <p class="product-text">
+                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet
+                      </p>
+                      <p class="product-text">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                      </p>
+                    </div>
+      
+                    <div class="cardlink">
+                      <span class="btn-product">Shop Menus</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--========== HOME-PRODUCTS END ============-->
+
+
   <!--========== HOME-FEATURES START ==========-->
   <section class="homefeatures">
     <div class="container">
@@ -618,7 +869,52 @@
   </footer>
   <!--========== FOOTER-END ============-->
 
-  
+
+  <!--========== ADDED-IN-BASKET MODAL START ============-->
+  <div class="modal fade pe-0 addedmodal" id="addedBasket" tabindex="-1" aria-labelledby="addedBasket" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.673 1.58189L17.9516 0L9.83648 7.4575L1.72138 0L0 1.58189L8.1151 9.03939L0 16.4969L1.72138 18.0788L9.83648 10.6213L17.9516 18.0788L19.673 16.4969L11.5579 9.03939L19.673 1.58189Z" fill="#E4D3C6"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="addedbasket">
+            <div class="addedbasket-header">
+              <figure class="icon">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#basketaddedicon)">
+                    <path d="M20 24.9062C20 24.3841 20.2074 23.8833 20.5766 23.5141C20.9458 23.1449 21.4466 22.9375 21.9688 22.9375H27.875C28.3142 22.9376 28.7407 23.0846 29.0867 23.355C29.4327 23.6254 29.6784 24.0037 29.7847 24.4298L31.3794 30.8125H77.0938C77.3828 30.8128 77.6683 30.8767 77.9299 30.9997C78.1915 31.1228 78.4228 31.3019 78.6073 31.5244C78.7918 31.7469 78.9251 32.0073 78.9977 32.2872C79.0702 32.567 79.0803 32.8594 79.0271 33.1435L73.1208 64.6435C73.0364 65.0947 72.7969 65.5021 72.4439 65.7955C72.0909 66.0888 71.6465 66.2496 71.1875 66.25H35.75C35.291 66.2496 34.8466 66.0888 34.4936 65.7955C34.1406 65.5021 33.9011 65.0947 33.8167 64.6435L27.9144 33.2026L26.3394 26.875H21.9688C21.4466 26.875 20.9458 26.6676 20.5766 26.2984C20.2074 25.9292 20 25.4284 20 24.9062ZM32.2141 34.75L37.3841 62.3125H69.5534L74.7234 34.75H32.2141ZM39.6875 66.25C37.5989 66.25 35.5959 67.0797 34.119 68.5565C32.6422 70.0334 31.8125 72.0364 31.8125 74.125C31.8125 76.2136 32.6422 78.2166 34.119 79.6935C35.5959 81.1703 37.5989 82 39.6875 82C41.7761 82 43.7791 81.1703 45.256 79.6935C46.7328 78.2166 47.5625 76.2136 47.5625 74.125C47.5625 72.0364 46.7328 70.0334 45.256 68.5565C43.7791 67.0797 41.7761 66.25 39.6875 66.25ZM67.25 66.25C65.1614 66.25 63.1584 67.0797 61.6815 68.5565C60.2047 70.0334 59.375 72.0364 59.375 74.125C59.375 76.2136 60.2047 78.2166 61.6815 79.6935C63.1584 81.1703 65.1614 82 67.25 82C69.3386 82 71.3416 81.1703 72.8185 79.6935C74.2953 78.2166 75.125 76.2136 75.125 74.125C75.125 72.0364 74.2953 70.0334 72.8185 68.5565C71.3416 67.0797 69.3386 66.25 67.25 66.25ZM39.6875 70.1875C40.7318 70.1875 41.7333 70.6023 42.4717 71.3408C43.2102 72.0792 43.625 73.0807 43.625 74.125C43.625 75.1693 43.2102 76.1708 42.4717 76.9092C41.7333 77.6477 40.7318 78.0625 39.6875 78.0625C38.6432 78.0625 37.6417 77.6477 36.9033 76.9092C36.1648 76.1708 35.75 75.1693 35.75 74.125C35.75 73.0807 36.1648 72.0792 36.9033 71.3408C37.6417 70.6023 38.6432 70.1875 39.6875 70.1875ZM67.25 70.1875C68.2943 70.1875 69.2958 70.6023 70.0342 71.3408C70.7727 72.0792 71.1875 73.0807 71.1875 74.125C71.1875 75.1693 70.7727 76.1708 70.0342 76.9092C69.2958 77.6477 68.2943 78.0625 67.25 78.0625C66.2057 78.0625 65.2042 77.6477 64.4658 76.9092C63.7273 76.1708 63.3125 75.1693 63.3125 74.125C63.3125 73.0807 63.7273 72.0792 64.4658 71.3408C65.2042 70.6023 66.2057 70.1875 67.25 70.1875Z" fill="#E4D3C6"/>
+                  </g>
+                  <circle cx="50" cy="50" r="49.5" stroke="#E4D3C6"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M88 8C81.925 8 77 12.925 77 19C77 25.075 81.925 30 88 30C94.075 30 99 25.075 99 19C99 12.925 94.075 8 88 8ZM89 23C89 23.2652 88.8946 23.5196 88.7071 23.7071C88.5196 23.8946 88.2652 24 88 24C87.7348 24 87.4804 23.8946 87.2929 23.7071C87.1054 23.5196 87 23.2652 87 23V20H84C83.7348 20 83.4804 19.8946 83.2929 19.7071C83.1054 19.5196 83 19.2652 83 19C83 18.7348 83.1054 18.4804 83.2929 18.2929C83.4804 18.1054 83.7348 18 84 18H87V15C87 14.7348 87.1054 14.4804 87.2929 14.2929C87.4804 14.1054 87.7348 14 88 14C88.2652 14 88.5196 14.1054 88.7071 14.2929C88.8946 14.4804 89 14.7348 89 15V18H92C92.2652 18 92.5196 18.1054 92.7071 18.2929C92.8946 18.4804 93 18.7348 93 19C93 19.2652 92.8946 19.5196 92.7071 19.7071C92.5196 19.8946 92.2652 20 92 20H89V23Z" fill="#95AFA9"/>
+                  <defs>
+                    <clipPath id="basketaddedicon">
+                      <rect width="63" height="63" fill="white" transform="translate(20 19)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </figure>
+            </div>
+            <div class="addedbasket-body">
+              <h4 class="basket-title">Item has has been added to the basket.</h4>
+
+              <div class="basket-buttons">
+                <button class="btn-basket">Continue Shopping</button>
+                <button class="btn-basket">View Basket</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========== ADDED-IN-BASKET MODAL END ==============-->
+
+
   <!-- LOTTIE JS -->
   <script src="assets/js/lottie-player/lottie-player.js"></script>
   <!-- PRELOADER JS -->
@@ -630,6 +926,7 @@
   <script src="assets/js/validations/newsletter.js"></script>
   <!-- COPYRIGHT (YEAR) -->
   <script src="assets/js/copyright/copyright.js"></script>
+  <script src="assets/js/select/select.js"></script>
   <!-- BOOTSTRAP JS -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- TOOLTIP JS -->

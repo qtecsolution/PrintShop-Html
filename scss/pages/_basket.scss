@@ -1,3 +1,104 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.basket {
+  &-content {
+    @include flex-column;
+  }
+
+  &-header {
+    background: $white;
+    padding: size(32);
+
+    @include breakpoint(tab992) {
+      padding: size(60);
+    }
+
+    .basket-head {
+      @include flex-center;
+      text-align: center;
+
+      .basket-title {
+        color: $black;
+        @include font($secondaryFont, 28, normal, normal, 28);
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 36, normal, normal, 36);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include font($secondaryFont, 48, normal, normal, 48);
+        }
+      }
+    }
+  }
+
+  &-body {
+    background: $sectionBg;
+    padding: size(32) size(0) size(48);
+
+    @include breakpoint(tab992) {
+      padding: size(48) size(0) size(64);
+    }
+
+    .basketlist {
+      @include list-vertical;
+      gap: size(24);
+    }
+  }
+
+  &-footer {
+    padding: size(32) size(0);
+
+    &-content {
+      @include flex-center-column;
+      gap: size(16);
+      @include border(solid, 1, $secondary);
+      padding: size(16);
+
+      @include breakpoint(mobile768) {
+        flex-direction: row;
+      }
+
+      .basketprice {
+        @include flex-center-vert;
+        gap: size(16);
+
+        @include breakpoint(mobile768) {
+          width: 50%;
+          text-align: left;
+        }
+
+        .title,
+        .price {
+          color: $black;
+          @include font($secondaryFont, 20, normal, normal, 20);
+        }
+      }
+
+      .checkinfo {
+        @include flex-center;
+        overflow: hidden;
+        @include w100;
+
+        @include breakpoint(mobile768) {
+          width: 50%;
+        }
+
+        .btn-checkout {
+          @include w100;
+          @include font($secondaryFont, 16, normal, normal, 24);
+          @include setBgColor($grayBg, $black);
+          @include radius(6);
+          padding: size(10);
+          text-align: center;
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor($black, $grayBg);
+          }
+        }
+      }
+    }
+  }
+}

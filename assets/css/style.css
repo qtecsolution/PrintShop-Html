@@ -741,14 +741,49 @@ button:focus,
   font-weight: 400;
   font-style: normal;
   line-height: 1.4285714286;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: all 250ms ease-in-out;
+}
+.btn-side .size-text {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+}
+.btn-side .size-type {
+  color: hsl(0deg, 12%, 71%);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3333333333;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 48rem) {
+  .btn-side .size-type {
+    max-width: 100%;
+  }
 }
 .btn-side:hover:not(.active) {
   background: hsl(26deg, 36%, 84%);
-  color: hsl(0deg, 0%, 0%);
+}
+.btn-side:hover:not(.active) .size-type {
+  color: hsl(87deg, 20%, 28%);
 }
 .btn-side.active {
   background: hsl(26deg, 36%, 84%);
-  color: hsl(0deg, 0%, 0%);
+}
+.btn-side.active .size-type {
+  color: hsl(87deg, 20%, 28%);
 }
 
 .btn-choose {
@@ -1165,6 +1200,224 @@ button:focus,
   color: #608079;
 }
 
+.cardbasket {
+  background: hsl(0deg, 0%, 100%);
+  padding: 1rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket {
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cardbasket {
+    padding: 2rem 2rem 2.5rem;
+  }
+}
+.cardbasket-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cardbasket-header .removeitem {
+  display: flex;
+  justify-content: flex-end;
+}
+.cardbasket-header .removeitem .btn-remove {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardbasket-header .removeitem .btn-remove svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms ease-in-out;
+}
+.cardbasket-header .removeitem .btn-remove:not([disabled]):hover svg {
+  transform: rotate(90deg);
+}
+.cardbasket-header .removeitem .btn-remove:not([disabled]):hover svg path {
+  fill: hsl(0deg, 49%, 52%);
+}
+.cardbasket-header .title-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 62rem) {
+  .cardbasket-header .title-price {
+    max-width: 92%;
+  }
+}
+.cardbasket-header .title-price .cardbasket-title {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .cardbasket-header .title-price .cardbasket-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .cardbasket-header .title-price .cardbasket-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.cardbasket-header .title-price .cardbasket-price {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .cardbasket-header .title-price .cardbasket-price {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .cardbasket-header .title-price .cardbasket-price {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.cardbasket-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 0.0625rem hsl(26deg, 36%, 84%);
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-body {
+    flex-direction: row;
+  }
+}
+.cardbasket-body .cardbasket-thumbnail {
+  width: 100%;
+  height: 10.625rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-body .cardbasket-thumbnail {
+    height: 12.5rem;
+    width: 18.75rem;
+  }
+}
+.cardbasket-body .cardbasket-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cardbasket-body .cardbasket-descriptions {
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-body .cardbasket-descriptions {
+    width: calc(100% - 18.75rem);
+  }
+}
+.cardbasket-body .cardbasket-descriptions .detailslist {
+  padding-left: 1.5rem;
+}
+.cardbasket-body .cardbasket-descriptions .detailslist-item {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+.cardbasket-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cardbasket-footer .footdescript {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-footer .footdescript {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-footer .footdescript .details {
+    width: 70%;
+  }
+}
+.cardbasket-footer .footdescript .details .texts {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+.cardbasket-footer .footdescript .upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .cardbasket-footer .footdescript .upload {
+    width: 30%;
+  }
+}
+.cardbasket-footer .footdescript .upload .uploadinfo .text {
+  color: hsl(0deg, 49%, 52%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+.cardbasket-footer .footdescript .upload .btn-upload {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 20%);
+  border: solid 0.125rem hsl(166deg, 14%, 64%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  transition: all 250ms ease-in-out;
+  padding: 0.5rem 1.25rem;
+}
+.cardbasket-footer .footdescript .upload .btn-upload:not([disabled]):hover {
+  background: hsl(166deg, 14%, 64%);
+  color: hsl(0deg, 0%, 100%);
+}
+
 .header {
   background: hsl(0deg, 0%, 100%);
   box-shadow: 0 0.25rem 1.25rem hsla(217deg, 98%, 61%, 0.102);
@@ -1559,8 +1812,8 @@ button:focus,
   border-bottom: 0;
 }
 .modal-header .btn-close {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1578,6 +1831,100 @@ button:focus,
 .modal-header .btn-close:not([disabled]):hover svg path {
   fill: hsl(0deg, 49%, 52%);
 }
+.modal.addedmodal .modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.modal.addedmodal .modal-body .addedbasket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .modal.addedmodal .modal-body .addedbasket {
+    padding: 0rem 3rem 3rem;
+  }
+}
+.modal.addedmodal .modal-body .addedbasket-header .icon {
+  width: calc(4rem / 16)rem;
+  height: calc(4rem / 16)rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .modal.addedmodal .modal-body .addedbasket-header .icon {
+    width: calc(6.25rem / 16)rem;
+    height: calc(6.25rem / 16)rem;
+  }
+}
+.modal.addedmodal .modal-body .addedbasket-header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.modal.addedmodal .modal-body .addedbasket-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+.modal.addedmodal .modal-body .addedbasket-body .basket-title {
+  color: hsl(0deg, 0%, 27%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .modal.addedmodal .modal-body .addedbasket-body .basket-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.modal.addedmodal .modal-body .addedbasket-body .basket-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.modal.addedmodal .modal-body .addedbasket-body .basket-buttons .btn-basket {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: hsl(166deg, 14%, 64%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+  text-align: center;
+  width: 50%;
+}
+@media screen and (min-width: 62rem) {
+  .modal.addedmodal .modal-body .addedbasket-body .basket-buttons .btn-basket {
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+  }
+}
+.modal.addedmodal .modal-body .addedbasket-body .basket-buttons .btn-basket:not([disabled]):hover {
+  background: #56716b;
+  color: hsl(0deg, 0%, 100%);
+}
+
 .tooltip {
   opacity: 1;
 }
@@ -2336,6 +2683,137 @@ button:focus,
 .whyprintshop-body .options {
   position: relative;
   margin-top: -15.5rem;
+}
+
+.basket-content {
+  display: flex;
+  flex-direction: column;
+}
+.basket-header {
+  background: hsl(0deg, 0%, 100%);
+  padding: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .basket-header {
+    padding: 3.75rem;
+  }
+}
+.basket-header .basket-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.basket-header .basket-head .basket-title {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .basket-header .basket-head .basket-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .basket-header .basket-head .basket-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.basket-body {
+  background: hsl(330deg, 12%, 97%);
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .basket-body {
+    padding: 3rem 0rem 4rem;
+  }
+}
+.basket-body .basketlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.basket-footer {
+  padding: 2rem 0rem;
+}
+.basket-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: solid 0.0625rem hsl(26deg, 36%, 84%);
+  padding: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .basket-footer-content {
+    flex-direction: row;
+  }
+}
+.basket-footer-content .basketprice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .basket-footer-content .basketprice {
+    width: 50%;
+    text-align: left;
+  }
+}
+.basket-footer-content .basketprice .title,
+.basket-footer-content .basketprice .price {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+.basket-footer-content .checkinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .basket-footer-content .checkinfo {
+    width: 50%;
+  }
+}
+.basket-footer-content .checkinfo .btn-checkout {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  background: hsl(0deg, 0%, 85%);
+  color: hsl(0deg, 0%, 0%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  padding: 0.625rem;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+.basket-footer-content .checkinfo .btn-checkout:not([disabled]):hover {
+  background: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 85%);
 }
 
 .getintouch {

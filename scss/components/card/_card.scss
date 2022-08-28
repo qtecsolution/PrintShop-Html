@@ -274,3 +274,179 @@
     }
   }
 }
+
+.cardbasket {
+  background: $white;
+  padding: size(16) size(16) size(24);
+  @include flex-column;
+  gap: size(24);
+
+  @include breakpoint(mobile768) {
+    padding: size(24) size(24) size(32);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(32) size(40);
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(8);
+
+    .removeitem {
+      @include flex-end;
+
+      .btn-remove {
+        @include square(20);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+          @include transitiontransform;
+        }
+
+        @include hover {
+          svg {
+            @include rotate(90);
+
+            path {
+              fill: $danger;
+            }
+          }
+        }
+      }
+    }
+
+    .title-price {
+      @include flex-center-between;
+
+      @include breakpoint(tab992) {
+        max-width: 92%;
+      }
+
+      .cardbasket-title {
+        color: $black;
+        @include font($secondaryFont, 20, normal, normal, 20);
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 24, normal, normal, 24);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+
+      .cardbasket-price {
+        color: $black;
+        @include font($secondaryFont, 20, normal, normal, 20);
+  
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 24, normal, normal, 24);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(24);
+    padding-bottom: size(24);
+    @include border-single(bottom, solid, 1, $secondary);
+
+    @include breakpoint(mobile768) {
+      flex-direction: row;
+    }
+
+    .cardbasket-thumbnail {
+      @include w100;
+      height: size(170);
+
+      @include breakpoint(mobile768) {
+        height: size(200);
+        width: size(300);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .cardbasket-descriptions {
+      @include w100;
+
+      @include breakpoint(mobile768) {
+        width: calc(100% - size(300));
+      }
+
+      .detailslist {
+        padding-left: size(24);
+
+        &-item {
+          color: $black;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+    }
+  }
+
+  &-footer {
+    @include flex-column;
+    gap: size(8);
+
+    .footdescript {
+      @include flex-column;
+      gap: size(16);
+  
+      @include breakpoint(mobile768) {
+        flex-direction: row;
+      }
+  
+      .details {
+        @include breakpoint(mobile768) {
+          width: 70%;
+        }
+  
+        .texts {
+          color: $black;
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
+      }
+  
+      .upload {
+        @include flex-center-column;
+        gap: size(8);
+        text-align: center;
+  
+        @include breakpoint(mobile768) {
+          width: 30%;
+        }
+
+        .uploadinfo {
+          .text {
+            color: $danger;
+            @include font($primaryFont, 16, normal, normal, 24);
+          }
+        }
+  
+        .btn-upload {
+          @include setBgColor($white, $textDark);
+          @include border(solid, 2, $green);
+          @include radius(6);
+          @include transitionsall;
+          padding: size(8) size(20);
+  
+          @include hover {
+            @include setBgColor($green, $white);
+          }
+        }
+      }
+    }
+  }
+}
