@@ -85,6 +85,12 @@
                 border-color: $secondary;
               }
             }
+            select{
+              @include border(solid, 1, $inputborder);
+              @include radius(6);
+              @include transitionsall;
+              padding: size(10) size(16);
+            }
           }
         }
       }
@@ -107,6 +113,7 @@
           }
       }
       .deliverydetails{
+        background: $sectionBg;
         padding: size(30) size(12);
         @include breakpoint(tab992) {
             padding-left: size(32);
@@ -121,6 +128,9 @@
           @include breakpoint(desktop1400) {
             padding-left: size(64);
             padding-right: size(64);
+          }
+          .billingdetails{
+            padding: size(10) 0 size(30) ;
           }
       }
       .payment {

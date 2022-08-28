@@ -154,7 +154,13 @@
                       <div class="col-lg-6 col-12">
                         <div class="inputbox">
                           <label for="lname">COUNTRY / REGION *</label>
-                          <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+                          <select id="country" class="inputselect">
+                            <option value="" selected="selected" disabled="disabled">Your Country/ Region</option>
+                            <option value="2">England</option>
+                            <option value="3">Wales</option>
+                            <option value="1">Scotland</option>
+                            <option value="4">Northern Ireland</option>
+                          </select>
                         </div>
                       </div>
                       <div class="col-lg-6 col-12">
@@ -226,19 +232,76 @@
                         </div>
                       </div>
                   </div>
-                 </div>
-                 <div class="deliverydetails">
+                </div>
+                <div class="deliverydetails">
                   <div class="deliverydetails-header">
                    <h5 class="formtitle">Delivery Details</h5>
                   </div>
                   <div class="deliverydetails-body">
                     <div class="deliverydetails-check">
                       <input type="checkbox" name="" id="check" class="deliver-check">
-                       <label for="check">Deliver to a different address?</label>
+                       <label class="checklabel" for="check">Deliver to a different address?</label>
                     </div>
+                    <div class="billingdetails">
+                      <div class="billingdetails-header">
+                       <h5 class="formtitle">Delivery Address</h5>
+                      </div>
+                      <div class="billingdetails-body">
+                       <div class="row g-4">
+                         <div class="col-lg-6 col-12">
+                           <div class="inputbox">
+                             <label for="fname">FIRST NAME *</label>
+                             <input type="text" id="fname" class="inputfield" name="fname" autocomplete="off" placeholder="Your first name ">
+                           </div>
+                         </div>
+                         <div class="col-lg-6 col-12">
+                           <div class="inputbox">
+                             <label for="lname">LAST NAME *</label>
+                             <input type="text" id="lname" class="inputfield" name="lname" autocomplete="off" placeholder="Your last name ">
+                           </div>
+                         </div>
+                         <div class="col-lg-6 col-12">
+                           <div class="inputbox">
+                             <label for="lname">COUNTRY / REGION *</label>
+                             <select id="country" class="inputselect">
+                              <option value="" selected="selected" disabled="disabled">Your Country/ Region</option>
+                              <option value="2">England</option>
+                              <option value="3">Wales</option>
+                              <option value="1">Scotland</option>
+                              <option value="4">Northern Ireland</option>
+                            </select>
+                           </div>
+                         </div>
+                         <div class="col-lg-6 col-12">
+                           <div class="inputbox">
+                             <label for="city">TOWN / CITY  *</label>
+                             <input type="text" id="city" class="inputfield" name="city" autocomplete="off" placeholder="Your Town/ City ">
+                           </div>
+                         </div>
+                         <div class="col-12">
+                           <div class="inputbox">
+                             <label for="street">STREET ADDRESS *</label>
+                             <input type="text" id="street" class="inputfield" name="street" autocomplete="off" placeholder="House number, street name, apartmen, suit, unit etc. ">
+                           </div>
+                         </div>
+                         <div class="col-12">
+                           <div class="inputbox">
+                             <label for="email">EMAIL ADDRESS *</label>
+                             <input type="email" id="email" class="inputfield" name="email" autocomplete="off" placeholder="Your email address">
+                           </div>
+                         </div>
+                         <div class="col-12">
+                           <div class="inputbox">
+                             <label for="phone">Phone Number *</label>
+                             <input type="tel" id="phone" class="inputfield" name="phone" autocomplete="off" placeholder="Your phone number ">
+                           </div>
+                         </div>
+                       </div>
+                      </div>
+                   </div>
                   </div>
-               </div>
-               <div class="payment">
+                </div>
+                <div class="payment">
                  <div class="payment-header">
                    <h5 class="formtitle">Payment </h5>
                  </div>
@@ -246,12 +309,13 @@
 
                  </div>
                </div>
+              </form> 
              </div>
              <div class="col-lg-5 col-12">
               Lorem ipsum dolor sit amet.
               <p>yoour order</p>
               <p>information </p>
-            </div>
+             </div>
              
                 <!-- <div class="billingform-header">
                    <h5 class="formtitle">Billing Details</h5>
@@ -302,7 +366,7 @@
                     </div>
                   </div>
                 </div> -->
-              </form>
+              
             </div>
            
           </div>

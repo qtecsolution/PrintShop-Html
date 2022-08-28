@@ -61,14 +61,14 @@
    display: flex;
    align-items: center;
    padding-block: p.size(30);
+   gap: p.size(28);
   
   .deliver-check{
-        -webkit-appearance: none;
-      -moz-appearance:    none;
-      appearance:         none;
+        -webkit-appearance:none;
+      -moz-appearance: none;
+      appearance:none;
       width: 63px;
       height: 55px;
-     
       position: relative;
       display: flex;
       align-items: center;
@@ -80,6 +80,7 @@
       position: relative;
       cursor: pointer;
       border: 1px solid #B7B7B7;
+      background: $white;
      &::after {
       content: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");;
       display: none;
@@ -91,6 +92,11 @@
         display: block;
       }
     }
+    }
+    .checklabel{
+      color: $black;
+      @include font($primaryFont, 24, normal, normal, 24);
+      
     }
   
   }

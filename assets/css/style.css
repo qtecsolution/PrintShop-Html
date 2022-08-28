@@ -2181,6 +2181,7 @@ button:focus,
   display: flex;
   align-items: center;
   padding-block: 1.875rem;
+  gap: 1.75rem;
 }
 .deliverydetails-check .deliver-check {
   -webkit-appearance: none;
@@ -2199,6 +2200,7 @@ button:focus,
   position: relative;
   cursor: pointer;
   border: 1px solid #B7B7B7;
+  background: hsl(0deg, 0%, 100%);
 }
 .deliverydetails-check .deliver-check::after {
   content: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -2209,6 +2211,14 @@ button:focus,
 }
 .deliverydetails-check .deliver-check:checked:after {
   display: block;
+}
+.deliverydetails-check .checklabel {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
 }
 
 .delivery-buttons {
@@ -3161,6 +3171,13 @@ button:focus,
 .checkout-body .billingform .billingdetails-body .inputbox .inputfield:focus {
   border-color: hsl(26deg, 36%, 84%);
 }
+.checkout-body .billingform .billingdetails-body .inputbox select {
+  border: solid 0.0625rem hsl(230deg, 11%, 89%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  transition: all 250ms ease-in-out;
+  padding: 0.625rem 1rem;
+}
 .checkout-body .billingform .deliveryoptions {
   background: hsl(330deg, 12%, 97%);
   padding: 1.875rem 0.75rem;
@@ -3184,6 +3201,7 @@ button:focus,
   }
 }
 .checkout-body .billingform .deliverydetails {
+  background: hsl(330deg, 12%, 97%);
   padding: 1.875rem 0.75rem;
 }
 @media screen and (min-width: 62rem) {
@@ -3203,6 +3221,9 @@ button:focus,
     padding-left: 4rem;
     padding-right: 4rem;
   }
+}
+.checkout-body .billingform .deliverydetails .billingdetails {
+  padding: 0.625rem 0 1.875rem;
 }
 .checkout-body .billingform .payment {
   background: hsl(330deg, 12%, 97%);
