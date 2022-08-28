@@ -268,3 +268,32 @@ button,
     @include setBgColor($secondary, $black);
   }
 }
+
+.btn-browse {
+  cursor: pointer;
+  @include flex-center;
+  gap: size(4);
+  padding: size(12);
+  @include radius(8);
+  background: $green;
+  @include transitionsbackground;
+
+  .icon {
+    @include square(size(16));
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .text {
+    color: $white;
+    @include font($secondaryFont, 14, normal, normal, 20);
+  }
+
+  @include hover {
+    background: darken($green, 25%);
+  }
+}

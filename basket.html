@@ -140,7 +140,7 @@
               <div class="cardbasket">
                 <div class="cardbasket-header">
                   <div class="removeitem">
-                    <button type="button" class="btn-remove">
+                    <button type="button" class="btn-remove" data-bs-toggle="modal" data-bs-target="#removeFromBasket">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.1865 20L10.0064 11.8123L1.82637 20L0 18.1748L8.19293 10L0 1.82519L1.82637 0L10.0064 8.18766L18.1865 0.0128538L20 1.82519L11.8199 10L20 18.1748L18.1865 20Z" fill="#E4D3C6"/>
                       </svg>
@@ -191,7 +191,7 @@
                         <p class="text">Artwork Succesfully Uploaded</p>
                       </div>
 
-                      <button type="button" class="btn-upload">Upload Art work</button>
+                      <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#uploadAtwork">Upload Art work</button>
                     </div>
                   </div>
                 </div>
@@ -202,7 +202,7 @@
               <div class="cardbasket">
                 <div class="cardbasket-header">
                   <div class="removeitem">
-                    <button type="button" class="btn-remove">
+                    <button type="button" class="btn-remove" data-bs-toggle="modal" data-bs-target="#removeFromBasket">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.1865 20L10.0064 11.8123L1.82637 20L0 18.1748L8.19293 10L0 1.82519L1.82637 0L10.0064 8.18766L18.1865 0.0128538L20 1.82519L11.8199 10L20 18.1748L18.1865 20Z" fill="#E4D3C6"/>
                       </svg>
@@ -253,7 +253,7 @@
                         <p class="text">Artwork Succesfully Uploaded</p>
                       </div>
 
-                      <button type="button" class="btn-upload">Upload Art work</button>
+                      <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#uploadAtwork">Upload Art work</button>
                     </div>
                   </div>
                 </div>
@@ -586,6 +586,141 @@
     </div>
   </footer>
   <!--========== FOOTER-END ============-->
+
+  <!--========== REMOVE-MODAL START ============-->
+  <div class="modal fade pe-0 removemodal" id="removeFromBasket" tabindex="-1" aria-labelledby="removeFromBasket" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.673 1.58189L17.9516 0L9.83648 7.4575L1.72138 0L0 1.58189L8.1151 9.03939L0 16.4969L1.72138 18.0788L9.83648 10.6213L17.9516 18.0788L19.673 16.4969L11.5579 9.03939L19.673 1.58189Z" fill="#E4D3C6"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="removebasket">
+            <div class="removebasket-header">
+              <figure class="icon">
+                <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34.0013 56.6667C40.0129 56.6667 45.7782 54.2786 50.0291 50.0278C54.2799 45.777 56.668 40.0116 56.668 34C56.668 27.9884 54.2799 22.2231 50.0291 17.9723C45.7782 13.7214 40.0129 11.3334 34.0013 11.3334C27.9897 11.3334 22.2244 13.7214 17.9735 17.9723C13.7227 22.2231 11.3346 27.9884 11.3346 34C11.3346 40.0116 13.7227 45.777 17.9735 50.0278C22.2244 54.2786 27.9897 56.6667 34.0013 56.6667ZM34.0013 62.3334C18.3528 62.3334 5.66797 49.6485 5.66797 34C5.66797 18.3515 18.3528 5.66669 34.0013 5.66669C49.6498 5.66669 62.3346 18.3515 62.3346 34C62.3346 49.6485 49.6498 62.3334 34.0013 62.3334ZM31.168 45.3334H36.8346V51H31.168V45.3334ZM31.168 17H36.8346V39.6667H31.168V17Z" fill="#E4D3C6"/>
+                </svg>
+              </figure>
+            </div>
+
+            <div class="removebasket-body">
+              <div class="removeinfo">
+                <p class="textremove">
+                  Are you sure you would like to delete this item?
+                </p>
+
+                <p class="textremove">
+                  Deleting will remove the item and associated artwork from your basket.
+                </p>
+              </div>
+
+              <div class="basket-buttons">
+                <button class="btn-remove btn-cancel">Cancel</button>
+                <button class="btn-remove btn-delete">Delete Item</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========== REMOVE-MODAL END ==============-->
+
+  <!--========== UPLOAD-ATWORK-MODAL START ============-->
+  <div class="modal fade pe-0 uploadatwork" id="uploadAtwork" tabindex="-1" aria-labelledby="uploadAtwork" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.673 1.58189L17.9516 0L9.83648 7.4575L1.72138 0L0 1.58189L8.1151 9.03939L0 16.4969L1.72138 18.0788L9.83648 10.6213L17.9516 18.0788L19.673 16.4969L11.5579 9.03939L19.673 1.58189Z" fill="#E4D3C6"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="uploadAtWork">
+            <div class="uploadAtWork-header">
+              <h4 class="atworktitle">Upload Artwork for Your Business Card</h4>
+            </div>
+
+            <div class="uploadAtWork-body">
+              <div class="row g-4">
+                <div class="col-md-8 col-12">
+                  <div class="atworkdetails">
+                    <ul class="atworklist">
+                      <li class="atworklist-item">
+                        Amet minim mollit non deserunt ullamco
+                      </li>
+                      <li class="atworklist-item">
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation
+                      </li>
+                      <li class="atworklist-item">
+                        veniam consequat sunt nostrud amet.
+                      </li>
+                      <li class="atworklist-item">
+                        Amet minim mollit non deserunt ullamco
+                      </li>
+                      <li class="atworklist-item">
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation
+                      </li>
+                      <li class="atworklist-item">
+                        veniam consequat sunt nostrud amet.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-12">
+                  <div class="upinfo">
+                    <div class="upbox">
+                      <input type="file" id="uploadimage" hidden>
+                      <label for="uploadimage" class="upbox-box">
+                        <span class="icon">
+                          <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M87.3599 85.12H24.6399C20.8319 85.12 17.9199 82.208 17.9199 78.4V33.6C17.9199 29.792 20.8319 26.88 24.6399 26.88H87.3599C91.1679 26.88 94.0799 29.792 94.0799 33.6V78.4C94.0799 82.208 91.1679 85.12 87.3599 85.12ZM24.6399 31.36C23.2959 31.36 22.3999 32.256 22.3999 33.6V78.4C22.3999 79.744 23.2959 80.64 24.6399 80.64H87.3599C88.7039 80.64 89.5999 79.744 89.5999 78.4V33.6C89.5999 32.256 88.7039 31.36 87.3599 31.36H24.6399Z" fill="#454545"/>
+                            <path d="M67.1998 53.76C62.2718 53.76 58.2398 49.728 58.2398 44.8C58.2398 39.872 62.2718 35.84 67.1998 35.84C72.1278 35.84 76.1598 39.872 76.1598 44.8C76.1598 49.728 72.1278 53.76 67.1998 53.76ZM67.1998 40.32C64.7358 40.32 62.7198 42.336 62.7198 44.8C62.7198 47.264 64.7358 49.28 67.1998 49.28C69.6638 49.28 71.6798 47.264 71.6798 44.8C71.6798 42.336 69.6638 40.32 67.1998 40.32ZM79.0718 84.448L42.5598 50.176L21.7278 69.44L18.5918 66.304L42.5598 43.904L82.2078 81.312L79.0718 84.448Z" fill="#454545"/>
+                            <path d="M90.4962 73.248L78.4002 63.392L68.3202 71.68L65.4082 68.096L78.4002 57.568L93.1842 69.664L90.4962 73.248Z" fill="#454545"/>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uploadinfo">
+                <div class="uploadinfo-head">
+                  <p class="title">Veniam consequat sunt nostrud amet veniam consequat sunt nostrud amet..</p>
+                </div>
+
+                <div class="uploadinfo-body">
+                  <div class="uploadfile">
+                    <input type="file" id="upload-1" hidden>
+                    <label for="upload-1" class="btn-browse">
+                      <span class="text">Browse</span>
+                      <span class="icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.125 14.25H14.875C15.0408 14.25 15.1997 14.3158 15.3169 14.4331C15.4342 14.5503 15.5 14.7092 15.5 14.875C15.5 15.0408 15.4342 15.1997 15.3169 15.3169C15.1997 15.4342 15.0408 15.5 14.875 15.5H1.125C0.95924 15.5 0.800269 15.4342 0.683058 15.3169C0.565848 15.1997 0.5 15.0408 0.5 14.875C0.5 14.7092 0.565848 14.5503 0.683058 14.4331C0.800269 14.3158 0.95924 14.25 1.125 14.25ZM8.625 2.955V11.75H7.375V2.83L2.63375 7.57125L1.75 6.6875L7.9375 0.5L14.125 6.6875L13.24 7.57125L8.625 2.955V2.955Z" fill="white"/>
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--========== UPLOAD-ATWORK-MODAL END ==============-->
 
   
   <!-- LOTTIE JS -->
