@@ -824,6 +824,42 @@ button:focus,
   color: hsl(0deg, 0%, 0%);
 }
 
+.btn-browse {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: hsl(166deg, 14%, 64%);
+  transition: background 250ms ease-in-out;
+}
+.btn-browse .icon {
+  width: calc(1rem / 16)rem;
+  height: calc(1rem / 16)rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.btn-browse .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.btn-browse .text {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4285714286;
+}
+.btn-browse:not([disabled]):hover {
+  background: #56716b;
+}
+
 .product {
   display: flex;
   flex-direction: column;
@@ -1823,10 +1859,14 @@ button:focus,
 .modal-header .btn-close svg {
   width: 100%;
   height: 100%;
+  transition: transform 250ms ease-in-out;
 }
 .modal-header .btn-close svg path {
   fill: rgba(193, 73, 73, 0.4);
   transition: all 250ms ease-in-out;
+}
+.modal-header .btn-close:not([disabled]):hover svg {
+  transform: rotate(90deg);
 }
 .modal-header .btn-close:not([disabled]):hover svg path {
   fill: hsl(0deg, 49%, 52%);
@@ -1923,6 +1963,185 @@ button:focus,
 .modal.addedmodal .modal-body .addedbasket-body .basket-buttons .btn-basket:not([disabled]):hover {
   background: #56716b;
   color: hsl(0deg, 0%, 100%);
+}
+.modal.removemodal .modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.modal.removemodal .modal-body .removebasket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .modal.removemodal .modal-body .removebasket {
+    padding: 0rem 3rem 3rem;
+  }
+}
+.modal.removemodal .modal-body .removebasket-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.removemodal .modal-body .removebasket-header .icon {
+  width: calc(4rem / 16)rem;
+  height: calc(4rem / 16)rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .modal.removemodal .modal-body .removebasket-header .icon {
+    width: calc(4.25rem / 16)rem;
+    height: calc(4.25rem / 16)rem;
+  }
+}
+.modal.removemodal .modal-body .removebasket-header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.modal.removemodal .modal-body .removebasket-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modal.removemodal .modal-body .removebasket-body .removeinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+.modal.removemodal .modal-body .removebasket-body .removeinfo .textremove {
+  color: hsl(0deg, 0%, 27%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4285714286;
+}
+@media screen and (min-width: 48rem) {
+  .modal.removemodal .modal-body .removebasket-body .removeinfo .textremove {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+  }
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons .btn-remove {
+  width: 50%;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons .btn-remove.btn-cancel {
+  background: hsl(166deg, 14%, 64%);
+  color: hsl(0deg, 0%, 100%);
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons .btn-remove.btn-cancel:not([disabled]):hover {
+  background: #56716b;
+  color: hsl(0deg, 0%, 100%);
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons .btn-remove.btn-delete {
+  background: hsl(0deg, 49%, 52%);
+  color: hsl(0deg, 0%, 100%);
+}
+.modal.removemodal .modal-body .removebasket-body .basket-buttons .btn-remove.btn-delete:not([disabled]):hover {
+  background: #FF1700;
+  color: hsl(0deg, 0%, 100%);
+}
+.modal.uploadatwork .modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.modal.uploadatwork .modal-body .uploadAtWork {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-header .atworktitle {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (min-width: 62rem) {
+  .modal.uploadatwork .modal-body .uploadAtWork-header .atworktitle {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .atworkdetails {
+  padding-left: 1.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .modal.uploadatwork .modal-body .uploadAtWork-body .atworkdetails {
+    padding-right: 2.5rem;
+  }
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .atworkdetails .atworklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .atworkdetails .atworklist-item {
+  color: hsl(0deg, 0%, 0%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .upbox-box {
+  background: hsl(26deg, 36%, 84%);
+  min-height: 22.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .upbox-box .icon {
+  cursor: pointer;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.modal.uploadatwork .modal-body .uploadAtWork-body .upbox-box .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .tooltip {
