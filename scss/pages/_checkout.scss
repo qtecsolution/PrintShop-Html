@@ -1,87 +1,95 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use '../global'as *;
+@use '../partials'as *;
 
 .checkout {
   padding-top: size(40);
+
   @include breakpoint(tab992) {
     padding-top: size(54);
   }
 
-  &-content{
+  &-content {
     @include flex-column;
     gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(54);
+    }
   }
-  &-header{
-    .checkout-title{
-      text-align: center;
-      @include font($secondaryFont, 36, normal, normal, 36);
+
+  &-header {
+    .checkout-title {
       color: $textDark;
-      @include breakpoint(tab992){
+      @include font($secondaryFont, 36, normal, normal, 36);
+      text-align: center;
+
+      @include breakpoint(tab992) {
         @include font($secondaryFont, 48, normal, normal, 48);
       }
     }
   }
-  &-body{
-    //  left side
+
+  &-body {
     .billingform {
       @include flex-column;
       gap: size(32);
-      // padding: size(48) size(12);
       @include h100;
-  
-      .formtitle{
+
+      .formtitle {
         @include font($secondaryFont, 24, normal, normal, 24);
         text-align: center;
+
         @include breakpoint(tab992) {
           @include font($secondaryFont, 28, normal, normal, 28);
           text-align: left;
         }
       }
-      .description{
+
+      .description {
         @include font($primaryFont, 20, normal, normal, 20);
         padding: size(15) size(0);
         color: $labelText;
-       }
+      }
+
       .billingdetails {
         background: $sectionBg;
         @include flex-column;
         gap: size(32);
         padding: size(48) size(12);
+
         @include breakpoint(tab992) {
-            padding-left: size(32);
-            padding-right: size(32);
-          }
-      
-          @include breakpoint(desktop1200) {
-            padding-left: size(48);
-            padding-right: size(48);
-          }
-      
-          // @include breakpoint(desktop1400) {
-          //   padding-left: size(64);
-          //   padding-right: size(64);
-          // }
-      
-        &-body{
-          .inputbox{
-            @include flex-column; 
-            label{
+          padding-left: size(32);
+          padding-right: size(32);
+        }
+
+        @include breakpoint(desktop1200) {
+          padding-left: size(48);
+          padding-right: size(48);
+        }
+
+        &-body {
+          .inputbox {
+            @include flex-column;
+
+            label {
               @include font($primaryFont, 15, normal, normal, 18);
               color: $labelText;
               padding-bottom: size(16);
               margin-left: size(1);
             }
-            .inputfield{
+
+            .inputfield {
               @include border(solid, 1, $inputborder);
               @include radius(6);
               @include transitionsall;
               padding: size(10) size(16);
-  
-              &:focus{
+
+              &:focus {
                 border-color: $secondary;
               }
             }
-            select{
+
+            select {
               @include border(solid, 1, $inputborder);
               @include radius(6);
               @include transitionsall;
@@ -90,196 +98,211 @@
           }
         }
       }
+
       .deliveryoptions {
         background: $sectionBg;
-        padding: size(30) size(12);
+        padding: size(16);
+        @include flex-column;
+        gap: size(24);
+
         @include breakpoint(tab992) {
-            padding-left: size(32);
-            padding-right: size(32);
+          padding: size(20) size(32);
+        }
+
+        @include breakpoint(desktop1200) {
+          padding: size(24) size(48);
+        }
+
+        &-body {
+          @include flex-center-column;
+          gap: size(16);
+
+          @include breakpoint(mobile576) {
+            flex-direction: row;
+            gap: size(24);
           }
-      
-          @include breakpoint(desktop1200) {
-            padding-left: size(48);
-            padding-right: size(48);
+
+          .deliveryradio {
+            @include w100;
           }
-      
-          // @include breakpoint(desktop1400) {
-          //   padding-left: size(64);
-          //   padding-right: size(64);
-          // }
+        }
       }
-      .deliverydetails{
+
+      .deliverydetails {
         background: $sectionBg;
         padding: size(30) size(12);
+
         @include breakpoint(tab992) {
-            padding-left: size(32);
-            padding-right: size(32);
-          }
-      
-          @include breakpoint(desktop1200) {
-            padding-left: size(48);
-            padding-right: size(48);
-          }
-      
-          // @include breakpoint(desktop1400) {
-          //   padding-left: size(64);
-          //   padding-right: size(64);
-          // }
-          .billingdetails{
-            padding: size(10) 0 size(30) ;
-          }
+          padding-left: size(32);
+          padding-right: size(32);
+        }
+
+        @include breakpoint(desktop1200) {
+          padding-left: size(48);
+          padding-right: size(48);
+        }
+        
+        .billingdetails {
+          padding: size(10) 0 size(30);
+        }
       }
+
       .payment {
         background: $sectionBg;
         padding: size(30) size(12);
+
         @include breakpoint(tab992) {
-            padding-left: size(32);
-            padding-right: size(32);
-          }
-      
-          @include breakpoint(desktop1200) {
-            padding-left: size(48);
-            padding-right: size(48);
-          }
-      
-          // @include breakpoint(desktop1400) {
-          //   padding-left: size(64);
-          //   padding-right: size(64);
-          // }
-          .billingdetails{
-            padding: size(10) 0 size(30) ;
-          }
+          padding-left: size(32);
+          padding-right: size(32);
+        }
 
-          &-body{
-            .inputbox{
-              @include flex-column; 
-              label{
-                @include font($primaryFont, 15, normal, normal, 18);
-                color: $labelText;
-                padding-bottom: size(16);
-                margin-left: size(1);
-               text-transform: capitalize;
-                // display: none;
-              }
-              .inputfield{
-                @include border(solid, 1, $inputborder);
-                @include radius(6);
-                @include transitionsall;
-                padding: size(10) size(16);
-    
-                &:focus{
-                  border-color: $secondary;
-                }
-              }
-              select{
-                @include border(solid, 1, $inputborder);
-                @include radius(6);
-                @include transitionsall;
-                padding: size(10) size(16);
+        @include breakpoint(desktop1200) {
+          padding-left: size(48);
+          padding-right: size(48);
+        }
+
+        .billingdetails {
+          padding: size(10) 0 size(30);
+        }
+
+        &-body {
+          .inputbox {
+            @include flex-column;
+
+            label {
+              @include font($primaryFont, 15, normal, normal, 18);
+              color: $labelText;
+              padding-bottom: size(16);
+              margin-left: size(1);
+              text-transform: capitalize;
+            }
+
+            .inputfield {
+              @include border(solid, 1, $inputborder);
+              @include radius(6);
+              @include transitionsall;
+              padding: size(10) size(16);
+
+              &:focus {
+                border-color: $secondary;
               }
             }
 
-            .btn-shop{
-               @include w100;
+            select {
+              @include border(solid, 1, $inputborder);
+              @include radius(6);
+              @include transitionsall;
+              padding: size(10) size(16);
             }
           }
+
+          .btn-shop {
+            @include w100;
+          }
+        }
       }
-  }
-  //  right side
-   
-    .yourorder{
+    }
+
+    .yourorder {
       background: $sectionBg;
       @include flex-column;
       gap: size(32);
-      // padding: size(30) size(12);
-      // @include breakpoint(tab992) {
-      //     padding-left: size(32);
-      //     padding-right: size(32);
-      //   }
-    
-      //   @include breakpoint(desktop1200) {
-      //     padding-left: size(48);
-      //     padding-right: size(48);
-      //   }
-       &-header{
+
+      &-header {
         padding: size(30) size(12);
-        .formtitle{
+
+        .formtitle {
           @include font($secondaryFont, 24, normal, normal, 24);
           text-align: center;
+
           @include breakpoint(tab992) {
             @include font($secondaryFont, 28, normal, normal, 28);
             text-align: left;
           }
         }
-       }
-       &-body{
-        .order-cards{
+      }
+
+      &-body {
+        .order-cards {
           padding: size(0) size(12) size(30);
-         @include flex-column;
-         gap:size(40);
-        .order-card{
-          @include flex;
-          gap :size(25);
-          position: relative;
-          &::after {
-            content: '';
-            position: absolute;
-            height: size(1);
-            bottom: size(-20);
-            left: 0;
-            background-color: #EBEBEB;
-            width: 60%;
-          }
-          figure{
-            flex-basis: 50%;
-            img{
-              max-width: 100%;
-              height: auto;
+          @include flex-column;
+          gap: size(40);
+
+          .order-card {
+            @include flex;
+            gap: size(25);
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              height: size(1);
+              bottom: size(-20);
+              left: 0;
+              background-color: #EBEBEB;
+              width: 60%;
+            }
+
+            figure {
+              flex-basis: 50%;
+
+              img {
+                max-width: 100%;
+                height: auto;
+              }
+            }
+
+            .info {
+              padding-bottom: size(30);
+              @include flex-column;
+              justify-content: space-between;
+              @include font($primaryFont, 20, normal, normal, 20);
+              color: $black;
             }
           }
-          .info{
-            padding-bottom: size(30);
-            @include flex-column;
-            justify-content: space-between;
-            @include font($primaryFont, 20, normal, normal, 20);
-            color: $black;
-          }
         }
-        }
-       }
-       &-footer{
+      }
+
+      &-footer {
         background-color: $white;
-        @include border(solid , 1, $secondary);
+        @include border(solid, 1, $secondary);
         margin: size(10);
-        .price-wrapper{
+
+        .price-wrapper {
           @include flex-column;
           padding: size(0) size(30);
-          .item{
+
+          .item {
             border-bottom: size(1) solid #E4D3C6;
             padding: size(20);
             @include flex-between;
-            &:nth-last-child(1){
+
+            &:nth-last-child(1) {
               border-bottom: none;
             }
-            span{
+
+            span {
               @include font($primaryFont, 16, normal, normal, 16);
             }
           }
         }
-       }
-      
-    }  
-    .deliveryinfo{
+      }
+
+    }
+
+    .deliveryinfo {
       background: $sectionBg;
       padding: size(40) size(30);
-      .information-text{
+
+      .information-text {
         @include font($primaryFont, 14, normal, normal, 22);
+
         @include breakpoint(tab992) {
           @include font($primaryFont, 16, normal, normal, 24);
         }
       }
     }
 
-}
+  }
 
 }

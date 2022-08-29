@@ -1,48 +1,64 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
-.delivery-buttons{
-  
- 
 
-  padding-block: p.size(20);
-  .custom-radio { 
-    display: inline-block;
-    width: 100%;
-    padding-block: 0;
-    input {
-      display: none;
-      // display: block;
-      &:checked {
-        + {
-          .radio-btn {
-            background-color: $btnText !important;
-            transition: all .5s;
-            h3{
-              color: #fff;
-            }
-          } 
-        }
+.deliveryradio {
+  .deliveryinput {
+    &:checked ~ .deliverylabel {
+      background: $btnText;
+      border-color: $btnText;
+
+      .text {
+        color: $white;
       }
     }
-    .radio-btn{
-      padding-block: p.size(16);
-       
-      background-color: #fff !important;
-      border-radius: p.size(6);
-      display: inline-block;
-      box-shadow: inset p.size(0) p.size(5) p.size(5) rgba(0, 0, 0, 0.1);
-      width: 100%;
-      text-align: center;
-      cursor: pointer;
-      .icon{
+  }
 
+  .deliverylabel {
+    background: $white;
+    box-shadow: $boxshadow-3;
+    @include border(solid, 1, $cardborder);
+    @include radius(6);
+    cursor: pointer;
+    @include flex-center-column;
+    gap: size(10);
+    padding: size(20);
+    text-align: center;
+    @include transitionsall;
+
+    @include breakpoint(tab992) {
+      padding: size(28);
+    }
+
+    .icon {
+      @include square(48);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(mobile768) {
+        @include square(64);
       }
-      h3{
+
+      @include breakpoint(tab992) {
+        @include square(93);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .text {
+      color: $black;
+      @include font($primaryFont, 18, normal, normal, 18);
+
+      @include breakpoint(mobile768) {
+        @include font($primaryFont, 20, normal, normal, 20);
+      }
+
+      @include breakpoint(tab992) {
         @include font($primaryFont, 24, normal, normal, 24);
       }
-    } 
-    
-  } 
-  
+    }
+  }
 }
