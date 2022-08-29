@@ -61,14 +61,17 @@
    display: flex;
    align-items: center;
    padding-block: p.size(30);
-   gap: p.size(28);
+   gap: p.size(14);
+   @include p.breakpoint(tab992){
+    gap: p.size(28);
+   }
   
   .deliver-check{
         -webkit-appearance:none;
       -moz-appearance: none;
       appearance:none;
-      width: 48px;
-      height: 40px;
+      width: 40px;
+      height: 32px;
       position: relative;
       display: flex;
       align-items: center;
@@ -82,7 +85,7 @@
       border: 1px solid #B7B7B7;
       background: $white;
      &::after {
-      content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");;
+      content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");;
       display: none;
     
     }
@@ -95,8 +98,11 @@
     }
     .checklabel{
       color: $black;
-      @include font($primaryFont, 24, normal, normal, 24);
-      
+      @include font($primaryFont, 18, normal, normal, 18);
+        @include p.breakpoint(tab992) {
+          @include font($primaryFont, 24, normal, normal, 24);
+         
+        }
     }
   
   }

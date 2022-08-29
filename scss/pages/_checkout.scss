@@ -22,7 +22,7 @@
     }
   }
   &-body{
-     
+    //  left side
     .billingform {
       @include flex-column;
       gap: size(32);
@@ -30,7 +30,12 @@
       @include h100;
   
       .formtitle{
-        @include font($secondaryFont, 28, normal, normal, 28);
+        @include font($secondaryFont, 24, normal, normal, 24);
+        text-align: center;
+        @include breakpoint(tab992) {
+          @include font($secondaryFont, 28, normal, normal, 28);
+          text-align: left;
+        }
       }
       .description{
         @include font($primaryFont, 20, normal, normal, 20);
@@ -52,10 +57,10 @@
             padding-right: size(48);
           }
       
-          @include breakpoint(desktop1400) {
-            padding-left: size(64);
-            padding-right: size(64);
-          }
+          // @include breakpoint(desktop1400) {
+          //   padding-left: size(64);
+          //   padding-right: size(64);
+          // }
       
         &-body{
           .inputbox{
@@ -98,10 +103,10 @@
             padding-right: size(48);
           }
       
-          @include breakpoint(desktop1400) {
-            padding-left: size(64);
-            padding-right: size(64);
-          }
+          // @include breakpoint(desktop1400) {
+          //   padding-left: size(64);
+          //   padding-right: size(64);
+          // }
       }
       .deliverydetails{
         background: $sectionBg;
@@ -116,10 +121,10 @@
             padding-right: size(48);
           }
       
-          @include breakpoint(desktop1400) {
-            padding-left: size(64);
-            padding-right: size(64);
-          }
+          // @include breakpoint(desktop1400) {
+          //   padding-left: size(64);
+          //   padding-right: size(64);
+          // }
           .billingdetails{
             padding: size(10) 0 size(30) ;
           }
@@ -137,10 +142,10 @@
             padding-right: size(48);
           }
       
-          @include breakpoint(desktop1400) {
-            padding-left: size(64);
-            padding-right: size(64);
-          }
+          // @include breakpoint(desktop1400) {
+          //   padding-left: size(64);
+          //   padding-right: size(64);
+          // }
           .billingdetails{
             padding: size(10) 0 size(30) ;
           }
@@ -180,37 +185,110 @@
           }
       }
       
-      &-header {
+     
+  }
+  //  right side
+   
+    .yourorder{
+      background: $sectionBg;
+      @include flex-column;
+      gap: size(32);
+      // padding: size(30) size(12);
+      // @include breakpoint(tab992) {
+      //     padding-left: size(32);
+      //     padding-right: size(32);
+      //   }
+    
+      //   @include breakpoint(desktop1200) {
+      //     padding-left: size(48);
+      //     padding-right: size(48);
+      //   }
+    
+      
 
-        // .formtitle{
-        //   @include font($secondaryFont, 28, normal, normal, 28);
-        // }
-      }
-
-      &-body{
-        .inputbox{
-          @include flex-column; 
-          label{
-            // @include font($primaryFont, 14, normal, normal, 18);
-            color: $labelText;
-            padding-bottom: size(16);
-            margin-left: size(1);
-            text-transform: lowercase;
-            display: none;
+       &-header{
+        padding: size(30) size(12);
+        .formtitle{
+          @include font($secondaryFont, 24, normal, normal, 24);
+          text-align: center;
+          @include breakpoint(tab992) {
+            @include font($secondaryFont, 28, normal, normal, 28);
+            text-align: left;
           }
-          .inputfield{
-            @include border(solid, 1, $inputborder);
-            @include radius(6);
-            @include transitionsall;
-            padding: size(10) size(16);
-
-            &:focus{
-              border-color: $secondary;
+        }
+       }
+       &-body{
+        .order-cards{
+          padding: size(0) size(12) size(30);
+         @include flex-column;
+         gap:size(40);
+        .order-card{
+          @include flex;
+          gap :size(25);
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            height: size(1);
+            bottom: size(-20);
+            left: 0;
+            background-color: #EBEBEB;
+            width: 60%;
+          }
+          figure{
+            flex-basis: 50%;
+            img{
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          .info{
+            padding-bottom: size(30);
+            @include flex-column;
+            justify-content: space-between;
+            @include font($primaryFont, 20, normal, normal, 20);
+            color: $black;
+          }
+        }
+        }
+       }
+       &-footer{
+        background-color: $white;
+        @include border(solid , 1, $secondary);
+        margin: 10px;
+        .price-wrapper{
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+         
+          padding: 0 29px;
+          .item{
+            border-bottom: 1px solid #E4D3C6;
+            padding: 20px;
+            @include flex-between;
+            &:nth-last-child(1){
+              border-bottom: none;
+            }
+            span{
+              @include font($primaryFont, 16, normal, normal, 16);
             }
           }
         }
+       }
+      
+    }
+
+    
+    .deliveryinfo{
+      background: $sectionBg;
+      padding: size(40) size(30);
+      .information-text{
+        @include font($primaryFont, 14, normal, normal, 22);
+        @include breakpoint(tab992) {
+          @include font($primaryFont, 16, normal, normal, 24);
+        }
       }
-  }
+    }
 
 }
 
