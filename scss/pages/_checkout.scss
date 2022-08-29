@@ -29,23 +29,14 @@
       // padding: size(48) size(12);
       @include h100;
   
-      // @include breakpoint(tab992) {
-      //   padding-left: size(32);
-      //   padding-right: size(32);
-      // }
-  
-      // @include breakpoint(desktop1200) {
-      //   padding-left: size(48);
-      //   padding-right: size(48);
-      // }
-  
-      // @include breakpoint(desktop1400) {
-      //   padding-left: size(64);
-      //   padding-right: size(64);
-      // }
       .formtitle{
         @include font($secondaryFont, 28, normal, normal, 28);
       }
+      .description{
+        @include font($primaryFont, 20, normal, normal, 20);
+        padding: size(15) size(0);
+        color: $labelText;
+       }
       .billingdetails {
         background: $sectionBg;
         @include flex-column;
@@ -135,6 +126,58 @@
       }
       .payment {
         background: $sectionBg;
+        padding: size(30) size(12);
+        @include breakpoint(tab992) {
+            padding-left: size(32);
+            padding-right: size(32);
+          }
+      
+          @include breakpoint(desktop1200) {
+            padding-left: size(48);
+            padding-right: size(48);
+          }
+      
+          @include breakpoint(desktop1400) {
+            padding-left: size(64);
+            padding-right: size(64);
+          }
+          .billingdetails{
+            padding: size(10) 0 size(30) ;
+          }
+
+          &-body{
+            .inputbox{
+              @include flex-column; 
+              label{
+                @include font($primaryFont, 15, normal, normal, 18);
+                color: $labelText;
+                padding-bottom: size(16);
+                margin-left: size(1);
+               text-transform: capitalize;
+                // display: none;
+              }
+              .inputfield{
+                @include border(solid, 1, $inputborder);
+                @include radius(6);
+                @include transitionsall;
+                padding: size(10) size(16);
+    
+                &:focus{
+                  border-color: $secondary;
+                }
+              }
+              select{
+                @include border(solid, 1, $inputborder);
+                @include radius(6);
+                @include transitionsall;
+                padding: size(10) size(16);
+              }
+            }
+
+            .btn-shop{
+               @include w100;
+            }
+          }
       }
       
       &-header {
@@ -148,10 +191,12 @@
         .inputbox{
           @include flex-column; 
           label{
-            @include font($primaryFont, 15, normal, normal, 18);
+            // @include font($primaryFont, 14, normal, normal, 18);
             color: $labelText;
             padding-bottom: size(16);
             margin-left: size(1);
+            text-transform: lowercase;
+            display: none;
           }
           .inputfield{
             @include border(solid, 1, $inputborder);

@@ -2406,8 +2406,8 @@ button:focus,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 63px;
-  height: 55px;
+  width: 48px;
+  height: 40px;
   position: relative;
   display: flex;
   align-items: center;
@@ -2422,7 +2422,7 @@ button:focus,
   background: hsl(0deg, 0%, 100%);
 }
 .deliverydetails-check .deliver-check::after {
-  content: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   display: none;
 }
 .deliverydetails-check .deliver-check:checked {
@@ -3341,6 +3341,15 @@ button:focus,
   font-style: normal;
   line-height: 1;
 }
+.checkout-body .billingform .description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  padding: 0.9375rem 0rem;
+  color: hsl(0deg, 0%, 35%);
+}
 .checkout-body .billingform .billingdetails {
   background: hsl(330deg, 12%, 97%);
   display: flex;
@@ -3446,12 +3455,34 @@ button:focus,
 }
 .checkout-body .billingform .payment {
   background: hsl(330deg, 12%, 97%);
+  padding: 1.875rem 0.75rem;
 }
-.checkout-body .billingform-body .inputbox {
+@media screen and (min-width: 62rem) {
+  .checkout-body .billingform .payment {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .checkout-body .billingform .payment {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .checkout-body .billingform .payment {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+.checkout-body .billingform .payment .billingdetails {
+  padding: 0.625rem 0 1.875rem;
+}
+.checkout-body .billingform .payment-body .inputbox {
   display: flex;
   flex-direction: column;
 }
-.checkout-body .billingform-body .inputbox label {
+.checkout-body .billingform .payment-body .inputbox label {
   font-family: "PT Sans", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
@@ -3460,6 +3491,38 @@ button:focus,
   color: hsl(0deg, 0%, 35%);
   padding-bottom: 1rem;
   margin-left: 0.0625rem;
+  text-transform: capitalize;
+}
+.checkout-body .billingform .payment-body .inputbox .inputfield {
+  border: solid 0.0625rem hsl(230deg, 11%, 89%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  transition: all 250ms ease-in-out;
+  padding: 0.625rem 1rem;
+}
+.checkout-body .billingform .payment-body .inputbox .inputfield:focus {
+  border-color: hsl(26deg, 36%, 84%);
+}
+.checkout-body .billingform .payment-body .inputbox select {
+  border: solid 0.0625rem hsl(230deg, 11%, 89%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  transition: all 250ms ease-in-out;
+  padding: 0.625rem 1rem;
+}
+.checkout-body .billingform .payment-body .btn-shop {
+  width: 100%;
+}
+.checkout-body .billingform-body .inputbox {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-body .billingform-body .inputbox label {
+  color: hsl(0deg, 0%, 35%);
+  padding-bottom: 1rem;
+  margin-left: 0.0625rem;
+  text-transform: lowercase;
+  display: none;
 }
 .checkout-body .billingform-body .inputbox .inputfield {
   border: solid 0.0625rem hsl(230deg, 11%, 89%);
