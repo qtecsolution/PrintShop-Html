@@ -37,10 +37,6 @@
     }
   }
 
-  // &-body {
-    
-  // }
-
   &.addedmodal {
     .modal-content {
       @include radius(8);
@@ -202,10 +198,20 @@
       @include radius(8);
     }
 
+    .modal-header {
+      @include breakpoint(tab992) {
+        padding: size(40);
+      }
+    }
+
     .modal-body {
       .uploadAtWork {
         @include flex-column;
         gap: size(16);
+
+        @include breakpoint(tab992) {
+          padding: size(40);
+        }
 
         &-header {
           .atworktitle {
@@ -240,22 +246,141 @@
             }
           }
 
-          .upbox {
+          .upinfo {
+            @include wh100;
+            @include flex-center;
 
-            &-box {
+            .default {
               background: $secondary;
-              min-height: size(365);
+              @include square(280);
               @include flex-center;
-              cursor: pointer;
+              overflow: hidden;
+
+              @include breakpoint(mobile360) {
+                @include square(310);
+              }
+
+              @include breakpoint(mobile576) {
+                @include square(365);
+              }
 
               .icon {
-                cursor: pointer;
                 @include square(112);
                 @include flex-center;
-                overflow: hidden;
-  
+
                 svg {
                   @include wh100;
+                }
+              }
+            }
+
+            .uploaded-thumb {
+              @include square(280);
+              @include flex-center;
+              overflow: hidden;
+
+              @include breakpoint(mobile360) {
+                @include square(310);
+              }
+
+              @include breakpoint(mobile576) {
+                width: size(466);
+                height: size(290);
+              }
+
+              img {
+                @include wh100;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .uploadinfo {
+            @include flex-column;
+            gap: size(24);
+
+            &-head {
+              .uploadinfo-title {
+                color: $textDark;
+                @include font($primaryFont, 16, normal, normal, 24);
+              }
+            }
+
+            &-body {
+              @include flex-column;
+              gap: size(24);
+
+              .uploadedfile {
+                @include flex-center-vert;
+                gap: size(16);
+
+                .uploaded {
+                  @include flex-center-between;
+                  padding: size(8) size(12);
+                  background: $grayBg;
+                  width: calc(100% - size(56));
+
+                  @include breakpoint(mobile576) {
+                    width: calc(100% - size(112));
+                    padding: size(10) size(12);
+                  }
+
+                  .filenameinfo {
+                    width: 65%;
+                    overflow: hidden;
+
+                    .filename {
+                      color: $black;
+                      @include font($primaryFont, 16, normal, normal, 24);
+                      @include text-overflow;
+                    }
+                  }
+
+                  .deleteinfo {
+                    width: 35%;
+                    @include flex-end;
+
+                    .btn-remove {
+                      @include flex-center;
+                      gap: size(8);
+  
+                      .text {
+                        color: $danger;
+                        @include font($secondaryFont, 16, normal, normal, 24);
+                      }
+  
+                      .icon {
+                        @include square(14);
+                        @include flex-center;
+                        overflow: hidden;
+  
+                        svg {
+                          @include wh100;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .uploadfile {
+                  width: size(40);
+
+                  @include breakpoint(mobile576) {
+                    width: size(96);
+                    @include flex-center;
+                  }
+                }
+              }
+
+              .continuebox {
+                @include flex-center;
+
+                .continue {
+                  @include w100;
+  
+                  @include breakpoint(mobile576) {
+                    width: size(554);
+                  }
                 }
               }
             }
