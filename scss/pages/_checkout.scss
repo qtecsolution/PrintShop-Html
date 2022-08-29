@@ -184,8 +184,6 @@
             }
           }
       }
-      
-     
   }
   //  right side
    
@@ -203,9 +201,6 @@
       //     padding-left: size(48);
       //     padding-right: size(48);
       //   }
-    
-      
-
        &-header{
         padding: size(30) size(12);
         .formtitle{
@@ -255,16 +250,13 @@
        &-footer{
         background-color: $white;
         @include border(solid , 1, $secondary);
-        margin: 10px;
+        margin: size(10);
         .price-wrapper{
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-         
-          padding: 0 29px;
+          @include flex-column;
+          padding: size(0) size(30);
           .item{
-            border-bottom: 1px solid #E4D3C6;
-            padding: 20px;
+            border-bottom: size(1) solid #E4D3C6;
+            padding: size(20);
             @include flex-between;
             &:nth-last-child(1){
               border-bottom: none;
@@ -276,9 +268,7 @@
         }
        }
       
-    }
-
-    
+    }  
     .deliveryinfo{
       background: $sectionBg;
       padding: size(40) size(30);
