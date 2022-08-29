@@ -279,7 +279,7 @@ button,
   @include transitionsbackground;
 
   .icon {
-    @include square(size(16));
+    @include square(16);
     @include flex-center;
     overflow: hidden;
 
@@ -291,6 +291,11 @@ button,
   .text {
     color: $white;
     @include font($secondaryFont, 14, normal, normal, 20);
+    display: none;
+
+    @include breakpoint(mobile576) {
+      display: block;
+    }
   }
 
   @include hover {
