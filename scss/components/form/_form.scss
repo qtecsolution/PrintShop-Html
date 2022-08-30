@@ -1,0 +1,75 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.billingform {
+  .inputbox {
+    @include flex-column;
+    gap: size(12);
+
+    .inputlabel {
+      color: $labelText;
+      @include font($primaryFont, 16, normal, normal, 24);
+
+      .required {
+        color: $danger;
+        font: inherit;
+      }
+    }
+
+    .inputfield {
+      @include border(solid, 1, $grayBg);
+      @include radius(6);
+      @include setBgColor($white, $black);
+      @include font($primaryFont, 16, normal, normal, 24);
+      padding: size(9) size(16);
+      @include transitionsall;
+
+      &:focus {
+        border-color: $textGray;
+      }
+
+      &::placeholder {
+        color: $grayBg;
+      }
+    }
+
+    .customselect {
+      .select-wrapper {
+        .select {
+          &-trigger {
+            height: size(44);
+            @include border(solid, 1, $grayBg);
+            @include radius(6);
+            background: $white;
+            @include transitionsall;
+
+            .selectedvalue {
+              opacity: 1;
+              padding-left: size(16);
+              width: calc(100% - size(40));
+              @include font($primaryFont, 16, normal, normal, 24);
+              color: $black;
+            }
+
+            .arrow {
+              @include radius(0);
+              background: transparent;
+            }
+          }
+
+          .custom-options {
+            .custom-option {
+              @include font($primaryFont, 14, normal, normal, 20);
+            }
+          }
+
+          &.open {
+            .select-trigger {
+              border-color: $textGray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

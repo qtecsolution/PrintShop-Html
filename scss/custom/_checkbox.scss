@@ -1,108 +1,58 @@
 @use '../global' as *;
-@use '../partials' as p;
+@use '../partials' as *;
 
 
-// .customcheck {
-//   &-box {
-//     &:checked ~ .customcheck-label {
-//       &::before {
-//         background: $primary;
-//         border-color: $primary;
-//       }
+.customcheck {
+  &-box {
+    &:checked ~ .customcheck-label {
+      &::before {
+        background: $buttonText;
+        border-color: $buttonText;
+      }
 
-//       &::after {
-//         opacity: 1;
-//         visibility: visible;
-//       }
-//     }
-//   }
-
-//   &-label {
-//     position: relative;
-//     color: $textCopyright;
-//     font: inherit;
-//     padding-left: p.size(26);
-//     cursor: pointer;
-
-//     &::before,
-//     &::after {
-//       content: '';
-//       @include p.absolute(top 50% left 0);
-//     }
-
-//     &::before {
-//       @include p.square(18);
-//       @include p.radius(4);
-//       @include p.border(solid, 1, $checkborder);
-//       @include p.translateY(-50%);
-//       @include p.transitionsall;
-//     }
-
-//     &::after {
-//       width: p.size(5);
-//       height: p.size(10);
-//       @include p.border(solid, 1.5, $white);
-//       border-top: 0;
-//       border-left: 0;
-//       left: p.size(7);
-//       @include p.transform(translateY(-70%) rotate(45deg));
-//       opacity: 0;
-//       visibility: hidden;
-//       @include p.transitionsall;
-//     }
-
-//     &::selection {
-//       // @include p.setBgColor(transparent, $textPrimary);
-//     }
-//   }
-// }
-
-.deliverydetails-check{
-   display: flex;
-   align-items: center;
-   padding-block: p.size(30);
-   gap: p.size(14);
-   @include p.breakpoint(tab992){
-    gap: p.size(28);
-   }
-  
-  .deliver-check{
-        -webkit-appearance:none;
-      -moz-appearance: none;
-      appearance:none;
-      width: 40px;
-      height: 32px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3px;
-      display: inline-block;
-      padding-left: 10px;
-      border-radius: 6px;
-      position: relative;
-      cursor: pointer;
-      border: 1px solid #B7B7B7;
-      background: $white;
-     &::after {
-      content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 37 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10938 14.9844L12.7031 26.5781L35.8906 1.73438' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");;
-      display: none;
-    
-    }
-    &:checked {
-      background: $buttonText;
-      &:after {
-        display: block;
+      &::after {
+        opacity: 1;
+        visibility: visible;
       }
     }
-    }
-    .checklabel{
-      color: $black;
-      @include font($primaryFont, 18, normal, normal, 18);
-        @include p.breakpoint(tab992) {
-          @include font($primaryFont, 24, normal, normal, 24);
-         
-        }
-    }
-  
   }
+
+  &-label {
+    position: relative;
+    color: $textCopyright;
+    @include font($primaryFont, 16, normal, normal, 24);
+    padding-left: size(36);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      @include absolute(top 50% left 0);
+    }
+
+    &::before {
+      @include square(24);
+      @include border(solid, 1, $secondary);
+      @include radius(3);
+      @include translateY(-50%);
+      @include transitionsall;
+    }
+
+    &::after {
+      width: size(8);
+      height: size(16);
+      @include border(solid, 1.5, $white);
+      border-top: 0;
+      border-left: 0;
+      left: size(8);
+      @include transform(translateY(-70%) rotate(45deg));
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+
+    &::selection {
+      @include setBgColor(transparent, $buttonText);
+    }
+  }
+}

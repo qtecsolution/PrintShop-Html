@@ -2,19 +2,19 @@
 @use '../partials' as *;
 
 
-.deliveryradio {
-  .deliveryinput {
-    &:checked ~ .deliverylabel {
+.option {
+  .optioninput {
+    &:checked ~ .optionlabel {
       background: $btnText;
       border-color: $btnText;
 
-      .text {
+      .title {
         color: $white;
       }
     }
   }
 
-  .deliverylabel {
+  .optionlabel {
     background: $white;
     box-shadow: $boxshadow-3;
     @include border(solid, 1, $cardborder);
@@ -48,7 +48,7 @@
       }
     }
 
-    .text {
+    .title {
       color: $black;
       @include font($primaryFont, 18, normal, normal, 18);
 
